@@ -8,7 +8,7 @@ import javax.persistence.*;
 /**
  * Entity implementation class for Entity: Amministrazione
  *
- */
+ */ 
 @Entity
 
 public class Amministrazione implements Serializable {
