@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.lang.Long;
 import java.lang.String;
 import javax.persistence.*;
-
+//test bob 2
 /**
  * Entity implementation class for Entity: Amministrazione
  *
