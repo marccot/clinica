@@ -6,7 +6,7 @@ import java.lang.String;
 import javax.persistence.*;
 //test bob 2
 /**
- * Entity implementation class for Entity: Amministrazione
+ * Entity implementation class for Entity: Amministrazione ciao
  *
  */ 
 @Entity
