@@ -1,4 +1,4 @@
-package it.unrioma3.clinica.controller;
+package it.uniroma3.clinica.controller;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
