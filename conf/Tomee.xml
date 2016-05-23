@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomee>
+<Resource id="PostgreSQL Database" type="DataSource">
+	   JdbcDriver   org.postgresql.Driver
+    JdbcUrl  jdbc:postgresql://localhost/products
+    UserName     postgres
+    Password     siw
+           JtaManaged      true
+           DefaultAutoCommit   false
+</Resource>
+</tomee>
