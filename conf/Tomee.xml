@@ -4,7 +4,7 @@
 	   JdbcDriver   org.postgresql.Driver
     JdbcUrl  jdbc:postgresql://localhost/products
     UserName     postgres
-    Password     siw
+    Password     postgres
            JtaManaged      true
            DefaultAutoCommit   false
 </Resource>
