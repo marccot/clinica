@@ -28,7 +28,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
   <div class="wrapper">
-    <form class="form-signin" action = "/userLogin" method = "post">       
+    <form class="form-signin" action = "userLogin" method = "post">       
       <h2 class="form-signin-heading">Please login</h2>
       <br/>
       <input type="text" class="form-control" name="username" placeholder="Username" required="true" autofocus="" />

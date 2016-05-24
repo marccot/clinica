@@ -86,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- banner -->
 <div class="banner">
 	<div class="logo">
-		<h1><a href="index.html"><img src="images/sacroCuore.jpg" /></a></h1>
+		<!-- <h1><a href="index.html"><img src="images/sacroCuore.jpg" /></a></h1>  -->
 	</div>
 	<div class="search">		
 		<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
@@ -94,10 +94,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
 		<div id="small-dialog" class="mfp-hide">
 			<div class="search-top">
-				<div class="login">
+				 <div class="login">
 					<input type="submit" value="">
 					<input type="text" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">		
-				</div>			
+				</div>	
 			</div>
 			<script>
 						$(document).ready(function() {
@@ -141,9 +141,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<ul class="rslides" id="slider3">
 					<li>
 						<div class="banner-text">
-						<form action=''>
-						<input type='text' />
-						</form>
+
 <!-- 							<h3>MAKE YOUR LIFE MORE<span> HEALTHY AND SAFE</span></h3> -->
 <!-- 							<p> Neque porro quisquam est, qui dolorem ipsum quia  -->
 <!-- 							dolor sit amet, consectetur, adipisci velit, sed  -->
@@ -286,7 +284,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<h3 class="tittle">THE BEST MEDICINE IS PREVENTION</h3>
 			
-			<div class="col-md-4 welcome-grid text-center">
+			<div class="col-md-3 welcome-grid text-center">
 				<div class="ih-item circle effect9 left_to_right"><a href="#">
 					<div class="img"><img src="images/3.jpg" alt="" /></div>
 					<div class="info">
@@ -295,7 +293,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div></a>
 				</div>
 			</div>
-			<div class="col-md-4 welcome-grid text-center">
+			<div class="col-md-3 welcome-grid text-center">
 				<div class="ih-item circle effect9 left_to_right"><a href="#">
 					<div class="img"><img src="images/2.jpg" alt="" /></div>
 					<div class="info">
@@ -304,7 +302,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div></a>
 				</div>
 			</div>
-			<div class="col-md-4 welcome-grid text-center">
+			<div class="col-md-3 welcome-grid text-center">
 				<div class="ih-item circle effect9 left_to_right"><a href="#">
 					<div class="img"><img src="images/111.jpg" alt="" /></div>
 					<div class="info">
