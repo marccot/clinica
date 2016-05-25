@@ -6,8 +6,10 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 import it.uniroma3.clinica.entity.Medico;
+import it.uniroma3.clinica.entity.Paziente;
 import it.uniroma3.clinica.entity.Utente;
 import it.uniroma3.clinica.persistence.MedicoDao;
+import it.uniroma3.clinica.persistence.PazienteDao;
 import it.uniroma3.clinica.persistence.UtenteDao;
 
 public class Facade {
@@ -36,6 +38,14 @@ public class Facade {
 		uDao.save(utente);
 		tx.commit();
 
+	}
+	
+	public void savePaziente(Paziente paziente){
+		PazienteDao pdao = new PazienteDao(this.em);
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		pdao.save(paziente);
+		tx.commit();
 	}
 	
 	public void saveMedico(Medico medico){
