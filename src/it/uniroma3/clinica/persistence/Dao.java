@@ -7,38 +7,23 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 
 public abstract class Dao<T> {
-	public EntityManagerFactory emf;
+	public EntityManager em;
 
-	public Dao(EntityManagerFactory emf) {
-		this.emf = emf;
+	public Dao(EntityManager em) {
+		this.em = em;
 	}
 
 	public void save(T entity) {
-		EntityManager em = this.emf.createEntityManager();
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
-		em.persist(entity);
-		tx.commit();
-		em.close();
+		em.persist(entity);;
 	}
 
 	public void update(T entity) {
-		EntityManager em = this.emf.createEntityManager();
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
 		em.merge(entity);
-		tx.commit();
-		em.close();
 	}
 
 	public void delete(T entity) {
-		EntityManager em = emf.createEntityManager();
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
 		T toRemove = em.merge(entity);
 		em.remove(toRemove);
-		tx.commit();
-		em.close();
 	}
 
 	public abstract T findById(Long id);

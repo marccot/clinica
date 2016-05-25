@@ -10,27 +10,20 @@ import it.uniroma3.clinica.entity.Medico;
 
 public class MedicoDao extends Dao<Medico>{
 	
-	public MedicoDao(EntityManagerFactory emf){
-		super(emf);
+	public MedicoDao(EntityManager em){
+		super(em);
 	}
 	
 	@Override
 	public Medico findById(Long id){
-		EntityManager em = this.emf.createEntityManager();
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
-		Medico medico = em.find(Medico.class, id);
-		tx.commit();
-		em.close();
+
+		Medico medico = this.em.find(Medico.class, id);
 		return medico;
 	}
 	
 	@Override
 	public List<Medico> findAll(){
-		EntityManager em = this.emf.createEntityManager();
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
-		List<Medico> list = em.createQuery("SELECT m FROM Medico m").getResultList(); //trovato su internet. Non so se è la best practice
+		List<Medico> list = em.createQuery("SELECT m FROM Medico m").getResultList(); 
 		return list;
 	}
 }

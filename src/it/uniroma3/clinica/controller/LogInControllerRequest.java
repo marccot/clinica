@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import it.uniroma3.clinica.entity.Utente;
+import it.uniroma3.clinica.facade.Facade;
 import it.uniroma3.clinica.helper.LogInHelper;
 import it.uniroma3.clinica.persistence.UtenteDao;
 
@@ -42,8 +43,9 @@ public class LogInControllerRequest extends HttpServlet {
 		
 		LogInHelper helper = new LogInHelper();
 		if(helper.logInValidator(username, password)) {
-//			Persistence.createEntityManagerFactory("clinica-unit");
-			Utente utente = new UtenteDao(Persistence.createEntityManagerFactory("clinica-unit")).findByUsername(username);
+			Facade facade = new Facade();
+			Utente utente = facade.getUtente(username);
+			facade.closeEm();
 			if(!utente.checkPassword(password)) {
 				session.setAttribute("inserimentoErrato", "username o password sbagliati" );
 				nextUrl = "/login.jsp";

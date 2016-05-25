@@ -10,19 +10,14 @@ import it.uniroma3.clinica.entity.Esame;
 
 public class EsameDao extends Dao<Esame> {
 
-	public EsameDao(EntityManagerFactory emf) {
-		super(emf);
+	public EsameDao(EntityManager em) {
+		super(em);
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public Esame findById(Long id) {
-		EntityManager em = this.emf.createEntityManager();
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
 		Esame e = em.find(Esame.class, id);
-		tx.commit();
-		em.close();
 		return e;
 	}
 

@@ -16,8 +16,8 @@ import it.uniroma3.clinica.entity.Utente;
 
 public class UtenteDao extends Dao<Utente> {
 
-	public UtenteDao(EntityManagerFactory emf) {
-		super(emf);
+	public UtenteDao(EntityManager em) {
+		super(em);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -26,13 +26,8 @@ public class UtenteDao extends Dao<Utente> {
 		return null;
 	}
 	
-	public Utente findByUsername(String username) {
-		EntityManager em = this.emf.createEntityManager();
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
+	public Utente findByUsername(String username) { 
 		Utente u = em.find(Utente.class, username);
-		tx.commit();
-		em.close();
 		return u;
 	}
 

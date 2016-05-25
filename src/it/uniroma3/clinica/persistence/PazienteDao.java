@@ -10,13 +10,12 @@ import it.uniroma3.clinica.entity.Paziente;
 
 public class PazienteDao extends Dao<Paziente> {
 	
-	public PazienteDao(EntityManagerFactory em){
+	public PazienteDao(EntityManager em){
 		super(em);
 	}
 
 	@Override
 	public Paziente findById(Long id) {
-		EntityManager em = this.emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		Paziente p = em.find(Paziente.class, id);
