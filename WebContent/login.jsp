@@ -24,10 +24,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- start-smoth-scrolling -->
 
 	<!-- start-smoth-scrolling -->
-
 </head>
 <body>
+
   <div class="wrapper">
+  <div class='col-md-12'>
     <form class="form-signin" action = "userLogin" method = "post">       
       <h2 class="form-signin-heading">Please login</h2>
       <br/>

@@ -284,7 +284,49 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<h3 class="tittle">THE BEST MEDICINE IS PREVENTION</h3>
 			
-			<div class="col-md-3 welcome-grid text-center">
+		<ul id="sti-menu" class="sti-menu">
+				<li data-hovercolor="#fff">
+					<a href="#">
+						<h4 data-type="mText" class="sti-item">ESAMI</h4>
+						<p data-type="sText" class="sti-item">Qui potrai vedere gli esami offerti dalla nostra clinica</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item"></span>
+					</a>
+				</li>	
+				
+				<li data-hovercolor="#fff">
+					<a href="#">
+						<h4 data-type="mText" class="sti-item">AREA PAZIENTE</h4>
+						<p data-type="sText" class="sti-item">Accedi alla tua area riservata per visionare i tuoi esami</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-apple sti-item"></span>
+					</a>
+				</li>
+				
+				<li data-hovercolor="#fff">
+					<a href="#">
+						<h4 data-type="mText" class="sti-item">AMMINISTRAZIONE</h4>
+						<p data-type="sText" class="sti-item">Accedi all'area riservata all'amministrazione</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-scissors sti-item"></span>
+					</a>
+				</li>
+				<script type="text/javascript" src="js/jquery.iconmenu.js"></script>
+				<script type="text/javascript">
+					$(function() {
+						$('#sti-menu').iconmenu({
+							animMouseenter	: {
+								'mText' : {speed : 400, easing : 'easeOutExpo', delay : 140, dir : 1},
+								'sText' : {speed : 400, easing : 'easeOutExpo', delay : 0, dir : 1},
+								'icon'  : {speed : 800, easing : 'easeOutBounce', delay : 280, dir : 1}
+							},
+							animMouseleave	: {
+								'mText' : {speed : 400, easing : 'easeInExpo', delay : 140, dir : 1},
+								'sText' : {speed : 400, easing : 'easeInExpo', delay : 280, dir : 1},
+								'icon'  : {speed : 400, easing : 'easeInExpo', delay : 0, dir : 1}
+							}
+						});
+					});
+				</script>
+		</ul>
+		<!--  <div class="col-md-3 welcome-grid text-center">
 				<div class="ih-item circle effect9 left_to_right"><a href="#">
 					<div class="img"><img src="images/3.jpg" alt="" /></div>
 					<div class="info">
@@ -313,7 +355,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="clearfix"></div>
 	</div>
-</div>
+</div> -->
 <!-- //qualified -->
 <!-- contact -->
 <!-- <div class="contact-home">
