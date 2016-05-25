@@ -33,7 +33,7 @@ public class InserimentoMedicoController extends HttpServlet{
 		facade.saveMedico(m);
 		facade.closeEm();
 		session.setAttribute("messaggioRitorno", "Medico aggiunto con successo");
-		String nextUrl = "/AreaAmministrazione";
+		String nextUrl = "/areaAmministrazione.jsp";
 		ServletContext application  = getServletContext();
 		RequestDispatcher rd = application.getRequestDispatcher(nextUrl);
 		rd.forward(request, response);

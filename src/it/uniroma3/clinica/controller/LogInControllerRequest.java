@@ -58,7 +58,7 @@ public class LogInControllerRequest extends HttpServlet {
 		
 		else {
 			session.setAttribute("inserimentoErrato", "username e password sono campi obbligatori");
-			nextUrl = "/paginaUtente";
+			nextUrl = "/login.jsp";
 		}
 
 		// inoltro
