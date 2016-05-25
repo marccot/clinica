@@ -29,6 +29,15 @@ public class Facade {
 		return utente;
 	}
 	
+	public void saveUtente(Utente utente) {
+		UtenteDao uDao = new UtenteDao(this.em);
+		EntityTransaction tx = this.em.getTransaction();
+		tx.begin();
+		uDao.save(utente);
+		tx.commit();
+
+	}
+	
 	public void saveMedico(Medico medico){
 		MedicoDao mdao = new MedicoDao(this.em);
 		mdao.save(medico);
