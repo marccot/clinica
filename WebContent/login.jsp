@@ -40,7 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </label> -->
       <br/>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
-      <a href="userSignUp" class="button btn-block btn-primary btn-lg btn">Sign Up</a>
+   <!--    <a href="userSignUp" class="button btn-block btn-success btn-lg btn">Sign Up</a>  -->
     </form>
   </div>
   </div>
