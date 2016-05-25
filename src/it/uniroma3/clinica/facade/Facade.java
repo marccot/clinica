@@ -39,9 +39,11 @@ public class Facade {
 	}
 	
 	public void saveMedico(Medico medico){
-		MedicoDao mdao = new MedicoDao(this.em);
-		mdao.save(medico);
-		this.closeEm();
+		MedicoDao mDao = new MedicoDao(this.em);
+		EntityTransaction tx = this.em.getTransaction();
+		tx.begin();
+		mDao.save(medico);
+		tx.commit();
 	}
 	
 	public void closeEm() {
