@@ -73,6 +73,10 @@ public class Utente implements Serializable {
 	public boolean checkPassword(String password) {
 		return this.password.equals(password);
 	}
+	
+	public boolean isAdmin() {
+		return this.ruolo.equals("admin");
+	}
 
 	@Override
 	public int hashCode() {
