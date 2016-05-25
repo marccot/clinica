@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>AreaAmministrazione</title>
+<title>Inserisci nuovo medico</title>
 </head>
 <body>
-<h1>Benevenuto nel pannello di amministrazione</h1>
-<a href="inserisciMedico.jsp"> Aggiungi dottore </a> <br />
-<a href="/inserisciPaziente">Aggiungi paziente</a> <br />
-<a href="/inserisciEsame">Aggiungi esame</a> <br />
+<form action = '/addMedico' method='post'>
+<label>Nome</label><input type='text' name='nome' /><br/>
+<label>Cognome</label><input type='text' name = 'cognome' /><br />
+</form>
 </body>
 </html>
