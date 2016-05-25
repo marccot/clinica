@@ -8,8 +8,8 @@
 </head>
 <body>
 <h1>Benevenuto nel pannello di amministrazione</h1>
-<a href="inserisciMedico.jsp"> Aggiungi dottore </a> <br />
-<a href="/inserisciPaziente">Aggiungi paziente</a> <br />
-<a href="/inserisciEsame">Aggiungi esame</a> <br />
+<a href="inserisciMedico.jsp"> Aggiungi dottore </a> ${messaggioRitorno}  <br />
+<a href="inserisciPaziente.jsp">Aggiungi paziente</a> <br />
+<a href="inserisciEsame.jsp">Aggiungi esame</a> <br />
 </body>
 </html>
