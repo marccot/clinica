@@ -7,9 +7,10 @@
 <title>Inserisci nuovo medico</title>
 </head>
 <body>
-<form action = '/addMedico' method='post'>
+<form action = 'addMedico' method='post'>
 <label>Nome</label><input type='text' name='nome' /><br/>
 <label>Cognome</label><input type='text' name = 'cognome' /><br />
+<input type='submit' name = 'submit' value = 'aggiungi' />
 </form>
 </body>
 </html>

@@ -13,7 +13,7 @@
 
 <div class = "wrapper">
 <c:if test="${utenteAutenticato.isAdmin()}">
-<%@include  file="AreaAmministrazione.jsp" %>
+<%@include  file="areaAmministrazione.jsp" %>
 </c:if>
 
 </div>

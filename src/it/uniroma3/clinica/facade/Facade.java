@@ -5,7 +5,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import it.uniroma3.clinica.entity.Medico;
 import it.uniroma3.clinica.entity.Utente;
+import it.uniroma3.clinica.persistence.MedicoDao;
 import it.uniroma3.clinica.persistence.UtenteDao;
 
 public class Facade {
@@ -25,6 +27,12 @@ public class Facade {
 		Utente utente = uDao.findByUsername(username);
 		tx.commit();
 		return utente;
+	}
+	
+	public void saveMedico(Medico medico){
+		MedicoDao mdao = new MedicoDao(this.em);
+		mdao.save(medico);
+		this.closeEm();
 	}
 	
 	public void closeEm() {
