@@ -280,7 +280,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- 	</div> -->
 <!-- </div>	 -->
 <!-- qualified -->
-<div class="welcome-grids">
+<!-- <div class="welcome-grids">-->
+<div id="banner-bottom" class="banner-bottom">
 	<div class="container">
 		<h3 class="tittle">THE BEST MEDICINE IS PREVENTION</h3>
 			
@@ -326,6 +327,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					});
 				</script>
 		</ul>
+		</div>
+		</div>
 		<!--  <div class="col-md-3 welcome-grid text-center">
 				<div class="ih-item circle effect9 left_to_right"><a href="#">
 					<div class="img"><img src="images/3.jpg" alt="" /></div>
