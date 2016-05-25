@@ -17,8 +17,11 @@ public class Paziente implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	@Column(nullable=false)
 	private String nome;
+	@Column(nullable=false)
 	private String cognome;
+	@Column(nullable=false)
 	private String codiceFiscale;
 	private String codice;
 	private static final long serialVersionUID = 1L;
