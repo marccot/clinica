@@ -12,6 +12,7 @@ import org.hibernate.cfg.Configuration;
 //import org.hibernate.criterion.Restrictions;
 import org.hibernate.criterion.Restrictions;
 
+import it.uniroma3.clinica.entity.Esame;
 import it.uniroma3.clinica.entity.Utente;
 
 public class UtenteDao extends Dao<Utente> {
@@ -33,7 +34,7 @@ public class UtenteDao extends Dao<Utente> {
 
 	@Override
 	public List findAll() {
-		// TODO Auto-generated method stub
+		List<Utente> list = em.createQuery("SELECT u FROM Utente u").getResultList();
 		return null;
 	}
 

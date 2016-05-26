@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 
+import it.uniroma3.clinica.entity.Esame;
 import it.uniroma3.clinica.entity.Paziente;
 import it.uniroma3.clinica.entity.TipologiaEsame;
 
@@ -25,8 +26,8 @@ public class TipologiaEsameDao extends Dao<TipologiaEsame> {
 
 	@Override
 	public List<TipologiaEsame> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		List<TipologiaEsame> list = em.createQuery("SELECT t FROM TipologiaEsame t").getResultList();
+		return list;
 	}
 
 }

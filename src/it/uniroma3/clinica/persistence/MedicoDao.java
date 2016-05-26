@@ -23,7 +23,7 @@ public class MedicoDao extends Dao<Medico>{
 	
 	@Override
 	public List<Medico> findAll(){
-		List<Medico> list = (List<Medico>) em.createQuery("SELECT m FROM Medico m").getResultList(); 
+		List<Medico> list = em.createQuery("SELECT m FROM Medico m").getResultList(); 
 		return list;
 	}
 }

@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 
+import it.uniroma3.clinica.entity.Esame;
 import it.uniroma3.clinica.entity.Paziente;
 import it.uniroma3.clinica.entity.Prerequisito;
 
@@ -28,8 +29,8 @@ public class PrerequisitoDao extends Dao<Prerequisito> {
 
 	@Override
 	public List<Prerequisito> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Prerequisito> list = em.createQuery("SELECT p FROM Prerequisito p").getResultList();
+		return list;
 	}
 
 }

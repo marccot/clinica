@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 
+import it.uniroma3.clinica.entity.Esame;
 import it.uniroma3.clinica.entity.Paziente;
 
 public class PazienteDao extends Dao<Paziente> {
@@ -16,18 +17,14 @@ public class PazienteDao extends Dao<Paziente> {
 
 	@Override
 	public Paziente findById(Long id) {
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
 		Paziente p = em.find(Paziente.class, id);
-		tx.commit();
-		em.close();
 		return p;
 	}
 
 	@Override
 	public List<Paziente> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Paziente> list = em.createQuery("SELECT p FROM Paziente p").getResultList();
+		return list;
 	}
 
 }
