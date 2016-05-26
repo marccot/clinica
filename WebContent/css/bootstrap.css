@@ -239,7 +239,7 @@ th {
     page-break-after: avoid;
   }
   .navbar {
-    display: none;
+    display: true;
   }
   .btn > .caret,
   .dropup > .btn > .caret {
@@ -4258,6 +4258,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-fixed-top .navbar-collapse,
   .navbar-static-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
+    background-color: #5bc0de;
+  	border-color: #46b8da;
     padding-right: 0;
     padding-left: 0;
   }
