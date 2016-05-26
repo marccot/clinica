@@ -276,7 +276,9 @@ ul.social-slide li i.mac{
     top: 47%;
     }
 }
-
+ul.nav{
+	margin-right: 6em;
+}
 .callbacks_tabs a{
  visibility: hidden;
 }

@@ -42,22 +42,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- start-smoth-scrolling -->
 
 </head>
+<%@include file='header.html' %>
 <!-- slide-toggle-menu -->
 <body class="cbp-spmenu-push">
        <!--top-header-->
 		<!--bottom-->
-		  <section class="button">
-					<button id="showLeftPush"><img src="images/menu.png" alt=""></button>
-		   </section>
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-				<h3>Menu</h3>
-						<a href="index.html" class="active">HOME</a>
-						<a href="login.html">AREA PAZIENTE</a>
-						<a href="blog.html">ESAMI</a>
-						<a href="shortcodes.html">AREA AMMINISTRAZIONE</a>
-						<a href="gallery.html">LOGIN</a>
-						<a href="contact.html">CONTACT</a>
-		    </nav>
+<!-- 		  <section class="button"> -->
+<!-- 					<button id="showLeftPush"><img src="images/menu.png" alt=""></button> -->
+<!-- 		   </section> -->
+<!-- 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1"> -->
+<!-- 				<h3>Menu</h3> -->
+<!-- 						<a href="index.html" class="active">HOME</a> -->
+<!-- 						<a href="login.html">AREA PAZIENTE</a> -->
+<!-- 						<a href="blog.html">ESAMI</a> -->
+<!-- 						<a href="shortcodes.html">AREA AMMINISTRAZIONE</a> -->
+<!-- 						<a href="gallery.html">LOGIN</a> -->
+<!-- 						<a href="contact.html">CONTACT</a> -->
+<!-- 		    </nav> -->
 		  
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="js/classie.js"></script>
@@ -85,12 +86,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</script>
 <!-- banner -->
 <div class="banner">
-	<div class="logo">
-		<!-- <h1><a href="index.html"><img src="images/sacroCuore.jpg" /></a></h1>  -->
-	</div>
-	<div class="search">		
-		<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
-	</div>
+<!-- 	<div class="logo"> -->
+<!-- 		<!-- <h1><a href="index.html"><img src="images/sacroCuore.jpg" /></a></h1>  --> -->
+<!-- 	</div> -->
+<!-- 	<div class="search">		 -->
+<!-- 		<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a> -->
+<!-- 	</div> -->
 	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
 		<div id="small-dialog" class="mfp-hide">
 			<div class="search-top">

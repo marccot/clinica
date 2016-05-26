@@ -11,7 +11,7 @@ import javax.persistence.*;
  */
 @Entity
 public class Esame implements Serializable {
-
+ 
 	   
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,6 +20,7 @@ public class Esame implements Serializable {
 	private Paziente paziente;
 	@ManyToOne
 	private Medico medico;
+	@ManyToOne
 	private TipologiaEsame tipologia;
 	@Temporal (TemporalType.DATE)
 	private Date dataEsame;
