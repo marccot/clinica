@@ -32,7 +32,8 @@ public class InserimentoMedicoController extends HttpServlet{
 		Facade facade = new Facade();
 		facade.saveMedico(m);
 		facade.closeEm();
-		session.setAttribute("messaggioRitorno", "Medico aggiunto con successo");
+		session.setAttribute("statoInserimentoMedico", m.getNome() + " " + m.getCognome()
+														+ " inserito con successo");
 		String nextUrl = "/areaAmministrazione.jsp";
 		ServletContext application  = getServletContext();
 		RequestDispatcher rd = application.getRequestDispatcher(nextUrl);
