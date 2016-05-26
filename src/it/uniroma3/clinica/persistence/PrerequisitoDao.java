@@ -29,7 +29,7 @@ public class PrerequisitoDao extends Dao<Prerequisito> {
 
 	@Override
 	public List<Prerequisito> findAll() {
-		List<Prerequisito> list = em.createQuery("SELECT p FROM Prerequisito p").getResultList();
+		List<Prerequisito> list = em.createNamedQuery("SELECT p FROM Prerequisito p").getResultList();
 		return list;
 	}
 

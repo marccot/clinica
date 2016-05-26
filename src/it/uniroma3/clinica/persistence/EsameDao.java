@@ -24,7 +24,7 @@ public class EsameDao extends Dao<Esame> {
 
 	@Override
 	public List<Esame> findAll() {
-		List<Esame> list = em.createQuery("SELECT e FROM Esame e").getResultList(); 
+		List<Esame> list = em.createNamedQuery("SELECT e FROM Esame e").getResultList(); 
 		return list;
 	}
 

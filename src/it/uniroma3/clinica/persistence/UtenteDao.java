@@ -34,7 +34,7 @@ public class UtenteDao extends Dao<Utente> {
 
 	@Override
 	public List findAll() {
-		List<Utente> list = em.createQuery("SELECT u FROM Utente u").getResultList();
+		List<Utente> list = em.createNamedQuery("SELECT u FROM Utente u").getResultList();
 		return null;
 	}
 

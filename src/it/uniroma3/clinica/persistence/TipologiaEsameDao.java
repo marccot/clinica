@@ -26,7 +26,7 @@ public class TipologiaEsameDao extends Dao<TipologiaEsame> {
 
 	@Override
 	public List<TipologiaEsame> findAll() {
-		List<TipologiaEsame> list = em.createQuery("SELECT t FROM TipologiaEsame t").getResultList();
+		List<TipologiaEsame> list = em.createNamedQuery("SELECT t FROM TipologiaEsame t").getResultList();
 		return list;
 	}
 

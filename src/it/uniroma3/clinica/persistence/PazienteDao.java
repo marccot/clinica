@@ -23,7 +23,7 @@ public class PazienteDao extends Dao<Paziente> {
 
 	@Override
 	public List<Paziente> findAll() {
-		List<Paziente> list = em.createQuery("SELECT p FROM Paziente p").getResultList();
+		List<Paziente> list = em.createNamedQuery("SELECT p FROM Paziente p").getResultList();
 		return list;
 	}
 
