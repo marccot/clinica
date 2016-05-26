@@ -8,9 +8,11 @@
 </head>
 <body>
 <h1>Benevenuto nel pannello di amministrazione</h1>
+
 <a href="inserisciMedico.jsp"> Aggiungi dottore </a> ${statoInserimentoMedico }  <br />
 <a href="inserisciPaziente.jsp">Aggiungi paziente</a> ${statoInserimentoPaziente } <br />
-<a href="inserisciEsame.jsp">Aggiungi esame</a> <br />
+<a href="inserisciTipologiaEsame.jsp">Aggiungi esame</a> ${statoInserimentoTipoEsame }<br />
+<a href="inserisciPrenotazione.jsp"> Aggiungi prenotazione </a> <br /> 
 <% session.removeAttribute("statoInserimentoMedico"); %>
 </body>
 </html>

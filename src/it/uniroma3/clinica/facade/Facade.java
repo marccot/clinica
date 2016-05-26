@@ -7,9 +7,11 @@ import javax.persistence.Persistence;
 
 import it.uniroma3.clinica.entity.Medico;
 import it.uniroma3.clinica.entity.Paziente;
+import it.uniroma3.clinica.entity.TipologiaEsame;
 import it.uniroma3.clinica.entity.Utente;
 import it.uniroma3.clinica.persistence.MedicoDao;
 import it.uniroma3.clinica.persistence.PazienteDao;
+import it.uniroma3.clinica.persistence.TipologiaEsameDao;
 import it.uniroma3.clinica.persistence.UtenteDao;
 
 public class Facade {
@@ -46,6 +48,14 @@ public class Facade {
 		tx.begin();
 		pdao.save(paziente);
 		tx.commit();
+	}
+	
+	public void saveTipoEsame(TipologiaEsame esame){
+		TipologiaEsameDao edao = new TipologiaEsameDao(this.em);
+		EntityTransaction t = em.getTransaction();
+		t.begin();
+		edao.save(esame);
+		t.commit();
 	}
 	
 	public void saveMedico(Medico medico){

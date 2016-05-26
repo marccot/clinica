@@ -38,7 +38,7 @@ public class TipologiaEsame implements Serializable {
 		this.costo = costo;
 		this.prerequisiti = prerequisiti;
 	}
-
+	
 	public Long getId() {
 		return this.id;
 	}
