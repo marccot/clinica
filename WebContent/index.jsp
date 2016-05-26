@@ -86,6 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</script>
 <!-- banner -->
 <div class="banner">
+
 <!-- 	<div class="logo"> -->
 <!-- 		<!-- <h1><a href="index.html"><img src="images/sacroCuore.jpg" /></a></h1>  --> -->
 <!-- 	</div> -->
@@ -288,7 +289,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 		<ul id="sti-menu" class="sti-menu">
 				<li data-hovercolor="#fff">
-					<a href="#">
+					<a href="esami.jsp">
 						<h4 data-type="mText" class="sti-item">ESAMI</h4>
 						<p data-type="sText" class="sti-item">Qui potrai vedere gli esami offerti dalla nostra clinica</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item"></span>

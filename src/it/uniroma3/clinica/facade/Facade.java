@@ -88,7 +88,14 @@ public class Facade {
 		t.commit();
 		return medici;
 	}
-	
+	public List<Esame> getEsami(){
+		EsameDao edao = new EsameDao(this.em);
+		EntityTransaction t = em.getTransaction();
+		t.begin();
+		List<Esame> esami = edao.findAll();
+		t.commit();
+		return esami;
+	}
 	public Medico getMedico(long id){
 		MedicoDao mdao = new MedicoDao(this.em);
 		EntityTransaction t = em.getTransaction();

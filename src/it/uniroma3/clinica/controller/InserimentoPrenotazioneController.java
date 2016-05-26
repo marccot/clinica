@@ -25,10 +25,11 @@ public class InserimentoPrenotazioneController extends HttpServlet{
 		Long esame = Long.valueOf(request.getParameter("esame"));
 		Long paziente = Long.valueOf(request.getParameter("paziente"));
 		Long medico = Long.valueOf(request.getParameter("medico"));
-		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		Date dataEsame = null;
 		try{
 		dataEsame = dateFormat.parse(request.getParameter("data"));
+		
 		}
 		catch(ParseException e){
 			e.getMessage();
