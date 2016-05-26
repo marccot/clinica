@@ -5,8 +5,10 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
 
 import it.uniroma3.clinica.entity.Medico;
+import it.uniroma3.clinica.entity.Prerequisito;
 
 public class MedicoDao extends Dao<Medico>{
 	
@@ -23,7 +25,8 @@ public class MedicoDao extends Dao<Medico>{
 	
 	@Override
 	public List<Medico> findAll(){
-		List<Medico> list = em.createNamedQuery("SELECT m FROM Medico m").getResultList(); 
+		TypedQuery<Medico> query = em.createNamedQuery("Medico.findAll", Medico.class);
+		List<Medico> list = query.getResultList();
 		return list;
 	}
 }

@@ -10,7 +10,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-
+@NamedQuery(name="Medico.findAll", query="SELECT m FROM Medico m")
 public class Medico implements Serializable {
 
 	   

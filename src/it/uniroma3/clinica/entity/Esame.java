@@ -10,7 +10,6 @@ import javax.persistence.*;
  *
  */
 @Entity
-
 public class Esame implements Serializable {
 
 	   
@@ -21,6 +20,7 @@ public class Esame implements Serializable {
 	private Paziente paziente;
 	@ManyToOne
 	private Medico medico;
+	private TipologiaEsame tipologia;
 	@Temporal (TemporalType.DATE)
 	private Date dataEsame;
 	@Temporal (TemporalType.DATE)
@@ -64,6 +64,12 @@ public class Esame implements Serializable {
 
 	public void setDataPrenotazione(Date dataPrenotazione) {
 		this.dataPrenotazione = dataPrenotazione;
+	}
+	public TipologiaEsame getTipologiaEsame() {
+		return tipologia;
+	}
+	public void setTipologiaEsame(TipologiaEsame tipologia) {
+		this.tipologia = tipologia;
 	}
    
 }

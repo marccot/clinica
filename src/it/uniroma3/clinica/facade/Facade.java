@@ -7,10 +7,12 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import it.uniroma3.clinica.entity.Esame;
 import it.uniroma3.clinica.entity.Medico;
 import it.uniroma3.clinica.entity.Paziente;
 import it.uniroma3.clinica.entity.TipologiaEsame;
 import it.uniroma3.clinica.entity.Utente;
+import it.uniroma3.clinica.persistence.EsameDao;
 import it.uniroma3.clinica.persistence.MedicoDao;
 import it.uniroma3.clinica.persistence.PazienteDao;
 import it.uniroma3.clinica.persistence.TipologiaEsameDao;
@@ -60,6 +62,14 @@ public class Facade {
 		t.commit();
 	}
 	
+	public void savePrenotazione(Esame prenotazione){
+		EsameDao edao = new EsameDao(this.em);
+		EntityTransaction t = em.getTransaction();
+		t.begin();
+		edao.save(prenotazione);
+		t.commit();
+	}
+	
 	public List<TipologiaEsame> getTipologieEsami(){
 		TipologiaEsameDao edao = new TipologiaEsameDao(this.em);
 		EntityTransaction t = em.getTransaction();
@@ -68,6 +78,51 @@ public class Facade {
 		t.commit();
 		return tlist;
 
+	}
+	
+	public List<Medico> getMedici(){
+		MedicoDao mdao = new MedicoDao(this.em);
+		EntityTransaction t = em.getTransaction();
+		t.begin();
+		List<Medico> medici = mdao.findAll();
+		t.commit();
+		return medici;
+	}
+	
+	public Medico getMedico(long id){
+		MedicoDao mdao = new MedicoDao(this.em);
+		EntityTransaction t = em.getTransaction();
+		t.begin();
+		Medico medico = mdao.findById(id);
+		t.commit();
+		return medico;
+	}
+	
+	public TipologiaEsame getTipologiaEsame(long id){
+		TipologiaEsameDao tdao = new TipologiaEsameDao(this.em);
+		EntityTransaction t = em.getTransaction();
+		t.begin();
+		TipologiaEsame tipo = tdao.findById(id);
+		t.commit();
+		return tipo;
+	}
+	
+	public Paziente getPaziente(long id){
+		PazienteDao pdao = new PazienteDao(this.em);
+		EntityTransaction t = em.getTransaction();
+		t.begin();
+		Paziente paziente = pdao.findById(id);
+		t.commit();
+		return paziente;
+	}
+	
+	public List<Paziente> getPazienti(){
+		PazienteDao pdao = new PazienteDao(this.em);
+		EntityTransaction t = em.getTransaction();
+		t.begin();
+		List<Paziente> pazienti = pdao.findAll();
+		t.commit();
+		return pazienti;
 	}
 	
 	public void saveMedico(Medico medico){

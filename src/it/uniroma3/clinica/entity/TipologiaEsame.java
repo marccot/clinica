@@ -12,7 +12,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-
+@NamedQuery(name="TipologiaEsame.findAll",query="SELECT t FROM TipologiaEsame t")
 public class TipologiaEsame implements Serializable {
 
 	   

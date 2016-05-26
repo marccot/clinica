@@ -10,7 +10,7 @@
 <form method='post' action='addTipoEsame'>
 <label>Nome esame</label><input type='text' name='nome' /> <br />
 <label>Descrizione</label><input type='text' name='descrizione' /> <br />
-<label>Costo € </label><input type='text' name='costo' /> <br />
+<label>Costo € </label><input type='number' name='costo' /> <br />
 <input type="submit" name="submit" value="aggiungi tipologia" />
 </form>
 </body>

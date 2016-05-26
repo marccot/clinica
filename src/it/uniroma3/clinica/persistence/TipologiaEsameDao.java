@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import it.uniroma3.clinica.entity.Esame;
 import it.uniroma3.clinica.entity.Paziente;
@@ -26,7 +28,8 @@ public class TipologiaEsameDao extends Dao<TipologiaEsame> {
 
 	@Override
 	public List<TipologiaEsame> findAll() {
-		List<TipologiaEsame> list = em.createNamedQuery("SELECT t FROM TipologiaEsame t").getResultList();
+		TypedQuery<TipologiaEsame> query = em.createNamedQuery("TipologiaEsame.findAll", TipologiaEsame.class);
+		List<TipologiaEsame> list = query.getResultList();
 		return list;
 	}
 

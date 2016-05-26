@@ -5,10 +5,12 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
 
 import it.uniroma3.clinica.entity.Esame;
 import it.uniroma3.clinica.entity.Paziente;
 import it.uniroma3.clinica.entity.Prerequisito;
+import it.uniroma3.clinica.entity.TipologiaEsame;
 
 public class PrerequisitoDao extends Dao<Prerequisito> {
 
@@ -29,7 +31,8 @@ public class PrerequisitoDao extends Dao<Prerequisito> {
 
 	@Override
 	public List<Prerequisito> findAll() {
-		List<Prerequisito> list = em.createNamedQuery("SELECT p FROM Prerequisito p").getResultList();
+		TypedQuery<Prerequisito> query = em.createNamedQuery("Prerequisito.findAll", Prerequisito.class);
+		List<Prerequisito> list = query.getResultList();
 		return list;
 	}
 

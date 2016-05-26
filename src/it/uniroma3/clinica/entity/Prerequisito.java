@@ -10,7 +10,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-
+@NamedQuery(name="Prerequisito.findAll", query="SELECT p FROM Prerequisito p")
 public class Prerequisito implements Serializable {
 
 	   
