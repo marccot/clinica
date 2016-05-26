@@ -1,5 +1,7 @@
 package it.uniroma3.clinica.facade;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -56,6 +58,16 @@ public class Facade {
 		t.begin();
 		edao.save(esame);
 		t.commit();
+	}
+	
+	public List<TipologiaEsame> getTipologieEsami(){
+		TipologiaEsameDao edao = new TipologiaEsameDao(this.em);
+		EntityTransaction t = em.getTransaction();
+		t.begin();
+		List<TipologiaEsame> tlist = edao.findAll();
+		t.commit();
+		return tlist;
+
 	}
 	
 	public void saveMedico(Medico medico){
