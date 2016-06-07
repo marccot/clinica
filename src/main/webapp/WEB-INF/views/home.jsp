@@ -18,16 +18,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="/WEB-INF/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/WEB-INF/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href=<c:url value="/bootstrap/css/bootstrap.css" /> rel="stylesheet" type="text/css" media="all" />
+<link href=<c:url value="/bootstrap/css/style.css" /> rel="stylesheet" type="text/css" media="all" />
 <!-- toggle menu links -->
-<link href="/WEB-INF/css/component.css" rel="stylesheet" type="text/css"  />
+<link href=<c:url value="/bootstrap/css/component.css" /> rel="stylesheet" type="text/css"  />
 <!-- //menu links -->
-<link href="/WEB-INF/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+<link href=<c:url value="/bootstrap/css/popuo-box.css" />rel="stylesheet" type="text/css" media="all"/>
 <!-- effect9 links -->
-<link href="/WEB-INF/css/ihover.css" rel="stylesheet" media="all">
+<link href=<c:url value="/bootstrap/css/ihover.css" /> rel="stylesheet" media="all">
 <!-- js -->
-<script src="/WEB-INF/js/jquery-1.11.1.min.js"></script>
+<script src=<c:url value ="/bootstrap/js/jquery-1.11.1.min.js"/>> </script>
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<!-- start-smoth-scrolling -->
@@ -44,24 +44,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- start-smoth-scrolling -->
 
 </head>
-<%@include file='WEB-INF/views/header.html' %>
+<%@include file='header.html' %>
 <!-- slide-toggle-menu -->
 <body class="cbp-spmenu-push">
-       <!--top-header-->
-		<!--bottom-->
-<!-- 		  <section class="button"> -->
-<!-- 					<button id="showLeftPush"><img src="images/menu.png" alt=""></button> -->
-<!-- 		   </section> -->
-<!-- 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1"> -->
-<!-- 				<h3>Menu</h3> -->
-<!-- 						<a href="index.html" class="active">HOME</a> -->
-<!-- 						<a href="login.html">AREA PAZIENTE</a> -->
-<!-- 						<a href="blog.html">ESAMI</a> -->
-<!-- 						<a href="shortcodes.html">AREA AMMINISTRAZIONE</a> -->
-<!-- 						<a href="gallery.html">LOGIN</a> -->
-<!-- 						<a href="contact.html">CONTACT</a> -->
-<!-- 		    </nav> -->
-		  
+ 
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="js/classie.js"></script>
 		<script>
@@ -89,12 +75,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- banner -->
 <div class="banner">
 
-<!-- 	<div class="logo"> -->
-<!-- 		<!-- <h1><a href="index.html"><img src="images/sacroCuore.jpg" /></a></h1>  --> -->
-<!-- 	</div> -->
-<!-- 	<div class="search">		 -->
-<!-- 		<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a> -->
-<!-- 	</div> -->
 	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
 		<div id="small-dialog" class="mfp-hide">
 			<div class="search-top">
@@ -169,122 +149,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- 			<div class="down-arrow text-center"><a class="scroll" href="#banner-bottom"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a></div> -->
 	</div>
 </div>
-<!-- //banner -->
-<!-- banner-bottom -->
-<!-- <div id="banner-bottom" class="banner-bottom"> -->
-<!-- 	<div class="container"> -->
-<!-- 		<h3 class="tittle">BENVENUTO AL SACRO CUORE</h3> -->
-<!-- 		<p> Neque porro quisquam est, qui dolorem ipsum quia  -->
-<!-- 			dolor sit amet, consectetur, adipisci velit, sed  -->
-<!-- 			quia non numquam eius modi tempora incidunt ut  -->
-<!-- 			labore et dolore magnam aliquam quaerat voluptatem.  -->
-<!-- 			Nemo enim ipsam voluptatem quia voluptas sit aspernatur -->
-<!-- 			aut odit aut fugit, sed quia consequuntur magni dolores  -->
-<!-- 			eos qui ratione voluptatem sequi nesciunt.  </p> -->
-<!-- 		<ul id="sti-menu" class="sti-menu"> -->
-<!-- 				<li data-hovercolor="#fff"> -->
-<!-- 					<a href="#"> -->
-<!-- 						<h4 data-type="mText" class="sti-item">HEALTH</h4> -->
-<!-- 						<p data-type="sText" class="sti-item">Voluptatem quia voluptas</p> -->
-<!-- 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item"></span> -->
-<!-- 					</a> -->
-<!-- 				</li> -->
-<!-- 				<li data-hovercolor="#fff"> -->
-<!-- 					<a href="#"> -->
-<!-- 						<h4 data-type="mText" class="sti-item">SURGERY</h4> -->
-<!-- 						<p data-type="sText" class="sti-item">Voluptatem quia voluptas</p> -->
-<!-- 						<span data-type="icon" class="sti-icon glyphicon glyphicon-scissors sti-item"></span> -->
-<!-- 					</a> -->
-<!-- 				</li> -->
-<!-- 				<li data-hovercolor="#fff"> -->
-<!-- 					<a href="#"> -->
-<!-- 						<h4 data-type="mText" class="sti-item">CAREERS</h4> -->
-<!-- 						<p data-type="sText" class="sti-item">Voluptatem quia voluptas</p> -->
-<!-- 						<span data-type="icon" class="sti-icon glyphicon glyphicon-education sti-item"></span> -->
-<!-- 					</a> -->
-<!-- 				</li> -->
-<!-- 				<li data-hovercolor="#fff"> -->
-<!-- 					<a href="#"> -->
-<!-- 						<h4 data-type="mText" class="sti-item">PLANNING</h4> -->
-<!-- 						<p data-type="sText" class="sti-item">Voluptatem quia voluptas</p> -->
-<!-- 						<span data-type="icon" class="sti-icon glyphicon glyphicon-apple sti-item"></span> -->
-<!-- 					</a> -->
-<!-- 				</li> -->
-				
-<!-- 				<script type="text/javascript" src="js/jquery.iconmenu.js"></script> -->
-<!-- 				<script type="text/javascript"> -->
-<!-- // 					$(function() {
-// 						$('#sti-menu').iconmenu({
-// 							animMouseenter	: {
-// 								'mText' : {speed : 400, easing : 'easeOutExpo', delay : 140, dir : 1},
-// 								'sText' : {speed : 400, easing : 'easeOutExpo', delay : 0, dir : 1},
-// 								'icon'  : {speed : 800, easing : 'easeOutBounce', delay : 280, dir : 1}
-// 							},
-// 							animMouseleave	: {
-// 								'mText' : {speed : 400, easing : 'easeInExpo', delay : 140, dir : 1},
-// 								'sText' : {speed : 400, easing : 'easeInExpo', delay : 280, dir : 1},
-// 								'icon'  : {speed : 400, easing : 'easeInExpo', delay : 0, dir : 1}
-// 							}
-// 						});
-<!-- 				}); -->
-<!-- 				</script> -->
-<!-- 		</ul> -->
-<!-- 	</div> -->
-<!-- </div> -->
-<!-- //banner-bottom -->
-<!-- measure -->
-<!-- <div class="measure"> -->
-<!-- 	<div class="container"> -->
-<!-- 		<h3>WE MEASURE SUCCESS IN SMILES AND IMPROVEMENT IN HEALTH AND QUALITY OF LIFE.</h3> -->
-<!-- 	</div> -->
-<!-- </div> -->
-<!-- measure -->
-<!-- qualified -->
-<!-- <div class="qualified"> -->
-<!-- 	<div class="container"> -->
-<!-- 		<h3 class="tittle">ONLY QUALIFIED MEDICAL SERVICES</h3> -->
-<!-- 		<div class="qualified-grids"> -->
-<!-- 			<div class="col-md-7 qualify-left"> -->
-<!-- 				<div class="qualify-left-grids"> -->
-<!-- 					<div class="qua-left-gd text-right"> -->
-<!-- 						<h4>voluptatem quia</h4> -->
-<!-- 						<p>Neque porro quisquam est, qui dolorem ipsum quia  -->
-<!-- 							dolor sit amet, consectetur, adipisci velit, sed  -->
-<!-- 							quia non numquam eius.</p> -->
-<!-- 					</div> -->
-<!-- 					<div class="qua-right-gd text-center"> -->
-<!-- 						<img src="images/t2.png" alt="" /> -->
-<!-- 					</div> -->
-<!-- 					<div class="clearfix"></div> -->
-<!-- 				</div> -->
-<!-- 				<div class="qualify-left-grids"> -->
-<!-- 					<div class="qua-left-gd text-right"> -->
-<!-- 						<h4>voluptatem quia</h4> -->
-<!-- 						<p>Neque porro quisquam est, qui dolorem ipsum quia  -->
-<!-- 							dolor sit amet, consectetur, adipisci velit, sed  -->
-<!-- 							quia non numquam eius.</p> -->
-<!-- 					</div> -->
-<!-- 					<div class="qua-right-gd text-center"> -->
-<!-- 						<img src="images/t3.png" alt="" /> -->
-<!-- 					</div> -->
-<!-- 					<div class="clearfix"></div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5 qualify-right grid"> -->
-<!-- 				<figure class="effect-moses"> -->
-<!-- 						<img src="images/aa.jpg" alt="" /> -->
-<!-- 						<figcaption> -->
-<!-- 							<h4>MEDI <span>CURE</span></h4> -->
-<!-- 							<p>voluptatem quia voluptas sit.</p> -->
-<!-- 						</figcaption>			 -->
-<!-- 				</figure> -->
-<!-- 			</div> -->
-<!-- 			<div class="clearfix"></div> -->
-<!-- 		</div> -->
-<!-- 	</div> -->
-<!-- </div>	 -->
-<!-- qualified -->
-<!-- <div class="welcome-grids">-->
 <div id="banner-bottom" class="banner-bottom">
 	<div class="container">
 		<h3 class="tittle">THE BEST MEDICINE IS PREVENTION</h3>
