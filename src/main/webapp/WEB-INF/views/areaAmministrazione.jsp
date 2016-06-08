@@ -32,11 +32,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <h1>Benevenuto nel pannello di amministrazione</h1>
-
-<a href="<c:url value="/inserisciMedico"/>"> Aggiungi dottore </a> ${statoInserimentoMedico }  <br />
-<a href="<c:url value="/inserisciPaziente"/>">Aggiungi paziente</a> ${statoInserimentoPaziente } <br />
-<a href="<c:url value="/inserisciTipologiaEsame"/>">Aggiungi esame</a> ${statoInserimentoTipoEsame }<br />
-<a href="<c:url value="/inserisciPrenotazione"/>"> Aggiungi prenotazione </a> <br /> 
+<!--<a href="<c:url value="/inserisciMedico"/>"> Aggiungi dottore </a> ${statoInserimentoMedico }  <br />-->
+<a href="<c:url value="/inserisciMedico"/>"class="shiny-button pulsantiAreaAmministrazione"> <strong>Inserisci Dottore</strong> </a> ${statoInserimentoMedico }<br />
+<a href="<c:url value="/inserisciPaziente"/>"class="shiny-button pulsantiAreaAmministrazione"><strong>Inserisci Paziente</strong></a> ${statoInserimentoPaziente } <br />
+<a href="<c:url value="/inserisciTipologiaEsame"/>"class="shiny-button pulsantiAreaAmministrazione"><strong>Inserisci Esame</strong></a> ${statoInserimentoTipoEsame }<br />
+<a href="<c:url value="/inserisciPrenotazione"/>"class="shiny-button pulsantiAreaAmministrazione"> <strong>Avvia Prenotazione</strong> </a> <br /> 
 <% session.removeAttribute("statoInserimentoMedico"); %>
 <form action = "userLogout" method = "get">
 <button class="btn btn-lg btn-danger btn-block" type="submit">Logout</button> 

@@ -2273,8 +2273,9 @@ margin:0 23px;
 	  padding: 14px;
 	}
 	.sti-menu li a h4 {
+	  
 	  top: 85px;
-	  left: 27px;
+	  left: 60px;
 	}
 	.sti-menu li:nth-child(1) a h4 {
 	  left: 36px;
@@ -3089,5 +3090,70 @@ margin:0 23px;
     .view p {
     line-height: 1.8em;
     }
+}
+ .shiny-button {
+  display: inline-block;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.1;
+  font-weight: normal;
+  font-family: sans-serif;
+  color: #FFFFFF;
+  font-size: 12px;
+  background-color: #006BCF;
+  background-image: -webkit-linear-gradient(top, #006ed4 0%, #197fdf 48%, #006BCF 49%, #006BCF 82%, #0079eb 100%);
+  background-image: -moz-linear-gradient(top, #006ed4 0%, #197fdf 48%, #006BCF 49%, #006BCF 82%, #0079eb 100%);
+  background-image: -o-linear-gradient(top, #006ed4 0%, #197fdf 48%, #006BCF 49%, #006BCF 82%, #0079eb 100%);
+  background-image: linear-gradient(top, #006ed4 0%, #197fdf 48%, #006BCF 49%, #006BCF 82%, #0079eb 100%);
+  border-color: hsl(209, 40%, 41%);
+  -webkit-box-shadow: inset 0 0 1px 1px #1c92ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 0 1px 1px #1c92ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 1px 1px #1c92ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 1px 1px 1px #003669;
+  -moz-text-shadow: 1px 1px 1px #003669;
+  -o-text-shadow: 1px 1px 1px #003669;
+  text-shadow: 1px 1px 1px #003669;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
+  padding: 10.8px 27px 10.8px 27px;
+}
+
+.shiny-button strong {
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+
+.shiny-button:hover {
+  color: #FFFFFF;
+  background-color: #0073de;
+  background-image: -webkit-linear-gradient(top, #0076e3 0%, #2087e6 48%, #0073de 49%, #0073de 82%, #0082fa 100%);
+  background-image: -moz-linear-gradient(top, #0076e3 0%, #2087e6 48%, #0073de 49%, #0073de 82%, #0082fa 100%);
+  background-image: -o-linear-gradient(top, #0076e3 0%, #2087e6 48%, #0073de 49%, #0073de 82%, #0082fa 100%);
+  background-image: linear-gradient(top, #0076e3 0%, #2087e6 48%, #0073de 49%, #0073de 82%, #0082fa 100%);
+  border-color: hsl(209, 41%, 44%);
+  -webkit-box-shadow: inset 0 0 1px 1px #2697ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 0 1px 1px #2697ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 1px 1px #2697ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 1px 1px 1px #003e78;
+  -moz-text-shadow: 1px 1px 1px #003e78;
+  -o-text-shadow: 1px 1px 1px #003e78;
+  text-shadow: 1px 1px 1px #003e78;
+}
+
+.shiny-button:active {
+  color: #FFFFFF;
+  background-color: #0063c0;
+  background-image: -webkit-linear-gradient(top, #005eb6 0%, #006BCF 100%);
+  background-image: -moz-linear-gradient(top, #005eb6 0%, #006BCF 100%);
+  background-image: -o-linear-gradient(top, #005eb6 0%, #006BCF 100%);
+  background-image: linear-gradient(top, #005eb6 0%, #006BCF 100%);
+  padding: 11.8px 27px 9.8px 27px;
+}
+.pulsantiAreaAmministrazione{
+	margin-bottom: 2em;
 }
 /*--//responsive media queries--*/
