@@ -26,5 +26,8 @@ public class InserimentoTipologiaEsameController {
 		
 		return "login";
 	}
-	
+	@RequestMapping(value="/inserisciTipologiaEsame", method = RequestMethod.GET)
+	public String indexRedirect(ModelMap model) {
+		return "inserisciTipologiaEsame";
+	}
 }
