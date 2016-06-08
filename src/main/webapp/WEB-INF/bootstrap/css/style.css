@@ -34,7 +34,7 @@ input[type="button"],input[type="submit"]{
 }
 
 h1,h2,h3,h4,h5,h6{
-	margin:0;	
+	margin:45;
 }	
 p{
 	margin:0;
@@ -3155,5 +3155,84 @@ margin:0 23px;
 }
 .pulsantiAreaAmministrazione{
 	margin-bottom: 2em;
+}
+.TitoloAreaAmministrazione{
+	font-family: cursive;
+	margin-bottom: 8em;
+	font-weight: bold;
+}
+.SfondoAreaAmministrazione{
+	 background-image:url(http://previews.123rf.com/images/andreypopov/andreypopov1303/andreypopov130300019/18205442-Group-of-doctors-and-managers-presenting-empty-banner-Isolated-on-white-Stock-Photo.jpg);
+	 background-repeat:no-repeat;
+}
+.login-button {
+  display: inline-block;
+  text-align: center;
+  border-width: 9px;
+  border-style: solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.1;
+  font-weight: normal;
+  font-family: sans-serif;
+  color: #FFFFFF;
+  font-size: 12px;
+  background-color: #990505;
+  background-image: -webkit-linear-gradient(top, #9e0505 0%, #ad1a1a 48%, #990505 49%, #990505 82%, #b40606 100%);
+  background-image: -moz-linear-gradient(top, #9e0505 0%, #ad1a1a 48%, #990505 49%, #990505 82%, #b40606 100%);
+  background-image: -o-linear-gradient(top, #9e0505 0%, #ad1a1a 48%, #990505 49%, #990505 82%, #b40606 100%);
+  background-image: linear-gradient(top, #9e0505 0%, #ad1a1a 48%, #990505 49%, #990505 82%, #b40606 100%);
+  border-color: hsl(0, 29%, 31%);
+  -webkit-box-shadow: inset 0 0 1px 1px #f70d0d, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 0 1px 1px #f70d0d, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 1px 1px #f70d0d, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 1px 1px 1px #360202;
+  -moz-text-shadow: 1px 1px 1px #360202;
+  -o-text-shadow: 1px 1px 1px #360202;
+  text-shadow: 1px 1px 1px #360202;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  padding: 9.600000000000001px 24px 9.600000000000001px 24px;
+}
+
+.login-button strong {
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+
+.login-button:hover {
+  color: #FFFFFF;
+  background-color: #a80505;
+  background-image: -webkit-linear-gradient(top, #ad0505 0%, #ba1c1c 48%, #a80505 49%, #a80505 82%, #c30606 100%);
+  background-image: -moz-linear-gradient(top, #ad0505 0%, #ba1c1c 48%, #a80505 49%, #a80505 82%, #c30606 100%);
+  background-image: -o-linear-gradient(top, #ad0505 0%, #ba1c1c 48%, #a80505 49%, #a80505 82%, #c30606 100%);
+  background-image: linear-gradient(top, #ad0505 0%, #ba1c1c 48%, #a80505 49%, #a80505 82%, #c30606 100%);
+  border-color: hsl(0, 30%, 34%);
+  -webkit-box-shadow: inset 0 0 1px 1px #f81616, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 0 1px 1px #f81616, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 1px 1px #f81616, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 1px 1px 1px #450202;
+  -moz-text-shadow: 1px 1px 1px #450202;
+  -o-text-shadow: 1px 1px 1px #450202;
+  text-shadow: 1px 1px 1px #450202;
+}
+
+.login-button:active {
+  color: #FFFFFF;
+  background-color: #8a0505;
+  background-image: -webkit-linear-gradient(top, #800505 0%, #990505 100%);
+  background-image: -moz-linear-gradient(top, #800505 0%, #990505 100%);
+  background-image: -o-linear-gradient(top, #800505 0%, #990505 100%);
+  background-image: linear-gradient(top, #800505 0%, #990505 100%);
+  padding: 10.600000000000001px 24px 8.600000000000001px 24px;
+}
+.logoutposition{
+	position: absolute;
+    top: 0;
+    right: 0px;
+}
+.margineNavAreaAmministrazione{
+	margin-bottom: 3em;
 }
 /*--//responsive media queries--*/
