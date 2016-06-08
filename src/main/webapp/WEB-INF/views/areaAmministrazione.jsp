@@ -33,10 +33,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <h1>Benevenuto nel pannello di amministrazione</h1>
 
-<a href="inserisciMedico.jsp"> Aggiungi dottore </a> ${statoInserimentoMedico }  <br />
-<a href="inserisciPaziente.jsp">Aggiungi paziente</a> ${statoInserimentoPaziente } <br />
-<a href="inserisciTipologiaEsame.jsp">Aggiungi esame</a> ${statoInserimentoTipoEsame }<br />
-<a href="inserisciPrenotazione.jsp"> Aggiungi prenotazione </a> <br /> 
+<a href="<c:url value="/inserisciMedico"/>"> Aggiungi dottore </a> ${statoInserimentoMedico }  <br />
+<a href="<c:url value="/inserisciPaziente"/>">Aggiungi paziente</a> ${statoInserimentoPaziente } <br />
+<a href="<c:url value="/inserisciTipologiaEsame"/>">Aggiungi esame</a> ${statoInserimentoTipoEsame }<br />
+<a href="<c:url value="/inserisciPrenotazione"/>"> Aggiungi prenotazione </a> <br /> 
 <% session.removeAttribute("statoInserimentoMedico"); %>
 <form action = "userLogout" method = "get">
 <button class="btn btn-lg btn-danger btn-block" type="submit">Logout</button> 
