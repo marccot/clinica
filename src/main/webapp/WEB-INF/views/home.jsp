@@ -171,7 +171,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</li>
 				
 				<li data-hovercolor="#fff">
-					<a href="WEB-INF/views/areaAmministrazione.jsp">
+					<a href='<c:url value="/areaAmministrazione" />'>
 						<h4 data-type="mText" class="sti-item">AMMINISTRAZIONE</h4>
 						<p data-type="sText" class="sti-item">Accedi all'area riservata all'amministrazione</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-scissors sti-item"></span>
