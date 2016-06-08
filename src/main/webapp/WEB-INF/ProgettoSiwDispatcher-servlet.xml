@@ -23,26 +23,6 @@
 		<property name="password" value="${jdbc.password}" />
 	</bean>
 
-	<!-- <bean id="sessionFactory" -->
-	<!-- class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"> -->
-	<!-- <property name="dataSource" ref="dataSource" /> -->
-	<!-- <property name="packagesToScan" value="it.uniroma3.clinica.model" /> -->
-	<!-- <property name="hibernateProperties"> -->
-	<!-- <props> -->
-	<!-- <prop key="hibernate.dialect">${hibernate.dialect}</prop> -->
-	<!-- <prop key="hibernate.show_sql">${hibernate.show_sql}</prop> -->
-	<!-- <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop> -->
-	<!-- </props> -->
-	<!-- </property> -->
-	<!-- </bean> -->
-
-
-	<!-- <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"> -->
-	<!-- <property name="showSql" value="true"/> -->
-	<!-- <property name="generateDdl" value="true"/> -->
-	<!-- <property name="databasePlatform" value="org.hibernate.dialect.PostgreSQLDialect"/> -->
-	<!-- </bean> -->
-
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 <!-- 		<property name="persistenceXmlLocation" value="classpath:META-INF/persistence.xml" /> -->
