@@ -8,16 +8,9 @@
 </head>
 <%@include file='header.html' %>
 <body>
-<% Facade facade = new Facade();
-List<TipologiaEsame> esami = facade.getTipologieEsami();
-facade.closeEm();
-%>
+
 <div class="content">
-<%for(TipologiaEsame esame : esami){
-	out.print("<div class='elementoElenco'><p class='titolo'><b>"+esame.getNome()+"</b></p><br />"+
-				"<p class='descrizione'>"+esame.getDescrizione()+"</p><br />"+
-				"<p class='prezzo'>costo € " + esame.getCosto()+"</div>");	
-	}%>
+
 
 </div>
 </body>

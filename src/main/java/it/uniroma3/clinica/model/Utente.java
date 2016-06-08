@@ -7,19 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQuery(name="Utente.findAll",query="SELECT u FROM Utente u")
 public class Utente implements Serializable {
-	
-	@Override
-	public String toString() {
-		return "Utente [username=" + username + ", password=" + password + ", ruolo=" + ruolo + "]";
-	}
 
-	/**
-	 * 
-	 */
-	
+
 //	@GeneratedValue(strategy = GenerationType.AUTO)
 //	private Long id;
 	@Id
@@ -76,6 +70,12 @@ public class Utente implements Serializable {
 	
 	public boolean isAdmin() {
 		return this.ruolo.equals("admin");
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Utente [username=" + username + ", password=" + password + ", ruolo=" + ruolo + "]";
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package it.uniroma3.clinica.persistence;
+package it.uniroma3.clinica.dao;
 
 import java.util.List;
 
@@ -15,16 +15,14 @@ public class EsameDao extends Dao<Esame> {
 
 	@Override
 	public Esame findById(Long id) {
-		return (Esame) openSession().get(Esame.class, id);
+		return (Esame) em.find(Esame.class, id);
 	}
 
 	@Override
 	@SuppressWarnings("unchecked")
 	public List<Esame> findAll() {
-		String hql = "FROM Esame";
-		Query query = openSession().createQuery(hql);
-		List<Esame> list = query.list();
-		return list;
+			
+		return null;
 	}
 	
 	

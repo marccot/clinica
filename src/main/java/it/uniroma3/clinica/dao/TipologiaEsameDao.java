@@ -1,9 +1,10 @@
-package it.uniroma3.clinica.persistence;
+package it.uniroma3.clinica.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 import org.hibernate.Query;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -19,15 +20,13 @@ public class TipologiaEsameDao extends Dao<TipologiaEsame> {
 
 	@Override
 	public TipologiaEsame findById(Long id) {
-		return (TipologiaEsame) openSession().get(TipologiaEsame.class, id);
+		return (TipologiaEsame) em.find(TipologiaEsame.class, id);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public List<TipologiaEsame> findAll() {
-		String hql = "FROM TipologiaEsame";
-		Query query = openSession().createQuery(hql);
-		List<TipologiaEsame> list = query.list();
+		TypedQuery<TipologiaEsame> query = em.createNamedQuery("TipologiaEsame.findAll", TipologiaEsame.class);
+		List<TipologiaEsame> list = query.getResultList();
 		return list;
 	}
 	

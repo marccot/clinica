@@ -4,8 +4,6 @@
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Medi Cure Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
@@ -19,11 +17,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/ihover.css" rel="stylesheet" media="all">
 <!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script>
-<!-- //js -->
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-	<!-- start-smoth-scrolling -->
-
-	<!-- start-smoth-scrolling -->
 </head>
 <body>
 
@@ -32,9 +25,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <form class="form-signin" action = "userLogin" method = "post">       
       <h2 class="form-signin-heading">Please login</h2>
       <br/>
-      <input type="text" class="form-control" name="username" placeholder="Username" required="true" autofocus="" />
+      <input type="text" class="form-control" name="username" placeholder="Username" required autofocus />
       <br/>
-      <input type="password" class="form-control" name="password" placeholder="Password" required="true"/>      
+      <input type="password" class="form-control" name="password" placeholder="Password" required/>      
    <!--   <label class="checkbox">
         <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
       </label> -->

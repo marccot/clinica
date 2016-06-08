@@ -18,16 +18,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href=<c:url value="/bootstrap/css/bootstrap.css" /> rel="stylesheet" type="text/css" media="all" />
-<link href=<c:url value="/bootstrap/css/style.css" /> rel="stylesheet" type="text/css" media="all" />
+<link href="<c:url value="/bootstrap/css/bootstrap.css" />" rel="stylesheet" type="text/css" media="all" />
+<link href="<c:url value="/bootstrap/css/style.css" />" rel="stylesheet" type="text/css" media="all" />
 <!-- toggle menu links -->
-<link href=<c:url value="/bootstrap/css/component.css" /> rel="stylesheet" type="text/css"  />
+<link href="<c:url value="/bootstrap/css/component.css" />" rel="stylesheet" type="text/css"  />
 <!-- //menu links -->
-<link href=<c:url value="/bootstrap/css/popuo-box.css" />rel="stylesheet" type="text/css" media="all"/>
+<link href="<c:url value="/bootstrap/css/popuo-box.css" />"rel="stylesheet" type="text/css" media="all"/>
 <!-- effect9 links -->
-<link href=<c:url value="/bootstrap/css/ihover.css" /> rel="stylesheet" media="all">
+<link href="<c:url value="/bootstrap/css/ihover.css" />" rel="stylesheet" media="all">
 <!-- js -->
-<script src=<c:url value ="/bootstrap/js/jquery-1.11.1.min.js"/>> </script>
+<script src="<c:url value ="/bootstrap/js/jquery-1.11.1.min.js"/>"> </script>
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<!-- start-smoth-scrolling -->
@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</li>	
 				
 				<li data-hovercolor="#fff">
-					<a href="#">
+					<a href="<c:url value = "pageLogIn"/>">
 						<h4 data-type="mText" class="sti-item">AREA PAZIENTE</h4>
 						<p data-type="sText" class="sti-item">Accedi alla tua area riservata per visionare i tuoi esami</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-apple sti-item"></span>

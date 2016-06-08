@@ -10,7 +10,7 @@ import javax.persistence.*;
  *
  */ 
 @Entity
-
+@NamedQuery(name="Amministrazione.findAll",query="SELECT a FROM Amministrazione a")
 public class Amministrazione implements Serializable {
 
 	/**

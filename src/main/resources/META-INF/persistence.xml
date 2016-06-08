@@ -3,13 +3,13 @@
 	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	<persistence-unit name="clinica-unit" transaction-type="RESOURCE_LOCAL">
-	<provider>javax.persistence.spi.PersistenceProvider</provider>
-<!-- 		<class>it.uniroma3.clinica.entity.Esame</class> -->
-<!-- 		<class>it.uniroma3.clinica.entity.Medico</class> -->
-<!-- 		<class>it.uniroma3.clinica.entity.Paziente</class> -->
-<!-- 		<class>it.uniroma3.clinica.entity.TipologiaEsame</class> -->
-<!-- 		<class>it.uniroma3.clinica.entity.Utente</class> -->
-<!-- 		<class>it.uniroma3.clinica.entity.Prerequisito</class> -->
+	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>it.uniroma3.clinica.model.Esame</class>
+		<class>it.uniroma3.clinica.model.Medico</class>
+		<class>it.uniroma3.clinica.model.Paziente</class>
+		<class>it.uniroma3.clinica.model.TipologiaEsame</class>
+		<class>it.uniroma3.clinica.model.Utente</class>
+		<class>it.uniroma3.clinica.model.Prerequisito</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 			<property name="javax.persistence.jdbc.user" value="postgres" />

@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(value="/homeController")
 public class HomePageController {
 	
 	@RequestMapping(value="/index", method = RequestMethod.GET)

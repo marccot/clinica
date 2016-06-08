@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import it.uniroma3.clinica.model.TipologiaEsame;
-import it.uniroma3.clinica.persistence.TipologiaEsameDao;
+import it.uniroma3.clinica.dao.TipologiaEsameDao;
 
 @Service
 @Transactional

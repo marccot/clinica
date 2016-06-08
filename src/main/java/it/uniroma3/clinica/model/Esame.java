@@ -10,6 +10,7 @@ import javax.persistence.*;
  *
  */
 @Entity
+@NamedQuery(name="Esame.findAll",query="SELECT e FROM Esame e")
 public class Esame implements Serializable {
  
 	   

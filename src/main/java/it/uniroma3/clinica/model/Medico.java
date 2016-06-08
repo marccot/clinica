@@ -11,6 +11,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "medico")
+@NamedQuery(name="Medico.findAll",query="SELECT m FROM TipologiaEsame m")
 public class Medico implements Serializable {
 
 	   

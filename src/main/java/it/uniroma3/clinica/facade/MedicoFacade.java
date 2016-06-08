@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import it.uniroma3.clinica.model.Medico;
-import it.uniroma3.clinica.persistence.MedicoDao;
+import it.uniroma3.clinica.dao.MedicoDao;
 
 @Service
 public class MedicoFacade {

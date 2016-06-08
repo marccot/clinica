@@ -1,4 +1,4 @@
-package it.uniroma3.clinica.persistence;
+package it.uniroma3.clinica.dao;
 
 import java.util.List;
 
@@ -22,14 +22,13 @@ public class PrerequisitoDao extends Dao<Prerequisito> {
 
 	@Override
 	public Prerequisito findById(Long id) {
-		return (Prerequisito) openSession().get(Paziente.class, id);
+		return (Prerequisito) em.find(Prerequisito.class, id);
 	}
 
 	@Override
 	public List<Prerequisito> findAll() {
-		String hql = "FROM Prerequisito";
-		Query query = openSession().createQuery(hql);
-		List<Prerequisito> list = query.list();
+		TypedQuery<Prerequisito> query = em.createNamedQuery("Prerequisito.findAll", Prerequisito.class);
+		List<Prerequisito> list = query.getResultList();
 		return list;
 	}
 

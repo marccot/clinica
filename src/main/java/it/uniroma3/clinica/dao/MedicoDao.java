@@ -1,9 +1,10 @@
-package it.uniroma3.clinica.persistence;
+package it.uniroma3.clinica.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
@@ -16,17 +17,15 @@ public class MedicoDao extends Dao<Medico>{
 
 	@Override
 	public Medico findById(Long id) {
-		return (Medico) openSession().get(Medico.class, id);
+		return (Medico) em.find(Medico.class, id);
 	}
 
 	@Override
-	@SuppressWarnings("unchecked")
 	public List<Medico> findAll() {
-		String hql = "FROM Medico";
-		Query query = openSession().createQuery(hql);
-		List<Medico> list = query.list();
+		TypedQuery<Medico> query = em.createNamedQuery("Medico.findAll", Medico.class);
+		List<Medico> list = query.getResultList();
 		return list;
 	}
-	
-	
+
+
 }

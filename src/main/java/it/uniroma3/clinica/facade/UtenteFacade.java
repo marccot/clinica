@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import it.uniroma3.clinica.persistence.UtenteDao;
+import it.uniroma3.clinica.dao.UtenteDao;
 import it.uniroma3.clinica.model.Utente;
 
 @Service

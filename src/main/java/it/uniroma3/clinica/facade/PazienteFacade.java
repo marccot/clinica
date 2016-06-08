@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import it.uniroma3.clinica.model.Paziente;
-import it.uniroma3.clinica.persistence.PazienteDao;
+import it.uniroma3.clinica.dao.PazienteDao;
 
 @Service
 public class PazienteFacade {

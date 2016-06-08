@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import it.uniroma3.clinica.facade.TipologiaEsameFacade;
 
 @Controller
-@RequestMapping("/tipologiaEsame")
 public class InserimentoTipologiaEsameController {
 
 	@Autowired

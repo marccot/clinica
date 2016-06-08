@@ -10,11 +10,11 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
 	<context:property-placeholder location="/WEB-INF/hibernate.properties" />
-	<mvc:resources mapping="/bootstrap/**" location="/bootstrap/"/>
-    <mvc:annotation-driven />
-    
- 	<context:component-scan base-package="it.uniroma3.clinica" />
- 
+	<mvc:resources mapping="/bootstrap/**" location="/WEB-INF/bootstrap/" />
+	<mvc:annotation-driven />
+
+	<context:component-scan base-package="it.uniroma3.clinica" />
+
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="${jdbc.driverClassName}" />
@@ -23,45 +23,45 @@
 		<property name="password" value="${jdbc.password}" />
 	</bean>
 
-	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		 <property name="packagesToScan" value="it.uniroma3.clinica.model"/>
-		<property name="hibernateProperties">
-			<props>
-				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
-				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
-				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
-			</props>
-		</property>
-	</bean>	
+	<!-- <bean id="sessionFactory" -->
+	<!-- class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"> -->
+	<!-- <property name="dataSource" ref="dataSource" /> -->
+	<!-- <property name="packagesToScan" value="it.uniroma3.clinica.model" /> -->
+	<!-- <property name="hibernateProperties"> -->
+	<!-- <props> -->
+	<!-- <prop key="hibernate.dialect">${hibernate.dialect}</prop> -->
+	<!-- <prop key="hibernate.show_sql">${hibernate.show_sql}</prop> -->
+	<!-- <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop> -->
+	<!-- </props> -->
+	<!-- </property> -->
+	<!-- </bean> -->
 
-<!-- <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"> -->
-<!--   <property name="showSql" value="true"/> -->
-<!--   <property name="generateDdl" value="true"/> -->
-<!--   <property name="databasePlatform" value="org.hibernate.dialect.PostgreSQLDialect"/> -->
-<!-- </bean> -->
-	
-<!--     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"> -->
-<!--         <property name="dataSource" ref="dataSource" /> -->
-<!--          <property name="jpaVendorAdapter" ref="jpaVendorAdapter" /> -->
-<!--         <property name="persistenceUnitName" value="clinica-unit"/> -->
-<!--         <property name="packagesToScan" value="it.uniroma3.clinica.model"/> -->
-<!--         <property name="jpaProperties"> -->
-<!--             <props> -->
-<!--                 <prop key="hibernate.dialect">${hibernate.dialect}</prop> -->
-<!--                 <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop> -->
-<!--                 <prop key="hibernate.show_sql">${hibernate.show_sql}</prop> -->
-<!--             </props> -->
-<!--         </property> -->
-<!--     </bean> -->
-    
-    	<bean id="transactionManager"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory" />
+
+	<!-- <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"> -->
+	<!-- <property name="showSql" value="true"/> -->
+	<!-- <property name="generateDdl" value="true"/> -->
+	<!-- <property name="databasePlatform" value="org.hibernate.dialect.PostgreSQLDialect"/> -->
+	<!-- </bean> -->
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+<!-- 		<property name="persistenceXmlLocation" value="classpath:META-INF/persistence.xml" /> -->
+<!-- 		<property name="persistenceUnitName" value="clinica-unit" /> -->
+		<property name="dataSource" ref="dataSource" />
+		       <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <property name="generateDdl" value="true" />
+                <property name="showSql" value="true" />
+            </bean>
+        </property>
+		<!-- <property name="jpaDialect" ref="jpaDialect" /> -->
 	</bean>
 
-	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
+    </bean>
+    <!-- enable the configuration of transactional behavior based on annotations -->
+    <tx:annotation-driven transaction-manager="transactionManager" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

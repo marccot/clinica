@@ -1,4 +1,4 @@
-package it.uniroma3.clinica.persistence;
+package it.uniroma3.clinica.dao;
 
 import java.util.List;
 
@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 
 import org.hibernate.*;
@@ -23,15 +24,13 @@ public class UtenteDao extends Dao<Utente> {
 
 	@Override
 	public Utente findById(Long id) {
-		return (Utente) openSession().get(Utente.class, id);
+		return (Utente) em.find(Utente.class, id);
 	}
 
 	@Override
-	@SuppressWarnings("unchecked")
 	public List<Utente> findAll() {
-		String hql = "FROM Utente";
-		Query query = openSession().createQuery(hql);
-		List<Utente> list = query.list();
+		TypedQuery<Utente> query = em.createNamedQuery("Utente.findAll", Utente.class);
+		List<Utente> list = query.getResultList();
 		return list;
 	}
 
