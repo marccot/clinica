@@ -31,8 +31,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<!-- start-smoth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript" src="<c:url value="/bootstrap/js/move-top.js"/>"></script>
+		<script type="text/javascript" src="<c:url value="/bootstrap/js/easing.js"/>"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){		
@@ -49,7 +49,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body class="cbp-spmenu-push">
  
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="js/classie.js"></script>
+		<script src="<c:url value="/bootstrap/js/classie.js"/>"></script>
 		<script>
 			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
 				showLeftPush = document.getElementById( 'showLeftPush' ),
@@ -75,7 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- banner -->
 <div class="banner">
 
-	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<script src=" <c:url value="/bootstrap/js/jquery.magnific-popup.js" /> " type="text/javascript"></script>
 		<div id="small-dialog" class="mfp-hide">
 			<div class="search-top">
 				 <div class="login">
@@ -101,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</script>				
 		</div>
 	<div class="banner-info">
-		<script src="js/responsiveslides.min.js"></script>
+		<script src="<c:url value="/bootstrap/js/responsiveslides.min.js"/>"></script>
 		<!-- 	<script>
 									// You can also use "$(window).load(function() {"
 									$(function () {
@@ -177,7 +177,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-scissors sti-item"></span>
 					</a>
 				</li>
-				<script type="text/javascript" src="WEB-INF/js/jquery.iconmenu.js"></script>
+				<script type="text/javascript" src="<c:url value="/bootstrap/js/jquery.iconmenu.js"/>"></script>
 				<script type="text/javascript">
 					$(function() {
 						$('#sti-menu').iconmenu({
@@ -259,7 +259,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Bootstrap core JavaScript-->
     <!-- Placed at the end of the document so the pages load faster -->
 	<!-- js -->
-		 <script src="js/bootstrap.js"></script>
+		 <script src="<c:url value="/bootstrap/js/bootstrap.js"/>"></script>
 	<!-- js -->
 <!-- smooth scrolling -->
 	<script type="text/javascript">
