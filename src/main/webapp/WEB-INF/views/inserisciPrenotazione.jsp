@@ -1,5 +1,5 @@
 <%@ page 
-import = "it.uniroma3.clinica.model.Medico, it.uniroma3.clinica.model.Paziente,it.uniroma3.clinica.facade.Facade, java.util.*, it.uniroma3.clinica.model.TipologiaEsame"
+import = "it.uniroma3.clinica.model.Medico, it.uniroma3.clinica.model.Paziente, java.util.*, it.uniroma3.clinica.model.TipologiaEsame"
 language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">

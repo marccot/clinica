@@ -14,10 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import it.uniroma3.clinica.facade.Facade;
 import it.uniroma3.clinica.helper.LogInHelper;
 import it.uniroma3.clinica.model.Utente;
-import it.uniroma3.clinica.persistence.UtenteDao;
+import it.uniroma3.clinica.dao.UtenteDao;
 
 //@WebServlet("/userLogout")
 public class LogOutController extends HttpServlet {
