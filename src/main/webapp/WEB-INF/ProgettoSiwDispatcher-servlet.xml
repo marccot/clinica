@@ -14,6 +14,8 @@
 	<mvc:annotation-driven />
 
 	<context:component-scan base-package="it.uniroma3.clinica" />
+	
+	<bean id="pazienteValidator" class="it.uniroma3.clinica.validator.PazienteValidator" />
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -39,6 +41,11 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="packagesToScan" value="it.uniroma3.clinica.model" />
 		<!-- <property name="jpaDialect" ref="jpaDialect" /> -->
+	</bean>
+	
+	<bean id="messageSource" 	class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:message" />
+		<property name="defaultEncoding" value="UTF-8" />
 	</bean>
 
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">

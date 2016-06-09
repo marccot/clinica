@@ -2,8 +2,6 @@ package it.uniroma3.clinica.facade;
 
 import java.util.List;
 
-import javax.persistence.EntityTransaction;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

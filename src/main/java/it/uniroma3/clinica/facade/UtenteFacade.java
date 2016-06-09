@@ -1,7 +1,5 @@
 package it.uniroma3.clinica.facade;
 
-import java.util.List;
-
 import org.springframework.transaction.annotation.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;

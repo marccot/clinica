@@ -18,19 +18,23 @@
 		<table>
 		<tr>
 			<td>Nome Paziente :</td>
-			<td><form:input type="text" path='nome' placeholder="nome" required="true"/></td>
+			<td><form:input type="text" path='nome' placeholder="nome" /></td>
+			<td><form:errors path="nome"  /></td>
 		</tr>
 		<tr>
 			<td>Cognome Paziente :</td>
 			<td><form:input type="text" path='cognome' placeholder="cognome" required="true"/></td>
+			<td><form:errors path="cognome"  /></td>
 		</tr>
 		<tr>
 			<td>Codice Fiscale :</td>
 			<td><form:input type="text" path='codiceFiscale' placeholder="codice fiscale" required="true"/></td>
+			<td><form:errors path="codiceFiscale"/></td>
 		</tr>
 		<tr>
 			<td>Codice Personale :</td>
 			<td><form:input type="text" path='codice' placeholder="codice" required="true"/></td>
+			<td><form:errors path="codice"  /></td>
 		</tr>
 		<tr>
 			<td><input type="submit" value="invia" /></td>
