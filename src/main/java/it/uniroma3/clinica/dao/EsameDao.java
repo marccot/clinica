@@ -2,10 +2,8 @@ package it.uniroma3.clinica.dao;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
-import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
 import it.uniroma3.clinica.model.Esame;
@@ -19,10 +17,10 @@ public class EsameDao extends Dao<Esame> {
 	}
 
 	@Override
-	@SuppressWarnings("unchecked")
 	public List<Esame> findAll() {
-			
-		return null;
+		TypedQuery<Esame> query = em.createNamedQuery("Esame.findAll", Esame.class);
+		List<Esame> list = query.getResultList();
+		return list;
 	}
 	
 	

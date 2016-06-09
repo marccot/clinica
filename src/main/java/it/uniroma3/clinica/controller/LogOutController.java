@@ -3,20 +3,13 @@ package it.uniroma3.clinica.controller;
 //import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import java.io.IOException;
-import java.io.PrintWriter;
 
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import it.uniroma3.clinica.helper.LogInHelper;
-import it.uniroma3.clinica.model.Utente;
-import it.uniroma3.clinica.dao.UtenteDao;
 
 //@WebServlet("/userLogout")
 public class LogOutController extends HttpServlet {

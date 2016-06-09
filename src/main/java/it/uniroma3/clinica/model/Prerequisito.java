@@ -29,7 +29,6 @@ public class Prerequisito implements Serializable {
 	
 	public Prerequisito( String nome, String valore, TipologiaEsame tipologiaEsame) {
 		super();
-		this.id = id;
 		this.nome = nome;
 		this.valore = valore;
 		this.tipologiaEsame = tipologiaEsame;
