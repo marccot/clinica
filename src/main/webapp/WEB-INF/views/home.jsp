@@ -161,6 +161,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item"></span>
 					</a>
 				</li>	
+				<li data-hovercolor="#fff">
+					<a href="<c:url value = "nuovoPaziente"/>">
+						<h4 data-type="mText" class="sti-item">Inserisci un fottuto paziente</h4>
+						<p data-type="sText" class="sti-item">Accedi alla tua area riservata per visionare i tuoi esami</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-apple sti-item"></span>
+					</a>
+				</li>
 				
 				<li data-hovercolor="#fff">
 					<a href="<c:url value = "pageLogIn"/>">

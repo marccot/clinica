@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+
+import java.io.Serializable;
 import java.lang.Long;
 import java.lang.String;
 
@@ -18,7 +20,7 @@ import java.lang.String;
 @Entity
 @Table(name = "paziente")
 @NamedQuery(name="Paziente.findAll",query="SELECT p FROM Paziente p")
-public class Paziente  {
+public class Paziente implements Serializable {
 
 	   
 	@Id
@@ -28,7 +30,6 @@ public class Paziente  {
 	private String nome;
 	@Column(nullable=false)
 	private String cognome;
-	@Column(nullable=false)
 	private String codiceFiscale;
 	private String codice;
 	private static final long serialVersionUID = 1L;
@@ -65,9 +66,10 @@ public class Paziente  {
 		this.codiceFiscale = codiceFiscale;
 	}
 	
-	public String getCodiceFsicale() {
+	public String getCodiceFiscale() {
 		return this.codiceFiscale;
 	}
+	
 	public String getCognome() {
 		return this.cognome;
 	}

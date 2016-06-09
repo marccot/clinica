@@ -12,24 +12,22 @@ import it.uniroma3.clinica.model.Paziente;
 import it.uniroma3.clinica.dao.PazienteDao;
 
 @Service
+@Transactional
 public class PazienteFacade {
 	
 	@Autowired
 	private PazienteDao pazienteDao;
 	
-	@Transactional
 	public List<Paziente> getPazienti(){
 		List<Paziente> pazienti = pazienteDao.findAll();
 		return pazienti;
 	}
 	
-	@Transactional
 	public Paziente getPaziente(long id) {
 		Paziente paziente = pazienteDao.findById(id);
 		return paziente;
 	}
 	
-	@Transactional
 	public void savePaziente(Paziente paziente){
 		pazienteDao.save(paziente);
 	}

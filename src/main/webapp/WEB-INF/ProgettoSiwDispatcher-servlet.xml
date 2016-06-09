@@ -25,23 +25,27 @@
 
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-<!-- 		<property name="persistenceXmlLocation" value="classpath:META-INF/persistence.xml" /> -->
-<!-- 		<property name="persistenceUnitName" value="clinica-unit" /> -->
+		<!-- <property name="persistenceXmlLocation" value="classpath:META-INF/persistence.xml" 
+			/> -->
+		<property name="persistenceUnitName" value="clinica-unit" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="showSql" value="true" />
+				<property name="generateDdl" value="true" />
+				<property name="database" value="POSTGRESQL" />
+				<property name="databasePlatform" value="org.hibernate.dialect.PostgreSQLDialect" />
+			</bean>
+		</property>
 		<property name="dataSource" ref="dataSource" />
-		       <property name="jpaVendorAdapter">
-            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-                <property name="generateDdl" value="true" />
-                <property name="showSql" value="true" />
-            </bean>
-        </property>
+		<property name="packagesToScan" value="it.uniroma3.clinica.model" />
 		<!-- <property name="jpaDialect" ref="jpaDialect" /> -->
 	</bean>
 
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-        <property name="entityManagerFactory" ref="entityManagerFactory" />
-    </bean>
-    <!-- enable the configuration of transactional behavior based on annotations -->
-    <tx:annotation-driven transaction-manager="transactionManager" />
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	<!-- enable the configuration of transactional behavior based on annotations -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
