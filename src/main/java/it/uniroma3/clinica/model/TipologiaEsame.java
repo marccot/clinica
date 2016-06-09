@@ -80,6 +80,11 @@ public class TipologiaEsame implements Serializable {
 	}
 
 	@Override
+	public String toString(){
+		return this.nome + ": " + this.descrizione + " €" + this.costo;
+	}
+	
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;

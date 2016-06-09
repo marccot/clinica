@@ -17,7 +17,7 @@ public class EsameFacade {
 	@Autowired
 	private EsameDao esameDao;
 	
-	public List<Esame> getPazienti(){
+	public List<Esame> getEsami(){
 		List<Esame> esame = esameDao.findAll();
 		return esame;
 	}

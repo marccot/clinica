@@ -42,7 +42,7 @@ public class EsameController extends WebMvcConfigurerAdapter {
 		esameFacade.saveEsame(esame);
 		return "esameInserito";
 	}
-	
+
 	@RequestMapping(value="/nuovoEsame", method = RequestMethod.GET)
 	public String nuovoPazienteRedirect(ModelMap model) {
 		model.addAttribute("esame", new Esame());

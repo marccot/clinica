@@ -1,5 +1,7 @@
 package it.uniroma3.clinica.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -26,6 +28,12 @@ public class InserimentoTipologiaEsameController {
 	public String deleteTipologiaEsame() {
 		
 		return "login";
+	}
+	@RequestMapping(value="/vediEsami" ,method = RequestMethod.GET)
+	public String vediEsami(ModelMap model){
+		List<TipologiaEsame> esami = tipoEsameFacade.getAllTipologiaEsame();
+		model.addAttribute("esami", esami);
+		return "esami";
 	}
 	@RequestMapping(value="/inserisciTipologiaEsame", method = RequestMethod.GET)
 	public String indexRedirect(ModelMap model) {

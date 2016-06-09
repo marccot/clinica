@@ -42,28 +42,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<p> Usa questa area per l'inserimento di dati nel sistema  </p>
 		<ul id="sti-menu" class="sti-menu">
 				<li data-hovercolor="#fff" class="">
-					<a href="<c:url value="/nuovoPaziente"/>">
+					<a href="<c:url value="/inserisciTipologiaEsame"/>">
 						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI ESAME</strong>
 						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci un esame nel sistema.</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
 					</a>
 				</li>
 				<li data-hovercolor="#fff" class="">
-					<a href="#">
+					<a href="<c:url value="/inserisciMedico" /> ">
 						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI MEDICO</strong>
 						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Aggiungi un medico alla clinica.</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-scissors sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
 					</a>
 				</li>
 				<li data-hovercolor="#fff" class="">
-					<a href="#">
+					<a href="<c:url value="/nuovoPaziente" /> ">
 						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI PAZIENTE</strong>
 						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci un paziente nel sistema.</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-education sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
 					</a>
 				</li>
 				<li data-hovercolor="#fff" class="">
-					<a href="#">
+					<a href="<c:url value="/inserisciPrenotazione" /> ">
 						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI PRENOTAZIONE</strong>
 						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci una prenotazione nel sistema.</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-apple sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
