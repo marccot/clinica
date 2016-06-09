@@ -1,5 +1,6 @@
 <%@ page session='true' language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -41,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<p> Usa questa area per l'inserimento di dati nel sistema  </p>
 		<ul id="sti-menu" class="sti-menu">
 				<li data-hovercolor="#fff" class="">
-					<a href="#"onclick=document.getElementById("es"); style="display:block";>
+					<a href="#" onclick="document.getElementById('es').style.display='block';">
 						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI ESAME</strong>
 						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci un esame nel sistema.</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
@@ -90,36 +91,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 <div id="es" class="bs-docs-example" style="display:none";>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
+<c:url var="url" value="/paziente" />
+        <form method="post" action="inserisciPaziente"
+		modelAttribute="paziente" name="form">
+		<table>
+		<tr>
+			<td>Nome Paziente :</td>
+			<td><input type="text" path='nome' placeholder="nome" required="true"/></td>
+		</tr>
+		<tr>
+			<td>Cognome Paziente :</td>
+			<td><input type="text" path='cognome' placeholder="cognome" required="true"/></td>
+		</tr>
+		<tr>
+			<td>Codice Fiscale :</td>
+			<td><input type="text" path='codiceFiscale' placeholder="codice fiscale" required="true"/></td>
+		</tr>
+		<tr>
+			<td>Codice Personale :</td>
+			<td><input type="text" path='codice' placeholder="codice" required="true"/></td>
+		</tr>
+		<tr>
+			<td><a href="#" onclick="document.getElementById('es').style.display='none';"></a><input type="submit" value="invia" /></td>
+		</tr>
+		</table>
+	</form>
           </div>
 </body>
 </html>
