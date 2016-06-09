@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import it.uniroma3.clinica.facade.EsameFacade;
+import it.uniroma3.clinica.facade.MedicoFacade;
+import it.uniroma3.clinica.facade.PazienteFacade;
 import it.uniroma3.clinica.facade.TipologiaEsameFacade;
 import it.uniroma3.clinica.model.Esame;
 
@@ -25,6 +27,10 @@ public class EsameController extends WebMvcConfigurerAdapter {
 	EsameFacade esameFacade;
 	@Autowired
 	TipologiaEsameFacade tipologiaFacade;
+	@Autowired
+	PazienteFacade pazienteFacade;
+	@Autowired
+	MedicoFacade medicoFacade;
 	
 //	@Autowired
 //	@Qualifier("esameValidator")
@@ -47,6 +53,8 @@ public class EsameController extends WebMvcConfigurerAdapter {
 	public String nuovoPazienteRedirect(ModelMap model) {
 		model.addAttribute("esame", new Esame());
 		model.addAttribute("listaTipologie",tipologiaFacade.getAllTipologiaEsame() );
+		model.addAttribute("listaPazienti", pazienteFacade.getPazienti());
+		model.addAttribute("listaMedici", medicoFacade.getMedici());
 		return "inserisciEsame";
 	}
 

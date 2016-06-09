@@ -10,14 +10,30 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h2>Effettua una prenotazione</h2>
 	<form:form method="post" action="inserisciEsame" modelAttribute="esame"
 		name="form">
 		<table>
 			<tr>
-				<form:select path="tipologia">
-					<form:option value="NONE" label="--- Select ---" />
-					<form:options items="${listaTipologie}" />
-				</form:select>
+				<td>Tipologia d'esame :</td>
+				<td><form:select path="tipologia">
+						<form:option value="NONE" label="--- Select ---" />
+						<form:options items="${listaTipologie}" />
+					</form:select></td>
+			</tr>
+			<tr>
+				<td>Paziente :</td>
+				<td><form:select path="paziente">
+						<form:option value="NONE" label="--- Select ---" />
+						<form:options items="${listaPazienti}" />
+					</form:select></td>
+			</tr>
+			<tr>
+				<td>Medico :</td>
+				<td><form:select path="medico">
+						<form:option value="NONE" label="--- Select ---" />
+						<form:options items="${listaMedici}" />
+					</form:select></td>
 			</tr>
 		</table>
 	</form:form>

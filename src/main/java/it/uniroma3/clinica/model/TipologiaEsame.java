@@ -128,5 +128,10 @@ public class TipologiaEsame implements Serializable {
 		return true;
 	}
 	
+	@Override
+	public String toString() {
+		return this.nome;
+	}
+	
 	
 }

@@ -67,10 +67,10 @@ public class Esame implements Serializable {
 	public void setDataPrenotazione(Date dataPrenotazione) {
 		this.dataPrenotazione = dataPrenotazione;
 	}
-	public TipologiaEsame getTipologiaEsame() {
+	public TipologiaEsame getTipologia() {
 		return tipologia;
 	}
-	public void setTipologiaEsame(TipologiaEsame tipologia) {
+	public void setTipologia(TipologiaEsame tipologia) {
 		this.tipologia = tipologia;
 	}
    
