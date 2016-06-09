@@ -1,16 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@page session="true"%>
+<%@ page session='true' language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
 <html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title></title>
+<title>AreaAmministrazione</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -34,46 +30,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- start-smoth-scrolling -->
 
 </head>
-
-<body>
+<body >
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
  <div class="collapse navbar-collapse navbar-ex1-collapse">
   <ul class="nav navbar-nav navbar-right">
-<a href="#"><span class="label label-danger logout">LOGOUT</span></a></ul></div></nav>
+  <button class="login-button logoutposition margineNavAreaAmministrazione" type="submit">Logout</button></ul></div></nav>
+  
+<div class="SfondoAreaAmministrazione"><h1 class="TitoloAreaAmministrazione" style="text-align:center">Benvenuto nel pannello di amministrazione</h1>
+<!--<a href="<c:url value="/inserisciMedico"/>"> Aggiungi dottore </a> ${statoInserimentoMedico }  <br />-->
+<a href="<c:url value="/inserisciMedico"/>"class="shiny-button pulsantiAreaAmministrazione"> <strong>Inserisci Dottore</strong> </a> ${statoInserimentoMedico }
+<a href="<c:url value="/inserisciPaziente"/>"class="shiny-button pulsantiAreaAmministrazione"><strong>Inserisci Paziente</strong></a> ${statoInserimentoPaziente }
+<a href="<c:url value="/inserisciTipologiaEsame"/>"class="shiny-button pulsantiAreaAmministrazione"><strong>Inserisci Esame</strong></a> ${statoInserimentoTipoEsame }
+<a href="<c:url value="/inserisciPrenotazione"/>"class="shiny-button"> <strong>Avvia Prenotazione</strong> </a> <br />
+<% session.removeAttribute("statoInserimentoMedico"); %>
+<form action = "userLogout" method = "get">
 
-<div id="banner-bottom" class="banner-bottom">
-	<div class="container">
-		<h3 class="tittle">Inserire dati del Paziente</h3>
-          </div>
-	<!-- va creato il controller per questo form -->
-	<form:form method="post" action="inserisciPaziente"
-		modelAttribute="paziente" name="form">
-		<table>
-		<tr>
-			<td>Nome Paziente :</td>
-			<td><form:input type="text" path='nome' placeholder="nome" /></td>
-			<td><form:errors path="nome"  /></td>
-		</tr>
-		<tr>
-			<td>Cognome Paziente :</td>
-			<td><form:input type="text" path='cognome' placeholder="cognome" required="true"/></td>
-			<td><form:errors path="cognome"  /></td>
-		</tr>
-		<tr>
-			<td>Codice Fiscale :</td>
-			<td><form:input type="text" path='codiceFiscale' placeholder="codice fiscale" required="true"/></td>
-			<td><form:errors path="codiceFiscale"/></td>
-		</tr>
-		<tr>
-			<td>Codice Personale :</td>
-			<td><form:input type="text" path='codice' placeholder="codice" required="true"/></td>
-			<td><form:errors path="codice"  /></td>
-		</tr>
-		<tr>
-			<td><input type="submit" value="invia" /></td>
-		</tr>
-		</table>
-	</form:form>
-	</div>
+</form></div>
 </body>
 </html>
