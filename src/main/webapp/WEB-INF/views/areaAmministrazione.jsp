@@ -49,7 +49,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</a>
 				</li>
 				<li data-hovercolor="#fff" class="">
-					<a href="#">
+					<a href='<c:url value="/inserisciMedico"/>'>
 						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI MEDICO</strong>
 						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Aggiungi un medico alla clinica.</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-scissors sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
@@ -63,7 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</a>
 				</li>
 				<li data-hovercolor="#fff" class="">
-					<a href="#">
+					<a href="<c:url value="/inserisciPrenotazione"/>">
 						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI PRENOTAZIONE</strong>
 						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci una prenotazione nel sistema.</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-apple sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
