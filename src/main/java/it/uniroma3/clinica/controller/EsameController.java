@@ -14,17 +14,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import it.uniroma3.clinica.facade.PazienteFacade;
-import it.uniroma3.clinica.model.Paziente;
+import it.uniroma3.clinica.facade.EsameFacade;
+import it.uniroma3.clinica.model.Esame;
 
 @Controller
-public class InserimentoPazienteController extends WebMvcConfigurerAdapter {
+public class EsameController extends WebMvcConfigurerAdapter {
 	
 	@Autowired
-	PazienteFacade facade;
+	EsameFacade facade;
 	
 	@Autowired
-	@Qualifier("pazienteValidator")
+	@Qualifier("esameValidator")
 	private Validator validator;
 	
 	@InitBinder
@@ -33,16 +33,16 @@ public class InserimentoPazienteController extends WebMvcConfigurerAdapter {
 	}
 	
 	@RequestMapping(value="/inserisciPaziente", method = RequestMethod.POST)
-	public String inserisciPaziente(@ModelAttribute("paziente") @Validated Paziente paziente,	BindingResult bindingResult, ModelMap model) {
+	public String inserisciPaziente(@ModelAttribute("esame") @Validated Esame esame, BindingResult bindingResult, ModelMap model) {
 		if (bindingResult.hasErrors()) 
 			return "inserisciPaziente";
-		facade.savePaziente(paziente);
+		facade.saveEsame(esame);
 		return "pazienteInserito";
 	}
 	
-	@RequestMapping(value="/nuovoPaziente", method = RequestMethod.GET)
+	@RequestMapping(value="/nuovoEsame", method = RequestMethod.GET)
 	public String nuovoPazienteRedirect(ModelMap model) {
-		model.addAttribute("paziente", new Paziente());
+		model.addAttribute("esame", new Esame());
 		return "inserisciPaziente";
 	}
 
