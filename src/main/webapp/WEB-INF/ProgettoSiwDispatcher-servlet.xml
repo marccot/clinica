@@ -16,6 +16,7 @@
 	<context:component-scan base-package="it.uniroma3.clinica" />
 	
 	<bean id="pazienteValidator" class="it.uniroma3.clinica.validator.PazienteValidator" />
+	<bean id="esameValidator" class="it.uniroma3.clinica.validator.EsameValidator" />
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">

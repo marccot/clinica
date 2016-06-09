@@ -15,35 +15,39 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import it.uniroma3.clinica.facade.EsameFacade;
+import it.uniroma3.clinica.facade.TipologiaEsameFacade;
 import it.uniroma3.clinica.model.Esame;
 
 @Controller
 public class EsameController extends WebMvcConfigurerAdapter {
 	
 	@Autowired
-	EsameFacade facade;
-	
+	EsameFacade esameFacade;
 	@Autowired
-	@Qualifier("esameValidator")
-	private Validator validator;
+	TipologiaEsameFacade tipologiaFacade;
 	
-	@InitBinder
-	private void initBinder(WebDataBinder binder) {
-		binder.setValidator(validator);
-	}
+//	@Autowired
+//	@Qualifier("esameValidator")
+//	private Validator validator;
+//	
+//	@InitBinder
+//	private void initBinder(WebDataBinder binder) {
+//		binder.setValidator(validator);
+//	}
 	
-	@RequestMapping(value="/inserisciPaziente", method = RequestMethod.POST)
-	public String inserisciPaziente(@ModelAttribute("esame") @Validated Esame esame, BindingResult bindingResult, ModelMap model) {
-		if (bindingResult.hasErrors()) 
-			return "inserisciPaziente";
-		facade.saveEsame(esame);
-		return "pazienteInserito";
+	@RequestMapping(value="/inserisciEsame", method = RequestMethod.POST)
+	public String inserisciPaziente(@ModelAttribute("esame") Esame esame,  ModelMap model) {
+//		if (bindingResult.hasErrors()) 
+//			return "inserisciEsame";
+		esameFacade.saveEsame(esame);
+		return "esameInserito";
 	}
 	
 	@RequestMapping(value="/nuovoEsame", method = RequestMethod.GET)
 	public String nuovoPazienteRedirect(ModelMap model) {
 		model.addAttribute("esame", new Esame());
-		return "inserisciPaziente";
+		model.addAttribute("listaTipologie",tipologiaFacade.getAllTipologiaEsame() );
+		return "inserisciEsame";
 	}
 
 }
