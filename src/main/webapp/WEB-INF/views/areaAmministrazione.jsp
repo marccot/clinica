@@ -30,16 +30,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- start-smoth-scrolling -->
 
 </head>
-<body>
-<h1>Benevenuto nel pannello di amministrazione</h1>
-
-<a href="<c:url value="/inserisciMedico"/>"> Aggiungi dottore </a> ${statoInserimentoMedico }  <br />
-<a href="<c:url value="/inserisciPaziente"/>">Aggiungi paziente</a> ${statoInserimentoPaziente } <br />
-<a href="<c:url value="/inserisciTipologiaEsame"/>">Aggiungi esame</a> ${statoInserimentoTipoEsame }<br />
-<a href="<c:url value="/inserisciPrenotazione"/>"> Aggiungi prenotazione </a> <br /> 
+<body >
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+ <div class="collapse navbar-collapse navbar-ex1-collapse">
+  <ul class="nav navbar-nav navbar-right">
+  <button class="login-button logoutposition margineNavAreaAmministrazione" type="submit">Logout</button></ul></div></nav>
+  
+<div class="SfondoAreaAmministrazione"><h1 class="TitoloAreaAmministrazione" style="text-align:center">Benvenuto nel pannello di amministrazione</h1>
+<!--<a href="<c:url value="/inserisciMedico"/>"> Aggiungi dottore </a> ${statoInserimentoMedico }  <br />-->
+<a href="<c:url value="/inserisciMedico"/>"class="shiny-button pulsantiAreaAmministrazione"> <strong>Inserisci Dottore</strong> </a> ${statoInserimentoMedico }
+<a href="<c:url value="/inserisciPaziente"/>"class="shiny-button pulsantiAreaAmministrazione"><strong>Inserisci Paziente</strong></a> ${statoInserimentoPaziente }
+<a href="<c:url value="/inserisciTipologiaEsame"/>"class="shiny-button pulsantiAreaAmministrazione"><strong>Inserisci Esame</strong></a> ${statoInserimentoTipoEsame }
+<a href="<c:url value="/inserisciPrenotazione"/>"class="shiny-button"> <strong>Avvia Prenotazione</strong> </a> <br />
 <% session.removeAttribute("statoInserimentoMedico"); %>
 <form action = "userLogout" method = "get">
-<button class="btn btn-lg btn-danger btn-block" type="submit">Logout</button> 
-</form>
+
+</form></div>
 </body>
 </html>
