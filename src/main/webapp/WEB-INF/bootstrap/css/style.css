@@ -3235,6 +3235,11 @@ margin:0 23px;
     top: 0;
     right: 0px;
 }
+.annullabutton{
+    line-height: 12.4;
+    border: none;
+    text-shadow: none;
+}
 .margineNavAreaAmministrazione{
 	margin-bottom: 3em;
 }

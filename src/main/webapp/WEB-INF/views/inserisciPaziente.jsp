@@ -73,7 +73,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<td><input type="submit" value="invia" /></td>
 		</tr>
 		</table>
+		<a href='<c:url value="/areaAmministrazione" />'><span class="label label-danger annullabutton">Annulla Operazione</span></a>
 	</form:form>
 	</div>
+	<div class="copy-right">
+	<div class="container">
+		<p> &copy; 2016 Clinica Progetto Siw<!-- design by e bla bla bla --></a></p>
+	</div>
+</div>
 </body>
 </html>

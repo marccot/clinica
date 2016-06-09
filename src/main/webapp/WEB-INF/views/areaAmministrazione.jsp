@@ -42,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<p> Usa questa area per l'inserimento di dati nel sistema  </p>
 		<ul id="sti-menu" class="sti-menu">
 				<li data-hovercolor="#fff" class="">
-					<a href="<c:url value="/nuovoPaziente"/>">
+					<a href='<c:url value="/nuovoEsame"/>'>
 						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI ESAME</strong>
 						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci un esame nel sistema.</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
@@ -56,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</a>
 				</li>
 				<li data-hovercolor="#fff" class="">
-					<a href="#">
+					<a href="<c:url value="/nuovoPaziente"/>">
 						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI PAZIENTE</strong>
 						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci un paziente nel sistema.</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-education sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
@@ -117,5 +117,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</table>
 	</form>
           </div>-->
+          <div class="copy-right">
+	<div class="container">
+		<p> &copy; 2016 Clinica Progetto Siw<!-- design by e bla bla bla --></a></p>
+	</div>
+</div>
 </body>
 </html>
