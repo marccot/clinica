@@ -155,7 +155,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 		<ul id="sti-menu" class="sti-menu">
 				<li data-hovercolor="#fff">
-					<a href="<c:url value="tipologiaEsame/addTipologiaEsame"/>">
+					<a href="<c:url value="/vediEsami"/>">
 						<h4 data-type="mText" class="sti-item">ESAMI</h4>
 						<p data-type="sText" class="sti-item">Qui potrai vedere gli esami offerti dalla nostra clinica</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item"></span>
