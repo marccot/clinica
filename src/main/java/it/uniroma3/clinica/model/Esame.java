@@ -73,5 +73,5 @@ public class Esame implements Serializable {
 	public void setTipologia(TipologiaEsame tipologia) {
 		this.tipologia = tipologia;
 	}
-   
+	
 }
