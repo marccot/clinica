@@ -91,33 +91,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</ul>
 	</div>
 </div>
-<!-- <div id="es" class="bs-docs-example" style="display:none";>
-<c:url var="url" value="/paziente" />
-        <form method="post" action="inserisciPaziente"
-		modelAttribute="paziente" name="form">
-		<table>
-		<tr>
-			<td>Nome Paziente :</td>
-			<td><input type="text" path='nome' placeholder="nome" required="true"/></td>
-		</tr>
-		<tr>
-			<td>Cognome Paziente :</td>
-			<td><input type="text" path='cognome' placeholder="cognome" required="true"/></td>
-		</tr>
-		<tr>
-			<td>Codice Fiscale :</td>
-			<td><input type="text" path='codiceFiscale' placeholder="codice fiscale" required="true"/></td>
-		</tr>
-		<tr>
-			<td>Codice Personale :</td>
-			<td><input type="text" path='codice' placeholder="codice" required="true"/></td>
-		</tr>
-		<tr>
-			<td><a href="#" onclick="document.getElementById('es').style.display='none';"></a><input type="submit" value="invia" /></td>
-		</tr>
-		</table>
-	</form>
-          </div>-->
           <div class="copy-right">
 	<div class="container">
 		<p> &copy; 2016 Clinica Progetto Siw<!-- design by e bla bla bla --></a></p>

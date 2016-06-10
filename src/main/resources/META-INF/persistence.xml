@@ -8,7 +8,6 @@
 		<class>it.uniroma3.clinica.model.Medico</class>
 		<class>it.uniroma3.clinica.model.Paziente</class>
 		<class>it.uniroma3.clinica.model.TipologiaEsame</class>
-		<class>it.uniroma3.clinica.model.Utente</class>
 		<class>it.uniroma3.clinica.model.Prerequisito</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
