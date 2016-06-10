@@ -16,7 +16,14 @@
 <label>Nome esame</label><form:input type='text' path='nome' /> <br />
 <label>Descrizione</label><form:input type='text' path='descrizione' /> <br />
 <label>Costo € </label><form:input path='costo' /> <br />
+<label>Prerequisiti:</label>
+<fieldset>
+<c:forEach items='${prerequisitiEsistenti }' var='prerequisito'>
+<input type='checkbox' name="${prerequisito.id }" value="${ prerequisito.id}" /> ${prerequisito.nome }
+ </c:forEach>
+ </fieldset>
 <input type="submit" name="submit" value="aggiungi tipologia" />
+
 </form:form>
 </body>
 </html>

@@ -3,6 +3,7 @@ package it.uniroma3.clinica.model;
 import java.io.Serializable;
 import java.lang.Long;
 import java.lang.String;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.*;
@@ -12,7 +13,9 @@ import javax.persistence.*;
  *
  */
 @Entity
-@NamedQuery(name="TipologiaEsame.findAll",query="SELECT t FROM TipologiaEsame t")
+@NamedQueries({
+@NamedQuery(name="TipologiaEsame.findAll",query="SELECT t FROM TipologiaEsame t"),
+})
 public class TipologiaEsame implements Serializable {
 
 	   
@@ -22,12 +25,13 @@ public class TipologiaEsame implements Serializable {
 	private String nome;
 	private String descrizione;
 	private Double costo;
-	@OneToMany
+	@ManyToMany( fetch=FetchType.EAGER)
 	private List<Prerequisito> prerequisiti;
 	private static final long serialVersionUID = 1L;
 	
 	public TipologiaEsame() {
 		super();
+		this.prerequisiti = new ArrayList<Prerequisito>();
 	}
 
 	public TipologiaEsame(Long id, String nome, String descrizione, Double costo, List<Prerequisito> prerequisiti) {
@@ -130,6 +134,6 @@ public class TipologiaEsame implements Serializable {
 	
 	@Override
 	public String toString(){
-		return this.nome + ": " + this.descrizione + " €" +this.costo;
+		return this.nome + ": " + this.descrizione + " €" +this.costo +this.getPrerequisiti().toString();
 	}
 }
