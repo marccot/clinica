@@ -133,5 +133,10 @@ public class Paziente implements Serializable {
 			return false;
 		return true;
 	}
+	
+	@Override
+	public String toString() {
+		return this.nome + " " + this.cognome;
+	}
    
 }

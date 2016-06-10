@@ -46,38 +46,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="collapse navbar-collapse navbar-ex1-collapse">
-		<ul class="nav navbar-nav navbar-right">
-			<a href="#"><span class="label label-danger logout">LOGOUT</span></a>
-		</ul>
-	</div>
-	</nav>
-	<div id="banner-bottom" class="banner-bottom">
-		<div class="container">
-			<h3 class="tittle">Inserire dati dell'Esame</h3>
-		</div>
-		<!-- va creato il controller per questo form -->
-		<form:form method="post" action="inserisciEsame"
-			modelAttribute="esame" name="form">
-			<table>
-				<tr>
-					<form:select path="tipologia">
+	<form:form method="post" action="inserisciEsame" modelAttribute="esame"
+		name="form">
+		<table>
+			<tr>
+				<td>Tipologia d'esame :</td>
+				<td><form:select path="tipologia">
 						<form:option value="NONE" label="--- Select ---" />
 						<form:options items="${listaTipologie}" />
-					</form:select>
-				</tr>
-			</table>
-		</form:form>
-		<a href='<c:url value="/areaAmministrazione" />'><span class="label label-danger annullabutton">Annulla Operazione</span></a>
-	</div>
-	<div class="copy-right">
-		<div class="container">
-			<p>
-				&copy; 2016 Clinica Progetto Siw
-				<!-- design by e bla bla bla -->
-			</p>
-		</div>
-	</div>
+					</form:select></td>
+			</tr>
+			<tr>
+				<td>Paziente :</td>
+				<td><form:select path="paziente">
+						<form:option value="NONE" label="--- Select ---" />
+						<form:options items="${listaPazienti}" />
+					</form:select></td>
+			</tr>
+			<tr>
+				<td>Medico :</td>
+				<td><form:select path="medico">
+						<form:option value="NONE" label="--- Select ---" />
+						<form:options items="${listaMedici}" />
+					</form:select></td>
+			</tr>
+			<tr>
+			<fmt:formatDate value="transactions['${loopStatus.index}'].valueTransactionDate"  
+                type="date" 
+                pattern="dd-MM-yyyy"
+                var="theFormattedDate" />
+<form:input type="text" path="dataEsame" value="${theFormattedDate}"/>
+			</tr>
+		</table>
+	</form:form>
 </body>
 </html>
