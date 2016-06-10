@@ -1,5 +1,6 @@
 <%@ page session='true' language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -30,21 +31,97 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- start-smoth-scrolling -->
 
 </head>
-<body >
+<body>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
  <div class="collapse navbar-collapse navbar-ex1-collapse">
   <ul class="nav navbar-nav navbar-right">
-  <button class="login-button logoutposition margineNavAreaAmministrazione" type="submit">Logout</button></ul></div></nav>
-  
-<div class="SfondoAreaAmministrazione"><h1 class="TitoloAreaAmministrazione" style="text-align:center">Benvenuto nel pannello di amministrazione</h1>
-<!--<a href="<c:url value="/inserisciMedico"/>"> Aggiungi dottore </a> ${statoInserimentoMedico }  <br />-->
-<a href="<c:url value="/inserisciMedico"/>"class="shiny-button pulsantiAreaAmministrazione"> <strong>Inserisci Dottore</strong> </a> ${statoInserimentoMedico }
-<a href="<c:url value="/inserisciPaziente"/>"class="shiny-button pulsantiAreaAmministrazione"><strong>Inserisci Paziente</strong></a> ${statoInserimentoPaziente }
-<a href="<c:url value="/inserisciTipologiaEsame"/>"class="shiny-button pulsantiAreaAmministrazione"><strong>Inserisci Esame</strong></a> ${statoInserimentoTipoEsame }
-<a href="<c:url value="/inserisciPrenotazione"/>"class="shiny-button"> <strong>Avvia Prenotazione</strong> </a> <br />
-<% session.removeAttribute("statoInserimentoMedico"); %>
-<form action = "userLogout" method = "get">
-
-</form></div>
+<a href="#"><span class="label label-danger logout">LOGOUT</span></a></ul></div></nav>
+<div id="banner-bottom" class="banner-bottom">
+	<div class="container">
+		<h3 class="tittle">Benvenuto nell'Area Amministrativa</h3>
+		<p> Usa questa area per l'inserimento di dati nel sistema  </p>
+		<ul id="sti-menu" class="sti-menu">
+				<li data-hovercolor="#fff" class="">
+					<!--  <a href='<c:url value="/nuovoEsame"/>'>-->
+					<a href="<c:url value="/inserisciTipologiaEsame"/>">
+						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI ESAME</strong>
+						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci un esame nel sistema.</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
+					</a>
+				</li>
+				<li data-hovercolor="#fff" class="">
+  					<a href="<c:url value="/inserisciMedico" /> ">
+						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI MEDICO</strong>
+						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Aggiungi un medico alla clinica.</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-scissors sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
+					</a>
+				</li>
+				<li data-hovercolor="#fff" class="">
+					<a href="<c:url value="/nuovoPaziente" /> ">
+						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI PAZIENTE</strong>
+						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci un paziente nel sistema.</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-education sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
+					</a>
+				</li>
+				<li data-hovercolor="#fff" class="">
+					<a href="<c:url value="/inserisciPrenotazione" /> ">
+						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI PRENOTAZIONE</strong>
+						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci una prenotazione nel sistema.</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-apple sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
+					</a>
+				</li>
+				
+				<script type="text/javascript" src="js/jquery.iconmenu.js"></script>
+				<script type="text/javascript">
+					$(function() {
+						$('#sti-menu').iconmenu({
+							animMouseenter	: {
+								'mText' : {speed : 400, easing : 'easeOutExpo', delay : 140, dir : 1},
+								'sText' : {speed : 400, easing : 'easeOutExpo', delay : 0, dir : 1},
+								'icon'  : {speed : 800, easing : 'easeOutBounce', delay : 280, dir : 1}
+							},
+							animMouseleave	: {
+								'mText' : {speed : 400, easing : 'easeInExpo', delay : 140, dir : 1},
+								'sText' : {speed : 400, easing : 'easeInExpo', delay : 280, dir : 1},
+								'icon'  : {speed : 400, easing : 'easeInExpo', delay : 0, dir : 1}
+							}
+						});
+					});
+				</script>
+		</ul>
+	</div>
+</div>
+<!-- <div id="es" class="bs-docs-example" style="display:none";>
+<c:url var="url" value="/paziente" />
+        <form method="post" action="inserisciPaziente"
+		modelAttribute="paziente" name="form">
+		<table>
+		<tr>
+			<td>Nome Paziente :</td>
+			<td><input type="text" path='nome' placeholder="nome" required="true"/></td>
+		</tr>
+		<tr>
+			<td>Cognome Paziente :</td>
+			<td><input type="text" path='cognome' placeholder="cognome" required="true"/></td>
+		</tr>
+		<tr>
+			<td>Codice Fiscale :</td>
+			<td><input type="text" path='codiceFiscale' placeholder="codice fiscale" required="true"/></td>
+		</tr>
+		<tr>
+			<td>Codice Personale :</td>
+			<td><input type="text" path='codice' placeholder="codice" required="true"/></td>
+		</tr>
+		<tr>
+			<td><a href="#" onclick="document.getElementById('es').style.display='none';"></a><input type="submit" value="invia" /></td>
+		</tr>
+		</table>
+	</form>
+          </div>-->
+          <div class="copy-right">
+	<div class="container">
+		<p> &copy; 2016 Clinica Progetto Siw<!-- design by e bla bla bla --></a></p>
+	</div>
+</div>
 </body>
 </html>

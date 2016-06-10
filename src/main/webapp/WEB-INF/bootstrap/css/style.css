@@ -44,7 +44,7 @@ ul{
 	padding:0;
 }
 label{
-	margin:0;
+	margin:5px;
 }
 /*-- to-top --*/
 #toTop {
@@ -3227,10 +3227,18 @@ margin:0 23px;
   background-image: linear-gradient(top, #800505 0%, #990505 100%);
   padding: 10.600000000000001px 24px 8.600000000000001px 24px;
 }
-.logoutposition{
+.logout{
+	padding: 18px 10px;
+    border: none;
+    text-shadow: none;
 	position: absolute;
     top: 0;
     right: 0px;
+}
+.annullabutton{
+    line-height: 12.4;
+    border: none;
+    text-shadow: none;
 }
 .margineNavAreaAmministrazione{
 	margin-bottom: 3em;
