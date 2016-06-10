@@ -3,6 +3,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@page session="true"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,6 +35,13 @@
 						<form:option value="NONE" label="--- Select ---" />
 						<form:options items="${listaMedici}" />
 					</form:select></td>
+			</tr>
+			<tr>
+			<fmt:formatDate value="transactions['${loopStatus.index}'].valueTransactionDate"  
+                type="date" 
+                pattern="dd-MM-yyyy"
+                var="theFormattedDate" />
+<form:input type="text" path="dataEsame" value="${theFormattedDate}"/>
 			</tr>
 		</table>
 	</form:form>
