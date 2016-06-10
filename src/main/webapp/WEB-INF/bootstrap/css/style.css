@@ -3243,4 +3243,9 @@ margin:0 23px;
 .margineNavAreaAmministrazione{
 	margin-bottom: 3em;
 }
-/*--//responsive media queries--*/
+a:hover > p {
+	background-color:white;
+	}
+a:hover > strong {
+	background-color:white;
+	} 

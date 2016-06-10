@@ -42,8 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<p> Usa questa area per l'inserimento di dati nel sistema  </p>
 		<ul id="sti-menu" class="sti-menu">
 				<li data-hovercolor="#fff" class="">
-					<!--  <a href='<c:url value="/nuovoEsame"/>'>-->
-					<a href="<c:url value="/inserisciTipologiaEsame"/>">
+					<a href="<c:url value="/inserisciTipologiaEsame"/>" class="">
 						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);">INSERISCI ESAME</strong>
 						<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci un esame nel sistema.</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
