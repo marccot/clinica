@@ -57,21 +57,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<h3 class="tittle">Inserire dati del Medico</h3>
 		</div>
+		<div>
 		<form:form action='addMedico' method='post' modelAttribute="medico"
 			name='form'>
 			<table>
+		</div>
+		<div>
 		<tr>
 			<td>Nome Medico :</td>
-			<td><form:input type="text" path='nome' placeholder="nome" required="true" /></td>
+			<td><form:input type="text" path='nome' placeholder="nome" required="true"  class="form-control"/></td>
 			<td><form:errors path="nome"  /></td>
 			</tr>
 		<tr>
+		</div>
+		<div>
 			<td>Cognome Medico</td>
-			<td><form:input type="text" path='cognome' placeholder="nome" required="true" /></td>
+			<td><form:input type="text" path='cognome' placeholder="nome" required="true" class="form-control"/></td>
 			<td><form:errors path="nome"  /></td>
 			</tr>
 			<tr>
-			<td><input type="submit" value="invia" /></td>
+			</div>
+			<div>
+			<td><input type="submit" value="invia" class = "button-success" /></td>
+			</div>
 		</tr>
 		</table>
 		<a href='<c:url value="/areaAmministrazione" />'><span class="label label-danger annullabutton">Annulla Operazione</span></a>
