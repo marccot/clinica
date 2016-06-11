@@ -53,18 +53,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <%@include file='header.html'%>
 
 <body>
-<<<<<<< HEAD
 
 <div class="content">
 <c:forEach items = '${esami }' var='esame'>
 	${esame } <br/>
 	<c:forEach items='${esame.prerequisiti }' var='prerequisito'>
-	${prerequisito} <br/>
+	${prerequisito.nome} <br/>
 	</c:forEach>
 </c:forEach>	 
 
 </div>
-=======
+
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav navbar-right">
@@ -102,6 +101,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</p>
 			</div>
 		</div>
->>>>>>> branch 'master' of https://github.com/marccot/clinica.git
+
 </body>
 </html>

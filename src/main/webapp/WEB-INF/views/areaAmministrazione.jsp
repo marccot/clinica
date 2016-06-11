@@ -155,7 +155,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</ul>
 		</div>
 	</div>
-<<<<<<< HEAD
 	<!-- <div id="es" class="bs-docs-example" style="display:none";>
 <c:url var="url" value="/paziente" />
         <form method="post" action="inserisciPaziente"
@@ -191,12 +190,5 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</a>
 			</p>
 		</div>
-=======
-</div>
-          <div class="copy-right">
-	<div class="container">
-		<p> &copy; 2016 Clinica Progetto Siw<!-- design by e bla bla bla --></a></p>
->>>>>>> branch 'master' of https://github.com/marccot/clinica
-	</div>
 </body>
 </html>
