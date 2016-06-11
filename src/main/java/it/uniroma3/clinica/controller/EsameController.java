@@ -2,6 +2,9 @@ package it.uniroma3.clinica.controller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.TimeZone;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -91,5 +94,16 @@ public class EsameController extends WebMvcConfigurerAdapter {
 		model.addAttribute("listaMedici", medicoFacade.getMedici());
 		return "inserisciEsame";
 	}
-
+	@RequestMapping(value="/vediEsamiPerMedici", method = RequestMethod.GET)
+	public String vediEsamiPerMedici(ModelMap model){
+		List<Medico> medici = medicoFacade.getMedici();
+		Map<Medico, List<Esame>> esamiByMedico = new HashMap<>();
+		for(Medico m : medici){
+			long id = m.getId();
+			List<Esame> esami = esameFacade.findByMedico(id); 
+			esamiByMedico.put(m, esami);
+		}
+		model.addAttribute("esamiByMedico", esamiByMedico);
+		return "riepilogoEsamiAmministrazione";
+	}
 }
