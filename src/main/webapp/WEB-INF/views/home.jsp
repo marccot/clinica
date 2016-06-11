@@ -174,7 +174,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</li>
 				
 				<li data-hovercolor="#fff">
-					<a href="<c:url value = "pageLogIn"/>">
+					<a href="<c:url value = "/areaPaziente"/>">
 					<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">AREA PAZIENTI</strong>
 					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Accedi alla tua area riservata per visionare i tuoi esami</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
