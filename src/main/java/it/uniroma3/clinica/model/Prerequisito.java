@@ -3,6 +3,8 @@ package it.uniroma3.clinica.model;
 import java.io.Serializable;
 import java.lang.Long;
 import java.lang.String;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -19,15 +21,15 @@ public class Prerequisito implements Serializable {
 	private Long id;
 	private String nome;
 	private String valore;
-	@ManyToOne
-	private TipologiaEsame tipologiaEsame;
+	@ManyToMany(fetch = FetchType.EAGER , mappedBy="prerequisiti")
+	private List<TipologiaEsame> tipologiaEsame;
 	private static final long serialVersionUID = 1L;
 
 	public Prerequisito() {
 		super();
 	}   
 	
-	public Prerequisito( String nome, String valore, TipologiaEsame tipologiaEsame) {
+	public Prerequisito( String nome, String valore, List<TipologiaEsame> tipologiaEsame) {
 		super();
 		this.nome = nome;
 		this.valore = valore;
@@ -58,11 +60,11 @@ public class Prerequisito implements Serializable {
 		this.valore = valore;
 	}   
 	
-	public TipologiaEsame getEsame() {
+	public List<TipologiaEsame> getEsame() {
 		return this.tipologiaEsame;
 	}
 
-	public void setEsame(TipologiaEsame tipologiaEsame) {
+	public void setEsame(List<TipologiaEsame> tipologiaEsame) {
 		this.tipologiaEsame = tipologiaEsame;
 	}
 
@@ -77,6 +79,11 @@ public class Prerequisito implements Serializable {
 		return result;
 	}
 
+	@Override
+	public String toString(){
+		return this.nome + this.valore;
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
