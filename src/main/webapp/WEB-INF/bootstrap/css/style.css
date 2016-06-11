@@ -3235,6 +3235,14 @@ margin:0 23px;
     top: 0;
     right: 0px;
 }
+.login{
+	padding: 18px 10px;
+    border: none;
+    text-shadow: none;
+	position: absolute;
+    top: 0;
+    right: 0px;
+}
 .annullabutton{
     line-height: 12.4;
     border: none;
@@ -3244,8 +3252,8 @@ margin:0 23px;
 	margin-bottom: 3em;
 }
 a:hover > p {
-	background-color:white;
+	color:white !important;
 	}
 a:hover > strong {
-	background-color:white;
+	color:white !important;
 	} 

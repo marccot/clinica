@@ -156,9 +156,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<ul id="sti-menu" class="sti-menu">
 				<li data-hovercolor="#fff">
 					<a href="<c:url value="/vediEsami"/>">
-					<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(255, 255, 255);">ELENCO ESAMI</strong>
-					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(255, 255, 255);">Inserisci un esame nel sistema.</p>
-						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
+					<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">ELENCO ESAMI</strong>
+					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci un esame nel sistema.</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 					</a>
 						<!-- <h4 data-type="mText" class="sti-item">ESAMI</h4>-->
 <!-- 						<p data-type="sText" class="sti-item">Qui potrai vedere gli esami offerti dalla nostra clinica</p> -->
@@ -166,26 +166,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</li>	
 				<li data-hovercolor="#fff">
 					<a href="<c:url value = "nuovoEsame"/>">
-						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(255, 255, 255);">Elenco Pazienti?</strong>
-					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(255, 255, 255);">non so a che serve xD</p>
-						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
+						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">Elenco Pazienti?</strong>
+					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0));">marco puzza :3</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 					</a>
 					</a>
 				</li>
 				
 				<li data-hovercolor="#fff">
 					<a href="<c:url value = "pageLogIn"/>">
-					<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(255, 255, 255);">AREA PAZIENTI</strong>
-					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(255, 255, 255);">Accedi alla tua area riservata per visionare i tuoi esami</p>
-						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
+					<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">AREA PAZIENTI</strong>
+					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Accedi alla tua area riservata per visionare i tuoi esami</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 					</a>
 				</li>
 				
 				<li data-hovercolor="#fff">
 					<a href='<c:url value="/areaAmministrazione" />'>
-					<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(255, 255, 255);">AMMINISTRAZIONE</strong>
-					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(255, 255, 255);">Accedi alla area riservata all'amministrazione</p>
-						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; top: 1px; background-position: left top;"></span>
+					<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">AMMINISTRAZIONE</strong>
+					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Accedi alla area riservata all'amministrazione</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 					</a>
 						
 				</li>
