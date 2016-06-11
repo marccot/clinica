@@ -151,7 +151,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 				</a></li>
 				<li data-hovercolor="#fff" class=""><a
-					href="<c:url value="/inserisciPrenotazione" /> "> <strong
+					href="<c:url value="/nuovoEsame" /> "> <strong
 						data-type="mText" class="sti-item"
 						style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">INSERISCI
 							PRENOTAZIONE</strong>

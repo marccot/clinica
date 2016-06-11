@@ -22,6 +22,10 @@ public class EsameDao extends Dao<Esame> {
 		List<Esame> list = query.getResultList();
 		return list;
 	}
-	
+	public List<Esame> findByPaziente(long id){
+		TypedQuery<Esame> query = em.createNamedQuery("Esame.findByPaziente", Esame.class).setParameter("id", id);
+		List<Esame> list = query.getResultList();
+		return list;
+	}
 	
 }
