@@ -30,6 +30,12 @@ public class EsameFacade {
 		List<Esame> esami = esameDao.findByPaziente(id);
 		return esami;
 	}
+	
+	public List<Esame> findByMedico(long id){
+		List<Esame> esami = esameDao.findByMedico(id);
+		return esami;
+	}
+	
 	public void saveEsame(Esame esame){
 		esameDao.save(esame);
 	}
