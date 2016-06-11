@@ -3,6 +3,7 @@ package it.uniroma3.clinica.model;
 import java.io.Serializable;
 import java.lang.Long;
 import java.lang.String;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.*;
@@ -28,6 +29,7 @@ public class Prerequisito implements Serializable {
 
 	public Prerequisito() {
 		super();
+		this.tipologiaEsame = new ArrayList<TipologiaEsame>();
 		
 	}   
 	

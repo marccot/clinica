@@ -22,6 +22,7 @@
 <input type='checkbox' name="${prerequisito.id }" value="${ prerequisito.id}" /> ${prerequisito.nome }
  </c:forEach>
  </fieldset>
+ <a href=<c:url value="/inserisciPrerequisito"/> >Aggiungi nuovo prerequisito</a>
 <input type="submit" name="submit" value="aggiungi tipologia" />
 
 </form:form>
