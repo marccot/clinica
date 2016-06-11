@@ -24,26 +24,25 @@ public class InserimentoTipologiaEsameController {
 	private TipologiaEsameFacade tipoEsameFacade;
 	@Autowired
 	private PrerequisitoFacade pFacade;
-	
+
 	@RequestMapping(value = "/addTipologiaEsame", method = RequestMethod.POST)
 	public String addTipologiaEsame(@ModelAttribute TipologiaEsame esame, ModelMap model, HttpServletRequest request) {
-	List<Prerequisito> p = pFacade.getPrerequisiti();
-	for(Prerequisito pre : p){
-		String s = request.getParameter(String.valueOf(pre.getId()));
-		if( s != null){
-			System.out.println(s);
-		//Integer id = Integer.parseInt(s);
-		esame.getPrerequisiti().add(pre);
-		pre.getEsame().add(esame);
+		List<Prerequisito> p = pFacade.getPrerequisiti();
+		for(Prerequisito pre : p){
+			String s = request.getParameter(String.valueOf(pre.getId()));
+			if( s != null){
+				esame.getPrerequisiti().add(pre);
+				pre.getEsame().add(esame);
+				pFacade.aggiornaPrerequisito(pre);
+			}
 		}
-		}
-				tipoEsameFacade.saveTipologiaEsame(esame);
+		tipoEsameFacade.saveTipologiaEsame(esame);
 		return "areaAmministrazione";
 	}
-	
+
 	@RequestMapping(value = "/deleteTipologiaEsame", method = RequestMethod.POST)
 	public String deleteTipologiaEsame() {
-		
+
 		return "login";
 	}
 	@RequestMapping(value="/inserisciTipologiaEsame", method = RequestMethod.GET)

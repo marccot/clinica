@@ -21,12 +21,14 @@ public class Prerequisito implements Serializable {
 	private Long id;
 	private String nome;
 	private String valore;
-	@ManyToMany(fetch = FetchType.EAGER , mappedBy="prerequisiti")
+	@ManyToMany(fetch = FetchType.EAGER, mappedBy="prerequisiti")
+	//@JoinTable(name="prerequisito_tipologiaesame", joinColumns=@JoinColumn(name="prerequisito_id"), inverseJoinColumns=@JoinColumn(name="tipologiaesame_id"))
 	private List<TipologiaEsame> tipologiaEsame;
 	private static final long serialVersionUID = 1L;
 
 	public Prerequisito() {
 		super();
+		
 	}   
 	
 	public Prerequisito( String nome, String valore, List<TipologiaEsame> tipologiaEsame) {
@@ -81,7 +83,7 @@ public class Prerequisito implements Serializable {
 
 	@Override
 	public String toString(){
-		return this.nome + this.valore;
+		return this.nome + ": " + this.valore;
 	}
 	
 	@Override

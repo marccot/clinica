@@ -14,6 +14,9 @@
 <div class="content">
 <c:forEach items = '${esami }' var='esame'>
 	${esame } <br/>
+	<c:forEach items='${esame.prerequisiti }' var='prerequisito'>
+	${prerequisito} <br/>
+	</c:forEach>
 </c:forEach>	 
 
 </div>
