@@ -3248,8 +3248,16 @@ margin:0 23px;
     border: none;
     text-shadow: none;
 }
+.esamebutton{
+	font-size: large;
+	margin-top: 1em;
+	margin-bottom : 3em;
+}
 .margineNavAreaAmministrazione{
 	margin-bottom: 3em;
+}
+.margineSpecificheEsami{
+	
 }
 a:hover > p {
 	color:white !important;
@@ -3257,3 +3265,4 @@ a:hover > p {
 a:hover > strong {
 	color:white !important;
 	} 
+	
