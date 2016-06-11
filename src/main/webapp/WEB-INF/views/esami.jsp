@@ -65,6 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<h3 class="tittle">Elenco esami disponibili</h3>
 		</div>
+		
 		<div class="content">
 		<ul class="list-group">
 		<c:forEach items='${esami}' var='esame'>
