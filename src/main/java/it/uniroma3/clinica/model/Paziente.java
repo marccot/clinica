@@ -80,6 +80,10 @@ public class Paziente implements Serializable {
 	public String getCodice() {
 		return this.codice;
 	}
+	
+	public String getNomeCognome() {
+		return this.nome + " " + this.cognome;
+	}
 
 	public void setCodice(String codice) {
 		this.codice = codice;

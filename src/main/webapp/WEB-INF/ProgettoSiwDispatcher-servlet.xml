@@ -17,6 +17,9 @@
 	
 	<bean id="pazienteValidator" class="it.uniroma3.clinica.validator.PazienteValidator" />
 	<bean id="esameValidator" class="it.uniroma3.clinica.validator.EsameValidator" />
+	<bean id="editorPaziente" class="it.uniroma3.clinica.editor.EditorPaziente" />
+	<bean id="editorMedico" class="it.uniroma3.clinica.editor.EditorMedico" />
+	<bean id="editorTipologiaEsame" class="it.uniroma3.clinica.editor.EditorTipologiaEsame" />
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">

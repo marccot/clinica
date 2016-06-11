@@ -24,4 +24,8 @@ public class TipologiaEsameFacade {
 	public List<TipologiaEsame> getAllTipologiaEsame() {
 		return tipologiaDao.findAll();
 	}
+	
+	public TipologiaEsame getTipologiaEsame(Long id) {
+		return tipologiaDao.findById(id);
+	}
 }

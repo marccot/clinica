@@ -134,6 +134,6 @@ public class TipologiaEsame implements Serializable {
 	
 	@Override
 	public String toString(){
-		return this.nome + ": " + this.descrizione + " €" +this.costo +this.getPrerequisiti().toString();
+		return this.nome ;
 	}
 }

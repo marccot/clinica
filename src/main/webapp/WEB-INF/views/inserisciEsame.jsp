@@ -16,22 +16,22 @@
 			<tr>
 				<td>Tipologia d'esame :</td>
 				<td><form:select path="tipologia">
-						<form:option value="NONE" label="--- Select ---" />
-						<form:options items="${listaTipologie}" />
+						<form:options items="${listaTipologie}" itemLabel="nome"
+					itemValue="id"/>
 					</form:select></td>
 			</tr>
 			<tr>
 				<td>Paziente :</td>
 				<td><form:select path="paziente">
-						<form:option value="NONE" label="--- Select ---" />
-						<form:options items="${listaPazienti}" />
+						<form:options items="${listaPazienti}" itemLabel="nomeCognome"
+					itemValue="id"/>
 					</form:select></td>
 			</tr>
 			<tr>
 				<td>Medico :</td>
 				<td><form:select path="medico">
-						<form:option value="NONE" label="--- Select ---" />
-						<form:options items="${listaMedici}" />
+						<form:options items="${listaMedici}"  itemLabel="nomeCognome"
+					itemValue="id"/>
 					</form:select></td>
 			</tr>
 			<tr>

@@ -33,7 +33,7 @@ public class InserimentoPazienteController extends WebMvcConfigurerAdapter {
 	}
 	
 	@RequestMapping(value="/inserisciPaziente", method = RequestMethod.POST)
-	public String inserisciPaziente(@ModelAttribute("paziente") @Validated Paziente paziente,	BindingResult bindingResult, ModelMap model) {
+	public String inserisciPaziente(@ModelAttribute("paziente") @Validated Paziente paziente, BindingResult bindingResult, ModelMap model) {
 		if (bindingResult.hasErrors()) 
 			return "inserisciPaziente";
 		facade.savePaziente(paziente);

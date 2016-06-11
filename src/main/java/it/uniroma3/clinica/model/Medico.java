@@ -45,6 +45,10 @@ public class Medico implements Serializable {
 	public String getCognome() {
 		return this.cognome;
 	}
+	
+	public String getNomeCognome() {
+		return this.nome + " " + this.cognome;
+	}
 
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
