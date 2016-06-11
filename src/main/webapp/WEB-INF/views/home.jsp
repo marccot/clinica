@@ -156,51 +156,56 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<ul id="sti-menu" class="sti-menu">
 				<li data-hovercolor="#fff">
 					<a href="<c:url value="/vediEsami"/>">
-						<h4 data-type="mText" class="sti-item">ESAMI</h4>
-						<p data-type="sText" class="sti-item">Qui potrai vedere gli esami offerti dalla nostra clinica</p>
-						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item"></span>
+					<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">ELENCO ESAMI</strong>
+					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci un esame nel sistema.</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 					</a>
+						<!-- <h4 data-type="mText" class="sti-item">ESAMI</h4>-->
+<!-- 						<p data-type="sText" class="sti-item">Qui potrai vedere gli esami offerti dalla nostra clinica</p> -->
+<!-- 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item"></span> -->
 				</li>	
 				<li data-hovercolor="#fff">
 					<a href="<c:url value = "nuovoEsame"/>">
-						<h4 data-type="mText" class="sti-item">Inserisci un fottuto paziente</h4>
-						<p data-type="sText" class="sti-item">Accedi alla tua area riservata per visionare i tuoi esami</p>
-						<span data-type="icon" class="sti-icon glyphicon glyphicon-apple sti-item"></span>
+						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">Elenco Pazienti?</strong>
+					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0));">marco puzza :3</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
+					</a>
 					</a>
 				</li>
 				
 				<li data-hovercolor="#fff">
 					<a href="<c:url value = "pageLogIn"/>">
-						<h4 data-type="mText" class="sti-item">AREA PAZIENTE</h4>
-						<p data-type="sText" class="sti-item">Accedi alla tua area riservata per visionare i tuoi esami</p>
-						<span data-type="icon" class="sti-icon glyphicon glyphicon-apple sti-item"></span>
+					<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">AREA PAZIENTI</strong>
+					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Accedi alla tua area riservata per visionare i tuoi esami</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 					</a>
 				</li>
 				
 				<li data-hovercolor="#fff">
 					<a href='<c:url value="/areaAmministrazione" />'>
-						<h4 data-type="mText" class="sti-item">AMMINISTRAZIONE</h4>
-						<p data-type="sText" class="sti-item">Accedi all'area riservata all'amministrazione</p>
-						<span data-type="icon" class="sti-icon glyphicon glyphicon-scissors sti-item"></span>
+					<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">AMMINISTRAZIONE</strong>
+					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Accedi alla area riservata all'amministrazione</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 					</a>
+						
 				</li>
-				<script type="text/javascript" src="<c:url value="/bootstrap/js/jquery.iconmenu.js"/>"></script>
+<!-- 				<script type="text/javascript" src="<c:url value="/bootstrap/js/jquery.iconmenu.js"/>"></script> --%>
 				<script type="text/javascript">
-					$(function() {
-						$('#sti-menu').iconmenu({
-							animMouseenter	: {
-								'mText' : {speed : 400, easing : 'easeOutExpo', delay : 140, dir : 1},
-								'sText' : {speed : 400, easing : 'easeOutExpo', delay : 0, dir : 1},
-								'icon'  : {speed : 800, easing : 'easeOutBounce', delay : 280, dir : 1}
-							},
-							animMouseleave	: {
-								'mText' : {speed : 400, easing : 'easeInExpo', delay : 140, dir : 1},
-								'sText' : {speed : 400, easing : 'easeInExpo', delay : 280, dir : 1},
-								'icon'  : {speed : 400, easing : 'easeInExpo', delay : 0, dir : 1}
-							}
-						});
-					});
-				</script>
+// 					$(function() {
+// 						$('#sti-menu').iconmenu({
+// 							animMouseenter	: {
+// 								'mText' : {speed : 400, easing : 'easeOutExpo', delay : 140, dir : 1},
+// 								'sText' : {speed : 400, easing : 'easeOutExpo', delay : 0, dir : 1},
+// 								'icon'  : {speed : 800, easing : 'easeOutBounce', delay : 280, dir : 1}
+// 							},
+// 							animMouseleave	: {
+// 								'mText' : {speed : 400, easing : 'easeInExpo', delay : 140, dir : 1},
+// 								'sText' : {speed : 400, easing : 'easeInExpo', delay : 280, dir : 1},
+// 								'icon'  : {speed : 400, easing : 'easeInExpo', delay : 0, dir : 1}
+// 							}
+// 						});
+// 					});
+			</script> -->
 		</ul>
 		</div>
 		</div>
