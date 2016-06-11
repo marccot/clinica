@@ -10,7 +10,10 @@ import javax.persistence.*;
  *
  */
 @Entity
-@NamedQuery(name="Esame.findAll",query="SELECT e FROM Esame e")
+@NamedQueries({
+@NamedQuery(name="Esame.findAll",query="SELECT e FROM Esame e"),
+@NamedQuery(name="Esame.findByPaziente", query="SELECT e FROM Esame e, Paziente p WHERE p.id = :id")
+})
 public class Esame implements Serializable {
  
 	   
@@ -20,7 +23,7 @@ public class Esame implements Serializable {
 	@ManyToOne
 	private Paziente paziente;
 	@ManyToOne
-	private Medico medico;
+	private Medico medico; 
 	@ManyToOne
 	private TipologiaEsame tipologia;
 	@Temporal (TemporalType.DATE)

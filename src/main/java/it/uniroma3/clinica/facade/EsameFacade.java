@@ -17,7 +17,7 @@ public class EsameFacade {
 	@Autowired
 	private EsameDao esameDao;
 	
-	public List<Esame> getPazienti(){
+	public List<Esame> getEsami(){
 		List<Esame> esame = esameDao.findAll();
 		return esame;
 	}
@@ -26,7 +26,10 @@ public class EsameFacade {
 		Esame esame = esameDao.findById(id);
 		return esame;
 	}
-	
+	public List<Esame> getEsamiByPaziente(long id){
+		List<Esame> esami = esameDao.findByPaziente(id);
+		return esami;
+	}
 	public void saveEsame(Esame esame){
 		esameDao.save(esame);
 	}
