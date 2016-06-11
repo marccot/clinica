@@ -80,12 +80,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			     <td>Nome Esame</td>
 			     <td>Descrizione</td>
 			     <td>Costo (€)</td>
+			     <td>Prerequisiti</td>
 			     </tr>
 				<c:forEach items='${esami }' var='esame'>
 					<tr>
 						<td>${esame.nome}</td>
 						<td>${esame.descrizione}</td>
 						<td>${esame.costo}</td>
+						<td><c:forEach items='${esame.prerequisiti }' var='prerequisito'>
+						${prerequisito.nome} <br/>
+	                         </c:forEach></td>
 					</tr>
 					
 				</c:forEach>
