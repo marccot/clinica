@@ -67,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="content">
 		<ul class="list-group">
-		<c:forEach items='${esami }' var='esame'>
+		<c:forEach items='${esami}' var='esame'>
 		<li><span class="label label-info esamebutton">${esame.nome}</span></br></li>
 		<div>
 		<ul type="disc">
@@ -84,27 +84,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	                         </ol>
 	                         </ul>
 		</div></br></br>
-		</c:forEach>
-		</ul>
-			<table border="2">
-			     <tr>
-			     <td>Nome Esame</td>
-			     <td>Descrizione</td>
-			     <td>Costo (€)</td>
-			     <td>Prerequisiti</td>
-			     </tr>
-				<c:forEach items='${esami }' var='esame'>
-					<tr>
-						<td>${esame.nome}</td>
-						<td>${esame.descrizione}</td>
-						<td>${esame.costo}</td>
-						<td><c:forEach items='${esame.prerequisiti }' var='prerequisito'>
-						${prerequisito.nome} <br/>
-	                         </c:forEach></td>
-					</tr>
+		
+</c:forEach>
+<!-- 		</ul> -->
+<!-- 			<table border="2"> -->
+<!-- 			     <tr> -->
+<!-- 			     <td>Nome Esame</td> -->
+<!-- 			     <td>Descrizione</td> -->
+<!-- 			     <td>Costo (€)</td> -->
+<!-- 			     <td>Prerequisiti</td> -->
+<!-- 			     </tr> -->
+<%-- 				<c:forEach items='${esami }' var='esame'> --%>
+<!-- 					<tr> -->
+<%-- 						<td>${esame.nome}</td> --%>
+<%-- 						<td>${esame.descrizione}</td> --%>
+<%-- 						<td>${esame.costo}</td> --%>
+<%-- 						<td><c:forEach items='${esame.prerequisiti }' var='prerequisito'> --%>
+<%-- 						${prerequisito.nome} <br/> --%>
+<%-- 	                         </c:forEach></td> --%>
+<!-- 					</tr> -->
 					
-				</c:forEach>
-			</table>
+<%-- 				</c:forEach> --%>
+<!-- 			</table> -->
 			<a href='<c:url value="/areaAmministrazione" />'><span class="label label-danger annullabutton">Torna alla Home</span></a>
 			</div>
 		</div>
