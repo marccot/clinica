@@ -54,15 +54,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 
-<!-- <div class="content"> -->
-<%-- <c:forEach items = '${esami }' var='esame'> --%>
-<%-- 	${esame } <br/> --%>
-<%-- 	<c:forEach items='${esame.prerequisiti }' var='prerequisito'> --%>
-<%-- 	${prerequisito.nome} <br/> --%>
-<%-- 	</c:forEach> --%>
-<%-- </c:forEach>	  --%>
-
-<!-- </div> -->
 
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
