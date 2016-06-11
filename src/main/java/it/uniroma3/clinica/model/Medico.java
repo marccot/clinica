@@ -22,6 +22,7 @@ public class Medico implements Serializable {
 	private String nome;
 	@Column(nullable=false)
 	private String cognome;
+	private String specializzazione;
 	private static final long serialVersionUID = 1L;
 
 	public Medico() {
@@ -50,6 +51,12 @@ public class Medico implements Serializable {
 	}
 	
 	   
+	public String getSpecializzazione() {
+		return specializzazione;
+	}
+	public void setSpecializzazione(String specializzazione) {
+		this.specializzazione = specializzazione;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;

@@ -64,7 +64,7 @@ public class InserimentoPrenotazioneController {
 	
 	@RequestMapping(value="/inserisciPrenotazione", method = RequestMethod.GET)
 	public String indexRedirect(ModelMap model) {
-		return "inserisciPrenotazione";
+		return "inserisciEsame";
 	}
 
 }
