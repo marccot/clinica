@@ -100,7 +100,8 @@ public class EsameController extends WebMvcConfigurerAdapter {
 		Map<Medico, List<Esame>> esamiByMedico = new HashMap<>();
 		for(Medico m : medici){
 			long id = m.getId();
-			List<Esame> esami = esameFacade.findByMedico(id); 
+			List<Esame> esami = esameFacade.findByMedico(id);
+			if(esami.size() != 0)
 			esamiByMedico.put(m, esami);
 		}
 		model.addAttribute("esamiByMedico", esamiByMedico);
