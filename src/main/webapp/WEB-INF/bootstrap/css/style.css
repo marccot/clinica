@@ -4,6 +4,31 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
+.form-clinica{
+	background-color:#d7e3f0;
+	padding:1em;
+}
+
+.DivToScroll{   
+    background-color: #F5F5F5;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px 0 4px 0;
+    color: #3B3C3E;
+    font-size: 12px;
+    font-weight: bold;
+    left: -1px;
+    padding: 10px 7px 5px;
+}
+
+.DivWithScroll{
+    height:120px;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+.form-clinica a{
+	font-weight:bold;
+}
 html, body{
 	margin:0;
 	font-size: 100%;
@@ -726,6 +751,7 @@ text-align:center;
 width:100%;
 }
 h3.tittle{
+margin-top:1.5em;
 text-align:center;
 color:#000;
 font-size:40px;
@@ -1631,6 +1657,13 @@ p.est span{
 	padding:1em 0 2em 0;
 }
 
+.form-clinica td {
+	padding-bottom:1em;
+	padding-right:0.5em;
+}
+.form-clinica h2 {
+	margin-bottom:1em;
+}
 .table td, .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
   padding: 15px!important;
 }
