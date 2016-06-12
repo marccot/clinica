@@ -14,7 +14,11 @@
 <!-- <title>Insert title here</title> -->
 <!-- </head> -->
 <%@include file ='header.html' %>
-
+<script>
+function showPrerequisito() {
+   document.getElementById('prerequisito').style.display = "block";
+}
+</script>
 <body>
 <form:form class='form-clinica' method='post' action='addTipologiaEsame' modelAttribute='esame' name='form'>
 <table>
@@ -36,11 +40,11 @@
  </c:forEach>
  </div>
  </fieldset></td></tr>
- <tr><td><a href=<c:url value="/inserisciPrerequisito"/>>Aggiungi nuovo prerequisito</a></td></tr>
+ <tr><td><input type="button" class="labe-info" onClick="showPrerequisito()">Aggiungi nuovo prerequisito</input></td></tr>
 <tr><td><input type="submit" class='label-success' name="submit" value="aggiungi tipologia" /></td></tr>
 </table>
 </form:form>
- <form:form class='form-clinica' method='post' action='addPrerequisito' modelAttribute='prerequisito' name='form'>
+ <form:form id="prerequisito" class='form-clinica' method='post' action='addPrerequisito' modelAttribute='prerequisito' name='form' style="display:none">
 <h2>Aggiungi qui un nuovo prerequisito</h2>
 <label>Nome prerequisito </label><form:input type='text' path='nome'/><br/>
 <label>Descrizione prerequisito</label><form:input type='text' path='valore' /><br/>
