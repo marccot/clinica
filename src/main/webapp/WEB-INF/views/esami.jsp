@@ -89,23 +89,21 @@ $('.hide').click(function () {
 			document.getElementById("id${esame.id }").style.display = "none";
  		}
  	</script> -->
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="collapse navbar-collapse navbar-ex1-collapse">
-		<ul class="nav navbar-nav navbar-right">
-		"</ul>
-	</div>
-	</nav>
-	<div id="banner-bottom" class="banner-bottom">
-		<div class="container">
+<!-- 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation"> -->
+<!-- 	<div class="collapse navbar-collapse navbar-ex1-collapse"> -->
+<!-- 		<ul class="nav navbar-nav navbar-right"> -->
+<!-- 		"</ul> -->
+<!-- 	</div> -->
+<!-- 	</nav> -->
+	
+		<div class="clinica-content">
 			<h3 class="tittle">Elenco esami disponibili</h3>
-		</div>
-
-		<div class="content">
-			<ul class="list-group">
+			<div>
 				<c:forEach items='${esami}' var='esame'>
-					<li><span class="label label-info esamebutton">${esame.nome}</span>	
-				  <div class="wrappa">
-                    <p3 class="colorinfo show p-block" >Mostra/Nascondi Informazioni Esame</p3>
+				
+					<div class='elenco-esami'><span class="label  label-info esamebutton">${esame.nome}</span>	
+				<div class="wrappa">  
+                    <p class="colorinfo show p-block didascalia" >Mostra Dettagli Esame</p>
                    </div>
                    <div class="wrapper">
 					<div class="content-block targetDiv">
@@ -113,18 +111,17 @@ $('.hide').click(function () {
 							<li>Descrizione: ${esame.descrizione}</li>
 							<li>Costo(€): ${esame.costo}</li>
 							<li>Prerequisiti: <c:if test="${empty esame.prerequisiti}">
-		                Nessun Prerequisito</br>
+		                Nessun Prerequisito
 								</c:if>
 								<ol>
 									<c:forEach items='${esame.prerequisiti }' var='prerequisito'>
-						${prerequisito.nome} <br />
+						${prerequisito.nome}: ${prerequisito.valore } <br />
 									</c:forEach></li>
 							</ol>
 						</ul>
+						</div>
 					</div>
 					</div>
-					</br>
-					</br>
 
 				</c:forEach>
 				<!-- 		</ul> -->
@@ -149,8 +146,9 @@ $('.hide').click(function () {
 				<!-- 			</table> -->
 				<a href='<c:url value="/areaAmministrazione" />'><span
 					class="label label-danger annullabutton">Torna alla Home</span></a>
+					</ul>
 		</div>
-	</div>
+
 	<div class="copy-right">
 		<div class="container">
 			<p>

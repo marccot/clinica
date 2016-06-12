@@ -541,6 +541,14 @@ text-decoration:none;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
+.wrappa{
+	width:18em;
+	display:inline-block;
+}
+.wrappa p{
+	font-size:0.5em;
+}
 .note {
   position: absolute;
   width: 250px;
@@ -749,6 +757,26 @@ text-align:center;
 
 .welcome-grid img{
 width:100%;
+}
+.elenco-esami{
+	margin-left:2em;
+}
+.esame-riepilogo{
+	margin-left:2em;
+	background-color:white;
+	margin-top:1em;
+	width:16em;
+	padding:0.3em;
+}
+.no-marg{
+	margin:0em;
+}
+.didascalia{
+	display:inherit;
+}
+.clinica-content{
+	margin-top:3em;
+	background-color:#d7e3f0;
 }
 h3.tittle{
 margin-top:1.5em;
