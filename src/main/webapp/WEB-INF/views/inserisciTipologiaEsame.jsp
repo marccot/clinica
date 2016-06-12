@@ -13,17 +13,19 @@
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->
 <!-- <title>Insert title here</title> -->
 <!-- </head> -->
-<<<<<<< HEAD
 <%@include file ='header.html' %>
 <script>
-function showPrerequisito() {
-   document.getElementById('prerequisito').style.display = "block";
-}
+$(document).ready(function(){
+	$("div2").toggle();
+	});
+$(document).ready(function(){
+    $("p3").click(function(){
+        $("div2").toggle();
+    });
+});
 </script>
-=======
 <%@include file ='header.jsp' %>
 
->>>>>>> branch 'master' of https://github.com/marccot/clinica
 <body>
 <form:form class='form-clinica' method='post' action='addTipologiaEsame' modelAttribute='esame' name='form'>
 <table>
@@ -45,16 +47,18 @@ function showPrerequisito() {
  </c:forEach>
  </div>
  </fieldset></td></tr>
- <tr><td><input type="button" class="labe-info" onClick="showPrerequisito()">Aggiungi nuovo prerequisito</input></td></tr>
+ <tr><td><p3 class="label label-info" id='button'>Aggiungi nuovo prerequisito</p3></td></tr>
 <tr><td><input type="submit" class='label-success' name="submit" value="aggiungi tipologia" /></td></tr>
 </table>
-</form:form>
- <form:form id="prerequisito" class='form-clinica' method='post' action='addPrerequisito' modelAttribute='prerequisito' name='form' style="display:none">
-<h2>Aggiungi qui un nuovo prerequisito</h2>
+ </form:form>
+ <div2 id="newpost">
+ <form:form class='form-clinica' method='post' action='addPrerequisito' modelAttribute='prerequisito' name='form' style='hidden'>
+<h3 class="tittle">Aggiungi qui un nuovo prerequisito</h3>
 <label>Nome prerequisito </label><form:input type='text' path='nome'/><br/>
 <label>Descrizione prerequisito</label><form:input type='text' path='valore' /><br/>
 <input type='submit' name='submit' class='label-success' value='Aggiungi prerequisito' />
-</form:form>
+</form:form></div2>
+
 <%@include file ='footer.html' %>
 
 </body>
