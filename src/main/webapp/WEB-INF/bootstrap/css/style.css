@@ -3289,9 +3289,8 @@ margin:0 23px;
 .margineNavAreaAmministrazione{
 	margin-bottom: 3em;
 }
-.margineSpecificheEsami{
-	
-	
+.colorinfo{
+	color:blue;
 }
 a:hover > p {
 	color:white !important;
