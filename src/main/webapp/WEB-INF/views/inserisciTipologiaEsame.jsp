@@ -13,7 +13,7 @@
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->
 <!-- <title>Insert title here</title> -->
 <!-- </head> -->
-<%@include file ='header.html' %>
+<%@include file ='header.jsp' %>
 
 <body>
 <form:form class='form-clinica' method='post' action='addTipologiaEsame' modelAttribute='esame' name='form'>

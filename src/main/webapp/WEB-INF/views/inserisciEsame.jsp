@@ -8,7 +8,7 @@
 <html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
-<%@include file ='header.html' %>
+<%@include file ='header.jsp' %>
 
 <body>
 	<form:form class='form-clinica' method="post" action="inserisciEsame" modelAttribute="esame"
