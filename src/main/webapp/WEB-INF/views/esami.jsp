@@ -97,16 +97,16 @@ $('.hide').click(function () {
 <!-- 	</nav> -->
 	
 		<div class="clinica-content">
-			<h3 class="tittle">Elenco esami disponibili</h3>
+			<h3 class="tittle" margin-top="1.9em">Elenco esami disponibili</h3>
 			<div>
 				<c:forEach items='${esami}' var='esame'>
 				
 					<div class='elenco-esami'><span class="label  label-info esamebutton">${esame.nome}</span>	
 				<div class="wrappa">  
-                    <p class="colorinfo show p-block didascalia" >Mostra Dettagli Esame</p>
+                    <p class="show p-block didascalia label-success" >Mostra Dettagli Esame</p>
                    </div>
                    <div class="wrapper">
-					<div class="content-block targetDiv">
+					<div class="content-block targetDiv esame-riepilogo">
 						<ul type="disc">
 							<li>Descrizione: ${esame.descrizione}</li>
 							<li>Costo(€): ${esame.costo}</li>
@@ -144,7 +144,7 @@ $('.hide').click(function () {
 
 				<%-- 				</c:forEach> --%>
 				<!-- 			</table> -->
-				<a href='<c:url value="/areaAmministrazione" />'><span
+				<a href='<c:url value="/index" />'><span
 					class="label label-danger annullabutton">Torna alla Home</span></a>
 					</ul>
 		</div>

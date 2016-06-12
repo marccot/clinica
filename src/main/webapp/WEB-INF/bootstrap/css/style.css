@@ -543,11 +543,11 @@ text-decoration:none;
 }
 
 .wrappa{
-	width:18em;
+	width:29em;
 	display:inline-block;
 }
 .wrappa p{
-	font-size:0.5em;
+	font-size:0.8em;
 }
 .note {
   position: absolute;
@@ -773,6 +773,8 @@ width:100%;
 }
 .didascalia{
 	display:inherit;
+	margin-right:25em;
+	color:white;
 }
 .clinica-content{
 	margin-top:3em;
@@ -2311,6 +2313,7 @@ margin:0 23px;
 	}
 	h3.tittle {
 	  font-size: 28px;
+	  padding-top:1em;
 	  }
 	.banner-text h3 {
 	  font-size: 56px;
