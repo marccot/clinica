@@ -44,7 +44,7 @@
 <!-- <!-- start-smoth-scrolling --> -->
 
 <!-- </head> -->
-<%@include file ='header.html' %>
+<%@include file ='header.jsp' %>
 
 <body>
 <!-- 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation"> -->

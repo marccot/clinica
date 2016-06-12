@@ -13,12 +13,17 @@
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->
 <!-- <title>Insert title here</title> -->
 <!-- </head> -->
+<<<<<<< HEAD
 <%@include file ='header.html' %>
 <script>
 function showPrerequisito() {
    document.getElementById('prerequisito').style.display = "block";
 }
 </script>
+=======
+<%@include file ='header.jsp' %>
+
+>>>>>>> branch 'master' of https://github.com/marccot/clinica
 <body>
 <form:form class='form-clinica' method='post' action='addTipologiaEsame' modelAttribute='esame' name='form'>
 <table>

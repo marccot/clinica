@@ -75,7 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	rel='stylesheet' type='text/css'>
 <!-- start-smoth-scrolling -->
 </head>
-<%@include file='header.html' %>
+<%@include file='header.jsp' %>
 <body>
 <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="<c:url value="/bootstrap/js/classie.js"/>"></script>
