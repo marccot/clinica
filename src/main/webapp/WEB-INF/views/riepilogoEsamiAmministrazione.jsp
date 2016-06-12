@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -13,14 +13,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<c:forEach var='type' items='${esamiByMedico }'>
-${type.key.nome } ${type.key.cognome }:<br/>
-<ul>
-<c:forEach var='esame' items='${type.value }'>
-<li><b>${esame.tipologia }:</b> paziente <b>${esame.paziente }</b>   </li><br/>
-</c:forEach>
-</ul>
-</c:forEach>
+	<div>
+		<form:form method="post" action="visualizzaEsamiMedico" name="form" modelAttribute = "medico">
+			<fieldset class="form-group">
+				<table>
+					<tr>
+						<td>Ricerca gli esami effettuati da un medico :</td>
+						<td><form:select path="id" class="form-control">
+								<form:options items="${listaMedici}" itemLabel="nomeCognome" itemValue="id" />
+							</form:select>
+							</td>
+					</tr>
+					<tr>
+					<td>
+					<input type = "submit" value = "Ricerca" />
+					</td>
+					</tr>
+				</table>
+			</fieldset>
+		</form:form>
+	</div>
 </body>
 </html>

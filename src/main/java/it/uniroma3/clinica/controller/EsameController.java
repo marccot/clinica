@@ -93,17 +93,14 @@ public class EsameController extends WebMvcConfigurerAdapter {
 		model.addAttribute("listaMedici", medicoFacade.getMedici());
 		return "inserisciEsame";
 	}
+	@RequestMapping(value="/visualizzaEsamiMedico", method = RequestMethod.GET)
+	public String visualizzaEsami(ModelMap model){
+		return "riepilogoEsamiMedico";
+	}
 	@RequestMapping(value="/vediEsamiPerMedici", method = RequestMethod.GET)
 	public String vediEsamiPerMedici(ModelMap model){
-		List<Medico> medici = medicoFacade.getMedici();
-		Map<Medico, List<Esame>> esamiByMedico = new HashMap<>();
-		for(Medico m : medici){
-			long id = m.getId();
-			List<Esame> esami = esameFacade.findByMedico(id);
-			if(esami.size() != 0)
-			esamiByMedico.put(m, esami);
-		}
-		model.addAttribute("esamiByMedico", esamiByMedico);
+		model.addAttribute("listaMedici", medicoFacade.getMedici());
+		model.addAttribute("medico", new Medico());
 		return "riepilogoEsamiAmministrazione";
 	}
 }
