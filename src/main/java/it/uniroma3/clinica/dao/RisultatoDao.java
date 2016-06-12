@@ -4,8 +4,11 @@ import java.util.List;
 
 import javax.persistence.TypedQuery;
 
+import org.springframework.stereotype.Repository;
+
 import it.uniroma3.clinica.model.Risultato;
 
+@Repository
 public class RisultatoDao extends Dao<Risultato> {
 
 	@Override
