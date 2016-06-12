@@ -6613,8 +6613,9 @@ button.close {
   display: none !important;
 }
 .wrapper {	
-	margin-top: 80px;
-  margin-bottom: 80px;
+	padding-left:1em;
+	margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .form-signin {
@@ -6847,8 +6848,8 @@ button.close {
 }
 
 .wrapper {	
-	margin-top: 80px;
-  margin-bottom: 80px;
+	margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .form-signin {

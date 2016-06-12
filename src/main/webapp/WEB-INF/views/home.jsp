@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- start-smoth-scrolling -->
 
 </head>
-<%@include file='header.html' %>
+<%@include file='header.jsp' %>
 <!-- slide-toggle-menu -->
 <body class="cbp-spmenu-push">
  
