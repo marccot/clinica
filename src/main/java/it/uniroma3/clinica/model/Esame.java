@@ -3,6 +3,8 @@ package it.uniroma3.clinica.model;
 import java.io.Serializable;
 import java.lang.Long;
 import java.util.Date;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -31,6 +33,8 @@ public class Esame implements Serializable {
 	private Date dataEsame;
 	@Temporal (TemporalType.DATE)
 	private Date dataPrenotazione;
+	@OneToMany(fetch = FetchType.EAGER, mappedBy="esame")
+	private List<Risultato> risultati;
 	private static final long serialVersionUID = 1L;
 
 	public Esame() {
@@ -40,6 +44,13 @@ public class Esame implements Serializable {
 		return this.id;
 	}
 
+	public List<Risultato> getRisultati(){
+		return this.risultati;
+	}
+	
+	public void setRisultati(List<Risultato> risultati){
+		this.risultati = risultati;
+	}
 	public void setId(Long id) {
 		this.id = id;
 	}   

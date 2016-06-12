@@ -36,6 +36,10 @@ public class EsameFacade {
 		return esami;
 	}
 	
+	public void aggiornaEsame(Esame e){
+		esameDao.update(e);
+	}
+	
 	public void saveEsame(Esame esame){
 		esameDao.save(esame);
 	}

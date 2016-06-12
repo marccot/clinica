@@ -15,6 +15,10 @@
 Medico: ${esame.medico }<br/>
 Prenotato il: ${esame.dataPrenotazione }<br/>
 Effettuato il: ${esame.dataEsame }<br/>
+Risultati: 
+<c:forEach items='${esame.risultati }' var='risultato'>
+${risultato.nome}, ${risultato.valore } <br/>
+</c:forEach>
 </div>
 </c:forEach>
 </div>
