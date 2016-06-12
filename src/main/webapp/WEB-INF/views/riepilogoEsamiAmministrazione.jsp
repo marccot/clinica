@@ -23,6 +23,7 @@
 </c:forEach>
 </c:forEach></br>
 
-<%@include file ='footer.html' %>
+
 </body>
+<%@include file ='footer.html' %>
 </html>
