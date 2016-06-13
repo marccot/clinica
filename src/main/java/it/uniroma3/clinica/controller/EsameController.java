@@ -98,14 +98,5 @@ public class EsameController extends WebMvcConfigurerAdapter {
 		model.addAttribute("listaMedici", medicoFacade.getMedici());
 		return "inserisciEsame";
 	}
-	@RequestMapping(value="/visualizzaEsamiMedico", method = RequestMethod.GET)
-	public String visualizzaEsami(ModelMap model){
-		return "riepilogoEsamiMedico";
-	}
-	@RequestMapping(value="/vediEsamiPerMedici", method = RequestMethod.GET)
-	public String vediEsamiPerMedici(ModelMap model){
-		model.addAttribute("listaMedici", medicoFacade.getMedici());
-		model.addAttribute("medico", new Medico());
-		return "riepilogoEsamiAmministrazione";
-	}
+
 }
