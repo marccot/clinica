@@ -22,6 +22,7 @@ function get_action(form) {
 <body>
 <div class='container-clinica'>
 <h3 class='tittle'>Step 2: Specificare i dettagli dei risultati</h3>
+<a href='<c:url value="/inserisciRisultatiEsame" />'><span class="label label-danger annullabutton">Torna Indietro</span></a>
 <c:forEach begin='0' end='${nRes }' varStatus='loop'>
 <form:form onSubmit="get_action(this)" class='f${loop.index } multiform-clinica' id='f${loop.index }' method="post" 
 modelAttribute='risultato${loop.index }' action='addRisultati'>
@@ -37,6 +38,7 @@ modelAttribute='risultato${loop.index }' action='addRisultati'>
 </table>
 </form:form>
 </c:forEach>
+<a href='<c:url value="/inserisciRisultatiEsame" />'><span class="label label-danger annullabutton">Torna Indietro</span></a></td></tr>
 <button class='label-success' onclick="submitAll();">Inserisci risultati</button>
 </div>
 
