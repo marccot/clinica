@@ -6,17 +6,22 @@
 <%@include file='header.jsp' %>
 <body>
 <form class='form-clinica' method='post' action='recuperaEsame'>
-<label style='float:left'>Esame</label>
-<fieldset>
-<div class='DivToScroll DivWithScroll div-clinica'>
+<h3 class='tittle'>Step 1: Indicare esame e numero di risultati</h3>
+<table>
+<tr>
+<td><label>Esame</label></td>
+<td><fieldset>
+<div class='DivToScroll DivWithScroll'>
 <c:forEach items='${esami}' var='esame'>
 <input type='radio' name='esamePrenotato' value='${esame.id }'/> #${esame.id}: ${esame.tipologia } paziente: ${esame.paziente }<br/>
 </c:forEach>
 </div >
-</fieldset>
-<label>numero di risultati</label>
-<input type='text' name='nResults' />
-<input type='submit' name='submit' value='avanti'/>
+</fieldset></td>
+</tr>
+<tr><td><label>numero di risultati</label></td>
+<td><input type='text' name='nResults' /></td></tr>
+<tr><td><input class='label-success'type='submit' name='submit' value='avanti'/></td></tr>
+</table>
 </form>
 <%@include file='footer.html' %>
 </body>

@@ -20,15 +20,25 @@ function get_action(form) {
 </script>
 <%@ include file='header.jsp' %>
 <body>
+<div class='container-clinica'>
+<h3 class='tittle'>Step 2: Specificare i dettagli dei risultati</h3>
 <c:forEach begin='0' end='${nRes }' varStatus='loop'>
-<form:form onSubmit="get_action(this)" class='f${loop.index } form-clinica' id='f${loop.index }' method="post" 
+<form:form onSubmit="get_action(this)" class='f${loop.index } multiform-clinica' id='f${loop.index }' method="post" 
 modelAttribute='risultato${loop.index }' action='addRisultati'>
-<label>Nome risultato</label><form:input  type='text' path='nome'/><br/>
-<label>Valore risultato</label><form:input type='text' path='valore'/><br/>
-<input type='hidden' name='esameScelto' value='${esame.id }' /> 
+<table>
+<tr><td><h4><b>Risultato #${loop.count }</b></h4>
+</td></tr>
+<tr>
+<td><label>Nome risultato</label></td>
+<td><form:input  type='text' path='nome'/></td></tr>
+<tr><td><label>Valore risultato</label></td>
+<td><form:input type='text' path='valore'/></td></tr>
+<tr><td><input type='hidden' name='esameScelto' value='${esame.id }' /></td></tr> 
+</table>
 </form:form>
 </c:forEach>
-<button onclick="submitAll();">Inserisci risultati</button>
+<button class='label-success' onclick="submitAll();">Inserisci risultati</button>
+</div>
 
 
 <%@ include file='footer.html' %>
