@@ -8,46 +8,50 @@
 <html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
-<%@include file ='header.jsp' %>
+<%@include file='header.jsp'%>
 
 <body>
-	<form:form class='form-clinica' method="post" action="inserisciEsame" modelAttribute="esame"
-		name="form">
+	<form:form class='form-clinica' method="post" action="inserisciEsame"
+		modelAttribute="esame" name="form">
 		<h3 class="tittle">Crea la prenotazione di un esame</h3>
 		<fieldset class="form-group">
-		<table>
-			<tr>
-				<td>Tipologia d'esame :</td>
-				<td><form:select path="tipologia" class="form-control">
-						<form:options items="${listaTipologie}" itemLabel="nome"
-					itemValue="id"/>
-					</form:select></td>
-			</tr>
-			<tr>
-				<td>Paziente :</td>
-				<td><form:select path="paziente" class="form-control">
-						<form:options items="${listaPazienti}" itemLabel="nomeCognome"
-					itemValue="id"/>
-					</form:select></td>
-			</tr>
-			<tr>
-				<td>Medico :</td>
-				<td><form:select path="medico" class="form-control">
-						<form:options items="${listaMedici}"  itemLabel="nomeCognome"
-					itemValue="id"/>
-					</form:select></td>
-			</tr>
-			<tr>
-			<td>
-			<input type="submit" value="Invia" class="label-success" />
-			</td>
-			</tr>
-		</table>
+			<table>
+				<tr>
+					<td>Tipologia d'esame :</td>
+					<td><form:select path="tipologia" class="form-control">
+							<form:options items="${listaTipologie}" itemLabel="nome"
+								itemValue="id" />
+						</form:select></td>
+				</tr>
+				<tr>
+					<td>Paziente :</td>
+					<td><form:select path="paziente" class="form-control">
+							<form:options items="${listaPazienti}" itemLabel="nomeCognome"
+								itemValue="id" />
+						</form:select></td>
+				</tr>
+				<tr>
+					<td>Medico :</td>
+					<td><form:select path="medico" class="form-control">
+							<form:options items="${listaMedici}" itemLabel="nomeCognome"
+								itemValue="id" />
+						</form:select></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Invia" class="label-success" />
+					</td>
+				</tr>
+				<tr>
+					<td><a href='<c:url value="/areaAmministrazione" />'><span
+							class="label label-danger annullabutton">Annulla
+								Operazione</span></a></td>
+				</tr>
+			</table>
 		</fieldset>
 	</form:form>
 
 
-	<%@include file ='footer.html' %>
+	<%@include file='footer.html'%>
 
 </body>
 </html>

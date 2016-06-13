@@ -37,7 +37,7 @@ $(document).ready(function(){
 <td>
 <form:input type='text' path='nome' /></td> </tr>
 <tr><td><label>Descrizione</label></td><td><form:input type='text' path='descrizione' /></td> </tr>
-<tr><td><label>Costo € </label></td><td><form:input path='costo' /></td> </tr>
+<tr><td><label>Costo &euro; </label></td><td><form:input path='costo' /></td> </tr>
 <tr><td><label>Prerequisiti:</label></td>
 <td><fieldset>
 <div class='DivToScroll DivWithScroll'>
@@ -49,6 +49,7 @@ $(document).ready(function(){
  </fieldset></td></tr>
  <tr><td><p3 class="label label-info" id='button'>Aggiungi nuovo prerequisito</p3></td></tr>
 <tr><td><input type="submit" class='label-success' name="submit" value="aggiungi tipologia" /></td></tr>
+<tr><td><a href='<c:url value="/areaAmministrazione" />'><span class="label label-danger annullabutton">Annulla Operazione</span></a></td></tr>
 </table>
  </form:form>
  <div2 id="newpost">
