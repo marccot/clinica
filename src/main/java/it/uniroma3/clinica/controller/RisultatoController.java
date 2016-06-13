@@ -26,24 +26,38 @@ public class RisultatoController {
 	
 	@RequestMapping(value="/addRisultati", method = RequestMethod.POST)
 	public String aggiungiRisultato(@ModelAttribute Risultato risultato, ModelMap model, HttpServletRequest request){
-			String s = request.getParameter("esamePrenotato");
-			System.out.println("eccolo" + s);
-			Esame e = esameFacade.getEsame(Long.parseLong(s));
+		System.out.println(risultato.getNome());	
+		Esame e = esameFacade.getEsame(Long.parseLong(request.getParameter("esameScelto")));
+		System.out.println(e.getId());
 			if(e!=null){
 				risultato.setEsame(e);
 				e.getRisultati().add(risultato);
 				esameFacade.aggiornaEsame(e);
 			}
 		rFacade.saveRisultato(risultato);
+//		model.addAttribute("success", "Risultato inserito nel sistema");
 		return "areaAmministrazione";
 	}
 	
-	@RequestMapping(value="/inserisciRisultati", method = RequestMethod.GET)
+	@RequestMapping(value="recuperaEsame", method = RequestMethod.POST)
+	public String recuperaEsame(ModelMap model, HttpServletRequest request){
+		String s = request.getParameter("esamePrenotato");
+		int nRes = Integer.parseInt(request.getParameter("nResults"));
+		for(int i=0; i<nRes; i++){
+			model.addAttribute("risultato"+i, new Risultato());
+		}
+//		System.out.println(nRes);
+		long id = Long.parseLong(s);
+		model.addAttribute("esame", esameFacade.getEsame(id));
+		model.addAttribute("nRes", nRes-1);
+		return "inserisciRisultati_step2";
+	}
+	
+	@RequestMapping(value="/inserisciRisultatiEsame", method = RequestMethod.GET)
 	public String indexRedirect(ModelMap model) {
 //		System.out.println("CISONO");
-		model.addAttribute("risultato", new Risultato());
 		System.out.println(esameFacade.getEsami());
 		model.addAttribute("esami", esameFacade.getEsami());
-		return "inserisciRisultati";
+		return "inserisciRisultati_step1";
 	}
 }
