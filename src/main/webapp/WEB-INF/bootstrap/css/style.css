@@ -11,6 +11,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	padding:1em;
 }
 
+.div-clinica{
+    margin-left: 2em;
+    width: 27em;
+}
 .DivToScroll{   
     background-color: #F5F5F5;
     border: 1px solid #DDDDDD;
