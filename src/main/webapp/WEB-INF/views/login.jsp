@@ -23,19 +23,28 @@
 
   <div class="wrapper">
   <div class='col-md-12'>
-    <form class="form-signin" action = "userLogin" method = "post">       
-      <h2 class="form-signin-heading">Please login</h2>
-      <br/>
-      <input type="text" class="form-control" name="username" placeholder="Username" required autofocus />
-      <br/>
-      <input type="password" class="form-control" name="password" placeholder="Password" required/>      
-   <!--   <label class="checkbox">
-        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
-      </label> -->
-      <br/>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
-   <!--    <a href="userSignUp" class="button btn-block btn-success btn-lg btn">Sign Up</a>  -->
-    </form>
+  <form name='loginForm'
+		  action="<c:url value="j_spring_security_check"/>" method='POST'>
+
+		  <table>
+			<tr>
+				<td>User:</td>
+				<td><input type='text' name='username' value=''></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type='password' name='password' /></td>
+			</tr>
+			<tr>
+				<td colspan='2'><input name="submit" type="submit"
+					value="submit" /></td>
+			</tr>
+		  </table>
+
+		  <input type="hidden" name="${_csrf.parameterName}"
+			value="${_csrf.token}" />
+
+		</form>
   </div>
   </div>
 </body>

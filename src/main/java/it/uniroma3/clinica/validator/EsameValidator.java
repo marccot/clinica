@@ -5,7 +5,6 @@ import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 import it.uniroma3.clinica.model.Esame;
-import it.uniroma3.clinica.model.Paziente;
 
 public class EsameValidator implements Validator {
 

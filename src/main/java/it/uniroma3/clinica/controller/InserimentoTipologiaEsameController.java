@@ -1,6 +1,5 @@
 package it.uniroma3.clinica.controller;
 
-import java.util.Enumeration;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;

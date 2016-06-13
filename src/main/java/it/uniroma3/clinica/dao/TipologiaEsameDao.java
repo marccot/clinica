@@ -1,10 +1,7 @@
 package it.uniroma3.clinica.dao;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;

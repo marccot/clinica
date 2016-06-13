@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
@@ -15,11 +16,11 @@
 
 	<context:component-scan base-package="it.uniroma3.clinica" />
 	
-	<bean id="pazienteValidator" class="it.uniroma3.clinica.validator.PazienteValidator" />
-	<bean id="esameValidator" class="it.uniroma3.clinica.validator.EsameValidator" />
-	<bean id="editorPaziente" class="it.uniroma3.clinica.editor.EditorPaziente" />
-	<bean id="editorMedico" class="it.uniroma3.clinica.editor.EditorMedico" />
-	<bean id="editorTipologiaEsame" class="it.uniroma3.clinica.editor.EditorTipologiaEsame" />
+	<beans:bean id="pazienteValidator" class="it.uniroma3.clinica.validator.PazienteValidator" />
+	<beans:bean id="esameValidator" class="it.uniroma3.clinica.validator.EsameValidator" />
+	<beans:bean id="editorPaziente" class="it.uniroma3.clinica.editor.EditorPaziente" />
+	<beans:bean id="editorMedico" class="it.uniroma3.clinica.editor.EditorMedico" />
+	<beans:bean id="editorTipologiaEsame" class="it.uniroma3.clinica.editor.EditorTipologiaEsame" />
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
