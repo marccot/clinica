@@ -114,8 +114,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- 	</nav> -->
 	<div id="banner-bottom" class="banner-bottom">
 		<div class="container">
-			<h3 class="tittle">Benvenuto nell'Area Amministrativa</h3>
+			<h3 class="title">Benvenuto nell'Area Amministrativa</h3>
 			<p>Usa questa area per l'inserimento di dati nel sistema</p>
+			
+			<h4 class ="success"> ${messaggioSuccesso} </h4>
 			<ul id="sti-menu" class="sti-menu">
 				<li data-hovercolor="#fff" class=""><a
 					href="<c:url value="/inserisciTipologiaEsame"/>" class=""> <strong

@@ -1,5 +1,6 @@
 package it.uniroma3.clinica.controller;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -9,6 +10,7 @@ import java.util.TimeZone;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -19,6 +21,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import it.uniroma3.clinica.model.Medico;
@@ -61,15 +64,16 @@ public class EsameController extends WebMvcConfigurerAdapter {
 		binder.registerCustomEditor(Paziente.class, this.editorPaziente);
 		binder.registerCustomEditor(TipologiaEsame.class, this.editorTipologiaEsame);
 		binder.registerCustomEditor(Medico.class, this.editorMedico);
-//		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-//		sdf.setTimeZone(TimeZone.getDefault());
-//		binder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, true));
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		binder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, true));
 	}
 
 	@RequestMapping(value="/inserisciEsame", method = RequestMethod.POST)
-	public String inserisciEsame(@ModelAttribute("esame") @Validated Esame esame,BindingResult bindingResult, ModelMap model) {
-		
+	public String inserisciEsame(@RequestParam("dataEsame")Date dataEsame, @ModelAttribute("esame") @Validated Esame esame,BindingResult bindingResult, ModelMap model) {
+		System.out.println(dataEsame);
+
 		if (bindingResult.hasErrors()) {
+			System.out.println(bindingResult.getAllErrors());
 			model.addAttribute("esame", new Esame());
 			model.addAttribute("listaTipologie",tipologiaFacade.getAllTipologiaEsame() );
 			model.addAttribute("listaPazienti", pazienteFacade.getPazienti());
@@ -78,6 +82,7 @@ public class EsameController extends WebMvcConfigurerAdapter {
 		}
 		esame.setDataPrenotazione(new Date());
 		esameFacade.saveEsame(esame);
+		model.addAttribute("messaggioSuccesso", "Prenotazione effettuata con successo");
 		return "areaAmministrazione";
 	}
 	@RequestMapping(value="/vediEsami", method = RequestMethod.GET)
