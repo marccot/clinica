@@ -7,12 +7,18 @@
 <%@ include file='header.jsp' %>
 <body>
 <form:form  class='form-clinica' method="post" action="addRisultati" modelAttribute="risultato">
-<form:input type='text' path='nome'/>
-<form:input type='text' path='valore'/>
+<label>Nome risultato</label><form:input type='text' path='nome'/><br/>
+<label>Valore risultato</label><form:input type='text' path='valore'/><br/>
+<label style='float:left'>Esame</label>
+<fieldset>
+<div class='DivToScroll DivWithScroll div-clinica'>
 <c:forEach items='${esami}' var='esame'>
-<input type='radio' name='${esame.id }' value='${esame.id }'/> ${esame.tipologia }<br/>
+<input type='radio' name='esamePrenotato' value='${esame.id }'/> #${esame.id}: ${esame.tipologia } paziente: ${esame.paziente }<br/>
 </c:forEach>
+</div >
+</fieldset>
 <input type='submit' value='Aggiungi risultati' name='submit'/> 
 </form:form>
+<%@ include file='footer.html' %>
 </body>
 </html>

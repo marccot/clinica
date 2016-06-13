@@ -28,7 +28,6 @@
 				</tr>
 				<tr>
 					<td>Paziente :</td>
-					
 					<td><form:select path="paziente" class="form-control">
 							<form:options items="${listaPazienti}" itemLabel="nomeCognome"
 								itemValue="id" />
@@ -37,7 +36,6 @@
 				</tr>
 				<tr>
 					<td>Medico :</td>
-					
 					<td><form:select path="medico" class="form-control">
 							<form:options items="${listaMedici}" itemLabel="nomeCognome"
 								itemValue="id" />
@@ -51,9 +49,14 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input type="submit" value="Invia" class="label-success"  />
+
+					<td><input type="submit" value="Invia" class="label-success" />
 					</td>
 				</tr>
+				<tr>
+					<td><a href='<c:url value="/areaAmministrazione" />'><span
+							class="label label-danger annullabutton">Annulla
+								Operazione</span></a></td>				</tr>
 			</table>
 		</fieldset>
 	</form:form>

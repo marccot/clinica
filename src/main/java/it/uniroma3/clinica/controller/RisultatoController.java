@@ -26,20 +26,14 @@ public class RisultatoController {
 	
 	@RequestMapping(value="/addRisultati", method = RequestMethod.POST)
 	public String aggiungiRisultato(@ModelAttribute Risultato risultato, ModelMap model, HttpServletRequest request){
-		List<Esame> esami = esameFacade.getEsami();
-		System.out.println("********************");
-		System.out.println(request.getParameterMap());
-		for(Esame e : esami){
-			System.out.println(String.valueOf(e.getId()));
-			String s = request.getParameter(String.valueOf(e.getId()));
+			String s = request.getParameter("esamePrenotato");
 			System.out.println("eccolo" + s);
-
-			if(s!=null){
+			Esame e = esameFacade.getEsame(Long.parseLong(s));
+			if(e!=null){
 				risultato.setEsame(e);
 				e.getRisultati().add(risultato);
 				esameFacade.aggiornaEsame(e);
 			}
-		}
 		rFacade.saveRisultato(risultato);
 		return "areaAmministrazione";
 	}
