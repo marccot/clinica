@@ -74,7 +74,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</script>
 <!-- banner -->
 <div class="banner">
-
+<div class="titolone">
+		<h3>MEDICURE INC.</h3>
+		<h3>I TUOI MALORI...IL NOSTRO FUTURO</h3>
+	</div>
 	<script src=" <c:url value="/bootstrap/js/jquery.magnific-popup.js" /> " type="text/javascript"></script>
 		<div id="small-dialog" class="mfp-hide">
 			<div class="search-top">
@@ -157,7 +160,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li data-hovercolor="#fff">
 					<a href="<c:url value="/vediEsami"/>">
 					<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">ELENCO ESAMI</strong>
-					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci un esame nel sistema.</p>
+					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0);">Visualizza gli esami offerti dalla nostra clinica.</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 					</a>
 						<!-- <h4 data-type="mText" class="sti-item">ESAMI</h4>-->
@@ -166,8 +169,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</li>	
 				<li data-hovercolor="#fff">
 					<a href="<c:url value = "nuovoEsame"/>">
-						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">Elenco Pazienti?</strong>
-					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0));">marco puzza :3</p>
+						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">Prenota esame</strong>
+					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0));">Prenotati per un esame con il nostro servizio automatico</p>
 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 					</a>
 					</a>

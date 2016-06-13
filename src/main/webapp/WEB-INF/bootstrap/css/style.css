@@ -10,10 +10,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	background-color:#d7e3f0;
 	padding:1em;
 }
-
+.multiform-clinica{
+	background-color:#d7e3f0;
+	padding:1em; 
+}
 .div-clinica{
     margin-left: 2em;
     width: 27em;
+}
+.container-clinica{	
+		background-color:#d7e3f0;
+	
+}
+.container-clinica button{
+	margin-left:1em;
+	margin-bottom:2em;
 }
 .DivToScroll{   
     background-color: #F5F5F5;
@@ -889,7 +900,7 @@ padding: 131px 0 0 0;
 .measure h3{
 line-height:1.4em;
   text-align: center;
-  color: #37B7E5;
+  color: #FFFFFF;
   font-size: 50px;
   font-family: 'FjallaOne-Regular';
 }
@@ -1696,8 +1707,15 @@ p.est span{
 	padding-bottom:1em;
 	padding-right:0.5em;
 }
+.multiform-clinica td{
+		padding-bottom:1em;
+	padding-right:0.5em;
+}
 .form-clinica h2 {
 	margin-bottom:1em;
+	}
+.multiform-clinica h2{
+		margin-bottom:1em;
 }
 .table td, .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
   padding: 15px!important;
@@ -3322,11 +3340,22 @@ margin:0 23px;
 	margin-top: 1em;
 	margin-bottom : 3em;
 }
+}
 .margineNavAreaAmministrazione{
 	margin-bottom: 3em;
 }
 .colorinfo{
 	color:blue;
+}
+.titolone{
+  padding-top: 34em;
+}
+.titolone h3{
+	line-height: 1.4em;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 50px;
+    font-family: 'FjallaOne-Regular';
 }
 a:hover > p {
 	color:white !important;
