@@ -24,17 +24,6 @@
 
 </c:forEach></br>
 
-
-</body>
-<%@include file ='footer.html' %>
-</c:forEach></br>
-
-
-</body>
-<%@include file ='footer.html' %>
-</c:forEach></br>
-
-
 </body>
 <%@include file ='footer.html' %>
 </body>
