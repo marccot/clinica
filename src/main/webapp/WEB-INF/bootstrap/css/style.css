@@ -3348,12 +3348,14 @@ margin:0 23px;
 	color:blue;
 }
 .titolone{
-  padding-top: 24em;
+  padding-top: 34em;
 }
 .titolone h3{
-	color:#FFFFFF;
-	font-size:xx-large;
-	text-align: center;
+	line-height: 1.4em;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 50px;
+    font-family: 'FjallaOne-Regular';
 }
 a:hover > p {
 	color:white !important;

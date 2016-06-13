@@ -153,9 +153,9 @@ $('.hide').click(function () {
 				<!-- 			</table> -->
 				<a href='<c:url value="/index" />'><span
 					class="label label-danger annullabutton">Torna alla Home</span></a>
+					<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 					</ul>
 		</div>
-
 	<div class="copy-right">
 		<div class="container">
 			<p>
