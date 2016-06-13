@@ -900,7 +900,7 @@ padding: 131px 0 0 0;
 .measure h3{
 line-height:1.4em;
   text-align: center;
-  color: #37B7E5;
+  color: #FFFFFF;
   font-size: 50px;
   font-family: 'FjallaOne-Regular';
 }
@@ -3340,11 +3340,20 @@ margin:0 23px;
 	margin-top: 1em;
 	margin-bottom : 3em;
 }
+}
 .margineNavAreaAmministrazione{
 	margin-bottom: 3em;
 }
 .colorinfo{
 	color:blue;
+}
+.titolone{
+  padding-top: 24em;
+}
+.titolone h3{
+	color:#FFFFFF;
+	font-size:xx-large;
+	text-align: center;
 }
 a:hover > p {
 	color:white !important;

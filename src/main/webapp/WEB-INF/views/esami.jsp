@@ -97,7 +97,14 @@ $('.hide').click(function () {
 <!-- 	</nav> -->
 	
 		<div class="clinica-content">
-			<h3 class="tittle" margin-top="1.9em">Elenco esami disponibili</h3>
+			
+			<div class="measure">
+	<div class="container">
+		<h3>LA NOSTRA CLINICA OFFRE NUMEROSI ESAMI</h3>
+		<h3>CONSULTALI QUI E VIENI A TROVARCI PER ULTERIORI INFORMAZIONI!</h3>
+	</div>
+</div></br>
+<h3 class="tittle" margin-top="1.9em">Elenco esami disponibili</h3>
 			<div>
 				<c:forEach items='${esami}' var='esame'>
 				
