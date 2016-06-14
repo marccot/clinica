@@ -2,6 +2,7 @@
 <html lang="en"> 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
   <head>
   
     <meta charset="utf-8">
@@ -34,7 +35,7 @@
   </head>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 
-  <!â€”Logo e pulsante per barra ridimensionata -->
+  <!--  €”Logo e pulsante per barra ridimensionata -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
       <span class="sr-only">Espandi barra di navigazione</span>
@@ -42,12 +43,15 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-     <a href="<c:url value = "login"/>"><span class="label label-success loginbutton">LOGIN</span></a>
-<!--       <a href="#"><span class="label label-danger logout">LOGOUT</span></a> -->
+<%--     <h3>${pageContext.request.userPrincipal.name}</h3> --%>
+    <c:choose>
+     <c:when test="${pageContext.request.userPrincipal == null}"><a href="<c:url value = "login"/>"><span class="label label-success loginbutton">LOGIN</span></a></c:when>
+	 <c:otherwise> <a href="<c:url value="/logout" />"><span class="label label-danger logout">LOGOUT</span></a></c:otherwise>
+</c:choose>
     <a class="navbar-brand" href="index.html">Logo</a>
   </div>
   
-  <!â€”Elementi della barra -->
+  <!--  Elementi della barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav navbar-right">
       <li class="active"><a href="<c:url value='/index'/>">Home</a></li>

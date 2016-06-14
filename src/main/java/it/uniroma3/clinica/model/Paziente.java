@@ -30,20 +30,21 @@ public class Paziente implements Serializable {
 	private String nome;
 	@Column(nullable=false)
 	private String cognome;
+	@Column(unique=true)
 	private String codiceFiscale;
-	private String password;
+	@Column(unique=true)
+	private String email;
 	private static final long serialVersionUID = 1L;
 
 	public Paziente() {
 		super();
 	}   
 	
-	public Paziente(Long id, String nome, String cognome, String codice, String codiceFiscale) {
+	public Paziente(Long id, String nome, String cognome, String codiceFiscale) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.cognome = cognome;
-		this.password = codice;
 		this.codiceFiscale = codiceFiscale;
 	}
 
@@ -77,23 +78,24 @@ public class Paziente implements Serializable {
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
 	}   
-	public String getPassword() {
-		return this.password;
-	}
+
 	
-	public String getNomeCognome() {
-		return this.nome + " " + this.cognome;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getNomeCognome() {
+		return this.nome + " " + this.cognome;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + ((codiceFiscale == null) ? 0 : codiceFiscale.hashCode());
 		result = prime * result + ((cognome == null) ? 0 : cognome.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
