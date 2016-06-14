@@ -118,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<p>Usa questa area per l'inserimento di dati nel sistema</p>
 			
 			<h4 class ="success"> ${messaggioSuccesso} </h4>
-			<ul id="sti-menu" class="sti-menu">
+			<ul id="sti-menu" class="sti-menu adminList">
 				<li data-hovercolor="#fff" class=""><a
 					href="<c:url value="/adminInserisciTipologiaEsame"/>" class=""> <strong
 						data-type="mText" class="sti-item"

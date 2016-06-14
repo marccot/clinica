@@ -154,9 +154,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <div id="banner-bottom" class="banner-bottom">
 	<div class="container">
+	<div>
 		<h3 class="tittle">THE BEST MEDICINE IS PREVENTION</h3>
 			<h4>${messaggioErrore }</h4>
-		<ul id="sti-menu" class="sti-menu">
+		<ul id="sti-menu" class="sti-menu homeList">
 				<li data-hovercolor="#fff">
 					<a href="<c:url value="/vediEsami"/>">
 					<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">ELENCO ESAMI</strong>
@@ -167,14 +168,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- 						<p data-type="sText" class="sti-item">Qui potrai vedere gli esami offerti dalla nostra clinica</p> -->
 <!-- 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item"></span> -->
 				</li>	
-				<li data-hovercolor="#fff">
-					<a href="<c:url value = "nuovoEsame"/>">
-						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">Prenota esame</strong>
-					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0));">Prenotati per un esame con il nostro servizio automatico</p>
-						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
-					</a>
-					</a>
-				</li>
+<!-- 				<li data-hovercolor="#fff"> -->
+<%-- 					<a href="<c:url value = "nuovoEsame"/>"> --%>
+<!-- 						<strong data-type="mText" class="sti-item" style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">Prenota esame</strong> -->
+<!-- 					<p data-type="sText" class="sti-item" style="display: block; top: 135px; color: rgb(0, 0, 0));">Prenotati per un esame con il nostro servizio automatico</p> -->
+<!-- 						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item" style="display: inline-block; margin-top: 1em; background-position: left top;"></span> -->
+<!-- 					</a> -->
+<!-- 					</a> -->
+<!-- 				</li> -->
 				
 				<li data-hovercolor="#fff">
 					<a href="<c:url value = "/areaPaziente"/>">
@@ -210,6 +211,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 // 					});
 			</script> -->
 		</ul>
+		</div>
 		</div>
 		</div>
 		<!--  <div class="col-md-3 welcome-grid text-center">
