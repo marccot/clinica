@@ -13,16 +13,16 @@
 
 		  <table>
 			<tr>
-				<td>User:</td>
+				<td><label>User</label></td>
 				<td><input type='text' name='username' value=''></td>
 			</tr>
 			<tr>
-				<td>Password:</td>
+				<td><label>Password</label></td>
 				<td><input type='password' name='password' /></td>
 			</tr>
 			<tr>
-				<td colspan='2'><input name="LogIn" type="submit"
-					value="Accedi" class="label-success" /></td>
+				<td colspan='2'><button name="LogIn" type="submit"
+					class="btn btn-success">Accedi</button></td>
 			</tr>
 		  </table>
 
@@ -30,12 +30,12 @@
 			value="${_csrf.token}" />
 
 		</form>
+		<form:form action = "iniziaRegistrazione" method = "get" class ="form-clinica registrazione-clinica">
+			<button type ="submit"  class = "btn btn-warning">Registrati</button>
+		</form:form>
 		</div>
-		<div style="background-color:#d7e3f0">
-<h3 class="tittle">NON SEI ANCORA REGISTRATO? FALLO ORA!</h3>
-		<form:form action = "iniziaRegistrazione" method = "get" class ="form-clinica">
-			<input type ="submit" value = "Registrati" class = "label-danger"/>
-		</form:form></div>
+
+
 </body>
 <%@include file ='footer.html' %>
 </html>

@@ -3329,6 +3329,11 @@ margin:0 23px;
     top: 0;
     right: 0px;
 }
+.registrazione-clinica button{
+    margin-bottom: 4em;
+    margin-top: -13.9em;
+    margin-left: 5em;	
+}
 .loginbutton{
 	padding: 19px 15px;
     border: none;

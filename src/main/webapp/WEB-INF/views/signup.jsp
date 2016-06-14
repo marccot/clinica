@@ -15,50 +15,67 @@
 <body>
 
 
-	<form action="creaUtente" method="post" class ="form-clinica">
-		Username :
-		<spring:bind path="utente.username">
-			<input type="text" name="${status.expression}"
-				value="${status.value}">
-			<br />
-		</spring:bind>
-		Password :
-		<spring:bind path="utente.password">
-			<input type="password" name="${status.expression}"
-				value="${status.value}">
-			<br />
-		</spring:bind>
-		Nome :
-		<spring:bind path="paziente.nome">
-			<input type="text" name="${status.expression}"
-				value="${status.value}">
-			<br />
-		</spring:bind>
-		
-		Cognome :
-		<spring:bind path="paziente.cognome">
-			<input type="text" name="${status.expression}"
-				value="${status.value}">
-			<br />
-		</spring:bind>
-		
-		Codice Fiscale :
-		<spring:bind path="paziente.codiceFiscale">
-			<input type="text" name="${status.expression}"
-				value="${status.value}">
-			<br />
-		</spring:bind>
-		
-		Email :
-		<spring:bind path="paziente.email">
-			<input type="text" name="${status.expression}"
-				value="${status.value}">
-			<br />
-		</spring:bind>
-		
-		 <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
+	<form action="creaUtente" method="post" class="form-clinica">
+		<table class='full-table'>
+			<tr>
+				<td><label>Username</label></td>
+				<td><spring:bind path="utente.username">
+						<input type="text" name="${status.expression}"
+							value="${status.value}">
+		</spring:bind></td>
+			</tr>
+			<tr>
+				<td><label>Password</label></td>
+				<td><spring:bind path="utente.password">
+						<input type="password" name="${status.expression}"
+							value="${status.value}">
+						<br />
+					</spring:bind></td>
+			<tr>
+				<td><label>Nome</label></td>
+				<td><spring:bind path="paziente.nome">
+						<input type="text" name="${status.expression}"
+							value="${status.value}">
+						<br />
+					</spring:bind></td>
+			</tr>
 
-		<input type="submit" value="Create" />
+			<tr>
+				<td><label>Cognome</label></td>
+				<td><spring:bind path="paziente.cognome">
+						<input type="text" name="${status.expression}"
+							value="${status.value}">
+						<br />
+					</spring:bind></td>
+			</tr>
+
+			<tr>
+				<td><label>Codice Fiscale</label></td>
+				<td><spring:bind path="paziente.codiceFiscale">
+						<input type="text" name="${status.expression}"
+							value="${status.value}">
+						<br />
+					</spring:bind></td>
+			</tr>
+
+			<tr>
+				<td><label>Email</label></td>
+				<td><spring:bind path="paziente.email">
+						<input type="text" name="${status.expression}"
+							value="${status.value}">
+						<br />
+					</spring:bind></td>
+			</tr>
+
+			<tr>
+				<td><input type="hidden" name="${_csrf.parameterName}"
+					value="${_csrf.token}" /></td>
+			</tr>
+
+			<tr>
+				<td><button type="submit" class='btn btn-success'>Registrati</button></td>
+			</tr>
+		</table>
 	</form>
 </body>
 <%@include file='footer.html'%>
