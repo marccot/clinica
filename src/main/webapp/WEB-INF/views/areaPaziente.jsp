@@ -7,19 +7,32 @@
 <%@include file='header.jsp' %>
 <body>
 <div class='clinica-content'>
-<h1>Benvenuto nell'area paziente</h1>
-<h3>Ecco lo stato dei tuoi esami</h3>
+<h3 class='tittle'>Benvenuto nell'area paziente</h3>
+<h3 class='tittle'>Ecco lo stato dei tuoi esami</h3>
 <c:forEach items='${esami }' var='esame' >
 <div class='esame-riepilogo'>
-<b>${esame.tipologia.nome }</b> <br/>
-Medico: ${esame.medico }<br/>
-Prenotato il: ${esame.dataPrenotazione }<br/>
-Effettuato il: ${esame.dataEsame }<br/>
-Risultati: 
+<table class='full-table'>
+<tr><th>
+<b>#${esame.id} ${esame.tipologia.nome }</b> </th></tr>
+<tr><td><label>Medico</label></td><td><p>${esame.medico }</p></td></tr>
+<tr><td><label>Data Prenotazione</label></td> <td><p> ${esame.dataPrenotazione }</p></td></tr>
+<tr><td><label>Effettuato in data</label></td><td><p> ${esame.dataEsame }</p></td></tr>
+<tr><td><label>Risultati</label></td> <td>
+<c:choose>
+<c:when test='${empty esame.risultati}'>
+<p>N/D</p>
+</c:when>
+<c:when test='${!empty esame.risultati }'>
+<div  class='DivToScroll DivWithScroll esame-risultati'>
 <c:forEach items='${esame.risultati }' var='risultato'>
 ${risultato.nome}, ${risultato.valore } <br/>
 </c:forEach>
 </div>
+</c:when>
+</c:choose>
+</td></tr>
+</table>
+</div> <br/>
 </c:forEach>
 </div>
 <%@include file='footer.html' %>

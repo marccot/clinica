@@ -23,16 +23,18 @@ public class RisultatoController {
 	private RisultatoFacade rFacade;
 	
 	@RequestMapping(value="/addRisultati", method = RequestMethod.POST)
-	public String aggiungiRisultato(@ModelAttribute Risultato risultato, ModelMap model, HttpServletRequest request){
-		System.out.println(risultato.getNome());	
+	public String aggiungiRisultato( ModelMap model, HttpServletRequest request){
+//		System.out.println(risultatos.getNome());	
 		Esame e = esameFacade.getEsame(Long.parseLong(request.getParameter("esameScelto")));
 		System.out.println(e.getId());
-			if(e!=null){
-				risultato.setEsame(e);
-				e.getRisultati().add(risultato);
-				esameFacade.aggiornaEsame(e);
-			}
-		rFacade.saveRisultato(risultato);
+		for(int i = 1; i<=(Integer.parseInt(request.getParameter("nRes")));i++){
+			System.out.println("*************");
+			Risultato risultato = new Risultato(request.getParameter("nome"+i), request.getParameter("valore"+i));
+			risultato.setEsame(e);
+			e.getRisultati().add(risultato);
+			esameFacade.aggiornaEsame(e);
+			rFacade.saveRisultato(risultato);
+		}
 //		model.addAttribute("success", "Risultato inserito nel sistema");
 		return "areaAmministrazione";
 	}
@@ -47,7 +49,7 @@ public class RisultatoController {
 //		System.out.println(nRes);
 		long id = Long.parseLong(s);
 		model.addAttribute("esame", esameFacade.getEsame(id));
-		model.addAttribute("nRes", nRes-1);
+		model.addAttribute("nRes", nRes);
 		return "inserisciRisultati_step2";
 	}
 	

@@ -28,7 +28,10 @@ public class Risultato implements Serializable {
 	public Risultato() {
 		
 	}
-
+	public Risultato(String nome, String valore){
+		this.nome = nome;
+		this.valore = valore;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
