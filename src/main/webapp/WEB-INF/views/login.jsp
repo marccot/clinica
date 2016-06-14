@@ -6,6 +6,8 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@page session="true"%>
 <%@include file ='header.jsp' %>
+<div style="background-color:#d7e3f0">
+<h3 class="tittle">EFFETTUA IL LOGIN PER ACCEDERE ALLE AREE PRIVATE</h3>
  <form name='loginForm'
 		  action="<c:url value="j_spring_security_check"/>" method='POST' class ="form-clinica">
 
@@ -20,7 +22,7 @@
 			</tr>
 			<tr>
 				<td colspan='2'><input name="LogIn" type="submit"
-					value="Accedi" /></td>
+					value="Accedi" class="label-success" /></td>
 			</tr>
 		  </table>
 
@@ -28,9 +30,12 @@
 			value="${_csrf.token}" />
 
 		</form>
+		</div>
+		<div style="background-color:#d7e3f0">
+<h3 class="tittle">NON SEI ANCORA REGISTRATO? FALLO ORA!</h3>
 		<form:form action = "iniziaRegistrazione" method = "get" class ="form-clinica">
-			<input type ="submit" value = "Registrati" class = "button-danger"/>
-		</form:form>
+			<input type ="submit" value = "Registrati" class = "label-danger"/>
+		</form:form></div>
 </body>
 <%@include file ='footer.html' %>
 </html>
