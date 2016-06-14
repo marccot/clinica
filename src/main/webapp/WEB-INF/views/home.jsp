@@ -156,7 +156,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 	<div>
 		<h3 class="tittle">THE BEST MEDICINE IS PREVENTION</h3>
-			<h4>${messaggioErrore }</h4>
+			<c:if test='${!empty messaggioErrore}'> <div class='error'><p>${messaggioErrore }</p></div></c:if>
 		<ul id="sti-menu" class="sti-menu homeList">
 				<li data-hovercolor="#fff">
 					<a href="<c:url value="/vediEsami"/>">

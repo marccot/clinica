@@ -28,7 +28,7 @@ $(document).ready(function(){
 <body>
 <form:form class='form-clinica' method='post' action='addTipologiaEsame' modelAttribute='esame' name='form'>
 <table>
-<tr><td>${messaggioSuccesso }</td></tr>
+<c:if test='${!empty messaggioSuccesso }'><div class='success'>${messaggioSuccesso }</div></c:if>
 <tr><td><h3 class='tittle'>Aggiungi una nuova tipologia</h3></td></tr>
 <tr>
 <td>

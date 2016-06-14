@@ -3342,6 +3342,26 @@ margin:0 23px;
     top: 0;
     right: 0px;
 }
+.success{
+	    padding: 1em;
+    background-color: lightgreen;
+    border: solid;
+    border-color: green;
+}
+.success p{
+	margin-bottom:0;
+	font-weight: bold;
+}
+.error{
+	    padding: 1em;
+    background-color: antiquewhite;
+    border: solid;
+    border-color: darkred;
+}
+.error p{
+	margin-bottom:0;
+	font-weight: bold;
+}
 .adminList li{
 	list-style-type: none;
   float: left;
