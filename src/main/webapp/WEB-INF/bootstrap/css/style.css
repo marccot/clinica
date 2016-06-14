@@ -22,6 +22,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		background-color:#d7e3f0;
 	
 }
+
+.full-table{
+	width:100%;
+}
+
 .container-clinica button{
 	margin-left:1em;
 	margin-bottom:2em;
@@ -559,7 +564,8 @@ text-decoration:none;
 }
 
 .wrappa{
-	width:29em;
+	margin-left:3em;
+	width:50%;
 	display:inline-block;
 }
 .wrappa p{
@@ -781,7 +787,7 @@ width:100%;
 	margin-left:2em;
 	background-color:white;
 	margin-top:1em;
-	width:16em;
+	width:50%;
 	padding:0.3em;
 }
 .no-marg{
@@ -3338,7 +3344,7 @@ margin:0 23px;
 .esamebutton{
 	font-size: large;
 	margin-top: 1em;
-	margin-bottom : 3em;
+	margin-bottom : 1em;
 }
 }
 .margineNavAreaAmministrazione{
