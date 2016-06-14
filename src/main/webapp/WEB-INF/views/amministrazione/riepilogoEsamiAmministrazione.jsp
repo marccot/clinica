@@ -14,7 +14,17 @@
 </head>
 <%@include file ='../header.jsp' %>
 <body class="form-clinica">
-<h3 class="tittle">Riepilogo esami per medico</h3>
+<h3 class="tittle">Seleziona un medico per vedere i suoi esami</h3>
+
+<form name='form' action='visualizzaEsamiMedico' method='post'>
+<select name='id_medico'>
+<c:forEach items='${listaMedici }' var='medico'>
+<option value='${medico.id }'> ${medico.nome } ${medico.cognome }</option>
+</c:forEach>
+</select>
+ <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
+<input class='label-success' type='submit' name='submit' value='avanti' />
+</form>
 <c:forEach var='type' items='${esamiByMedico }'>
 <span class="label  label-info esamebutton">${type.key.nome } ${type.key.cognome }:<br/></span>
 <c:forEach var='esame' items='${type.value }'>
