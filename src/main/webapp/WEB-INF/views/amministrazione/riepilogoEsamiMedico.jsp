@@ -66,5 +66,6 @@ $('.hide').click(function () {
 	<%-- <p>Effettutato il: <b>${esame.dataEsame }</b></p> --%>
 	<!-- </div> -->
 	<%-- </c:forEach> --%>
+		<%@include file='../footer.html'%>
 </body>
 </html>
