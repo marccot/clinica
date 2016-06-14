@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -54,6 +56,8 @@ public class LogController {
 	@RequestMapping(value= "creaUtente")
 	public String effettuaRegistrazione(@ModelAttribute("utente") Utente utente, @ModelAttribute("paziente") Paziente paziente, ModelMap model) {
 		utente.setRole("ROLE_USER");
+		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		utente.setPassword(passwordEncoder.encode(utente.getPassword()));
 		utente.setPaziente(paziente);
 		utenteFacade.save(utente);
 		model.addAttribute("utente", utente);
