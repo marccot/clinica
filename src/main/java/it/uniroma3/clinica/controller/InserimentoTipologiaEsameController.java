@@ -36,7 +36,7 @@ public class InserimentoTipologiaEsameController {
 			}
 		}
 		tipoEsameFacade.saveTipologiaEsame(esame);
-		return "areaAmministrazione";
+		return "amministrazione/areaAmministrazione";
 	}
 
 	@RequestMapping(value="/adminInserisciTipologiaEsame", method = RequestMethod.GET)

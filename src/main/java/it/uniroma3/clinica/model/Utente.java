@@ -3,11 +3,16 @@ package it.uniroma3.clinica.model;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 
+
 @Entity
-@NamedQuery(name="Utente.findAll",query="SELECT u FROM Utente u")
+@NamedQueries({
+@NamedQuery(name="Utente.findAll",query="SELECT u FROM Utente u"),
+@NamedQuery(name="Utente.findByName", query="SELECT u FROM Utente u WHERE u.username=:username")
+})
 public class Utente {
 	
 	@Id

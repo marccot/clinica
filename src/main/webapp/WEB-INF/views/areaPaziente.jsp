@@ -32,7 +32,7 @@ $('.hide').click(function () {
 </script>
 
 	<div class='clinica-content'>
-		<h3 class='tittle'>Benvenuto nell'area paziente</h3>
+		<h3 class='tittle'>Benvenuto nell'area paziente ${username }</h3>
 		<h3 class='tittle'>Ecco lo stato dei tuoi esami</h3>
 		<c:forEach items='${esami }' var='esame'>
 			<div class="wrappa">

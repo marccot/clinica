@@ -36,7 +36,7 @@ public class RisultatoController {
 			rFacade.saveRisultato(risultato);
 		}
 //		model.addAttribute("success", "Risultato inserito nel sistema");
-		return "areaAmministrazione";
+		return "amministrazione/areaAmministrazione";
 	}
 	
 	@RequestMapping(value="recuperaEsame", method = RequestMethod.POST)

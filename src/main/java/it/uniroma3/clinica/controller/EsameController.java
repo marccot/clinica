@@ -78,7 +78,7 @@ public class EsameController extends WebMvcConfigurerAdapter {
 		esame.setDataPrenotazione(new Date());
 		esameFacade.saveEsame(esame);
 		model.addAttribute("messaggioSuccesso", "Prenotazione effettuata con successo");
-		return "areaAmministrazione";
+		return "amministrazione/areaAmministrazione";
 	}
 	@RequestMapping(value="/vediEsami", method = RequestMethod.GET)
 	public String vediEsami(ModelMap model) {

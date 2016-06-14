@@ -29,5 +29,9 @@ public class UtenteDao extends Dao<Utente> {
 	public Utente findByUsername(String username) {
 		return em.find(Utente.class, username);
 	}
-
+	public Utente findByName(String nome){
+		TypedQuery<Utente> query = em.createNamedQuery("Utente.findByName", Utente.class).setParameter("username", nome);
+		Utente u = query.getSingleResult();
+		return u;
+	}
 }

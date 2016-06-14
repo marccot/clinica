@@ -16,7 +16,7 @@
 <body class="form-clinica">
 <h3 class="tittle">Seleziona un medico per vedere i suoi esami</h3>
 
-<form name='form' class='form-centrato' action='visualizzaEsamiMedico' method='post'>
+<form name='form' class='form-centrato' action='adminVisualizzaEsamiMedico' method='post'>
 <select name='id_medico'>
 <c:forEach items='${listaMedici }' var='medico'>
 <option value='${medico.id }'> ${medico.nome } ${medico.cognome }</option>

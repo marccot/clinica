@@ -33,7 +33,8 @@ public class MedicoController extends WebMvcConfigurerAdapter{
 	@RequestMapping(value="/addMedico", method = RequestMethod.POST) 
 	public String aggiungiMedico(@ModelAttribute Medico medico, ModelMap model){ 
 		medicoFacade.saveMedico(medico);
-		return "areaAmministrazione";
+		model.addAttribute("messaggioSuccesso", "Il medico " + medico.getNome() + " " + medico.getCognome()+" è stato inserito nel sistema");
+		return "amministrazione/areaAmministrazione";
 	}
 	
 	@RequestMapping(value="/adminVisualizzaEsamiMedico", method = RequestMethod.POST)

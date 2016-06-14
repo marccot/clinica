@@ -151,17 +151,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						class="sti-icon glyphicon glyphicon-scissors sti-item"
 						style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 				</a></li>
-				<li data-hovercolor="#fff" class=""><a
-					href="<c:url value="/nuovoPaziente" /> "> <strong
-						data-type="mText" class="sti-item"
-						style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">INSERISCI
-							PAZIENTE</strong>
-						<p data-type="sText" class="sti-item"
-							style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci
-							un paziente nel sistema.</p> <span data-type="icon"
-						class="sti-icon glyphicon glyphicon-education sti-item"
-						style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
-				</a></li>
+<!-- 				<li data-hovercolor="#fff" class=""><a -->
+<%-- 					href="<c:url value="/nuovoPaziente" /> "> <strong --%>
+<!-- 						data-type="mText" class="sti-item" -->
+<!-- 						style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">INSERISCI -->
+<!-- 							PAZIENTE</strong> -->
+<!-- 						<p data-type="sText" class="sti-item" -->
+<!-- 							style="display: block; top: 135px; color: rgb(0, 0, 0);">Inserisci -->
+<!-- 							un paziente nel sistema.</p> <span data-type="icon" -->
+<!-- 						class="sti-icon glyphicon glyphicon-education sti-item" -->
+<!-- 						style="display: inline-block; margin-top: 1em; background-position: left top;"></span> -->
+<!-- 				</a></li> -->
 				<li data-hovercolor="#fff" class=""><a
 					href="<c:url value="/adminNuovoEsame" /> "> <strong
 						data-type="mText" class="sti-item"

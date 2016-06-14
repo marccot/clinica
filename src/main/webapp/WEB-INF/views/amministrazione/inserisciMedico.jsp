@@ -63,25 +63,23 @@
 			name='form'>
 			<h3 class="tittle">Inserire dati del Medico</h3>
 			<table>
-		</div>
-		<div>
 		<tr>
 			<td>Nome Medico :</td>
 			<td><form:input type="text" path='nome' placeholder="nome" required="true"  class="form-control"/></td>
 			<td><form:errors path="nome"  /></td>
 			</tr>
 		<tr>
-		</div>
-		<div>
-			<td>Cognome Medico</td>
-			<td><form:input type="text" path='cognome' placeholder="nome" required="true" class="form-control"/></td>
+					<td>Cognome Medico</td>
+			<td><form:input type="text" path='cognome' placeholder="cognome" required="true" class="form-control"/></td>
 			<td><form:errors path="nome"  /></td>
 			</tr>
 			<tr>
-			</div>
-			<div>
+			<td>Specializzazione</td>
+			<td><form:input type='text' path='specializzazione' placeholder='specializzazione' required='true' class='form-control' /></td>
+			</tr>
+			<tr>
 			<td><input type="submit" value="invia" class = "label-success" /></td>
-			</div>
+
 		</tr>
 		</table>
 		<a href='<c:url value="/areaAmministrazione" />'><span class="label label-danger annullabutton">Annulla Operazione</span></a>

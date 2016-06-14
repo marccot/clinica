@@ -18,5 +18,7 @@ public class UtenteFacade {
 	public void save(Utente utente) {
 		utenteDao.save(utente);
 	}
-
+	public Utente findByName(String name){
+		return utenteDao.findByName(name);
+	}
 }
