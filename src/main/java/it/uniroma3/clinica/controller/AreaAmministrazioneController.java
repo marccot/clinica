@@ -10,7 +10,7 @@ public class AreaAmministrazioneController {
 	
 	@RequestMapping(value="/areaAmministrazione", method = RequestMethod.GET)
 	public String indexRedirect(ModelMap model) {
-		return "areaAmministrazione";
+		return "amministrazione/areaAmministrazione";
 	}
 
 }

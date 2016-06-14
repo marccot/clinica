@@ -79,7 +79,6 @@ public class Paziente implements Serializable {
 		this.cognome = cognome;
 	}   
 
-	
 	public String getEmail() {
 		return email;
 	}

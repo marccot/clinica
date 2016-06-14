@@ -12,7 +12,7 @@
 <%@include file='../header.jsp'%>
 
 <body>
-	<form:form class='form-clinica' method="post" action="inserisciEsame"
+	<form:form class='form-clinica' method="post" action="adminInserisciEsame"
 		modelAttribute="esame" name="form">
 		<h3 class="tittle">Crea la prenotazione di un esame</h3>
 		<fieldset class="form-group">

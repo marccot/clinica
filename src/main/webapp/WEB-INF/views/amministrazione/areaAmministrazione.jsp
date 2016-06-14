@@ -75,7 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	rel='stylesheet' type='text/css'>
 <!-- start-smoth-scrolling -->
 </head>
-<%@include file='header.jsp' %>
+<%@include file='../header.jsp' %>
 <body>
 <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="<c:url value="/bootstrap/js/classie.js"/>"></script>
@@ -120,7 +120,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h4 class ="success"> ${messaggioSuccesso} </h4>
 			<ul id="sti-menu" class="sti-menu">
 				<li data-hovercolor="#fff" class=""><a
-					href="<c:url value="/inserisciTipologiaEsame"/>" class=""> <strong
+					href="<c:url value="/adminInserisciTipologiaEsame"/>" class=""> <strong
 						data-type="mText" class="sti-item"
 						style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">INSERISCI
 							ESAME</strong>
@@ -131,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 				</a></li>
 				<li data-hovercolor="#fff" class=""><a
-					href="<c:url value="/vediEsamiPerMedici"/>" class=""> <strong
+					href="<c:url value="/adminVediEsamiPerMedici"/>" class=""> <strong
 						data-type="mText" class="sti-item"
 						style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">VEDI ESAMI</strong>
 						<p data-type="sText" class="sti-item"
@@ -141,7 +141,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 				</a></li>
 				<li data-hovercolor="#fff" class=""><a
-					href="<c:url value="/inserisciMedico" /> "> <strong
+					href="<c:url value="/adminInserisciMedico" /> "> <strong
 						data-type="mText" class="sti-item"
 						style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">INSERISCI
 							MEDICO</strong>
@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						style="display: inline-block; margin-top: 1em; background-position: left top;"></span>
 				</a></li>
 				<li data-hovercolor="#fff" class=""><a
-					href="<c:url value="/nuovoEsame" /> "> <strong
+					href="<c:url value="/adminNuovoEsame" /> "> <strong
 						data-type="mText" class="sti-item"
 						style="display: block; top: 106px; color: rgb(0, 0, 0);padding-top: 0.5em;">INSERISCI
 							PRENOTAZIONE</strong>

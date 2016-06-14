@@ -39,12 +39,7 @@ public class InserimentoTipologiaEsameController {
 		return "areaAmministrazione";
 	}
 
-	@RequestMapping(value = "/deleteTipologiaEsame", method = RequestMethod.POST)
-	public String deleteTipologiaEsame() {
-
-		return "login";
-	}
-	@RequestMapping(value="/inserisciTipologiaEsame", method = RequestMethod.GET)
+	@RequestMapping(value="/adminInserisciTipologiaEsame", method = RequestMethod.GET)
 	public String indexRedirect(ModelMap model) {
 		List<Prerequisito> prerequisitiEsistenti = pFacade.getPrerequisiti();
 		model.addAttribute("esame", new TipologiaEsame());

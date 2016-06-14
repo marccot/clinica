@@ -1,8 +1,10 @@
 package it.uniroma3.clinica.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 
 @Entity
 @NamedQuery(name="Utente.findAll",query="SELECT u FROM Utente u")
@@ -15,6 +17,7 @@ public class Utente {
 	
 	private String role;
 	
+	@OneToOne(cascade=CascadeType.PERSIST)
 	private Paziente paziente;
 
 	public String getUsername() {

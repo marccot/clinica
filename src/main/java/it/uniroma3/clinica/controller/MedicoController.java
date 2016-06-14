@@ -24,7 +24,7 @@ public class MedicoController extends WebMvcConfigurerAdapter{
 	@Autowired
 	EsameFacade eFacade;
 	
-	@RequestMapping(value="/inserisciMedico", method = RequestMethod.GET)
+	@RequestMapping(value="/adminInserisciMedico", method = RequestMethod.GET)
 	public String indexRedirect(ModelMap model) {
 		model.addAttribute("medico", new Medico());
 		return "amministrazione/inserisciMedico";
@@ -36,7 +36,7 @@ public class MedicoController extends WebMvcConfigurerAdapter{
 		return "areaAmministrazione";
 	}
 	
-	@RequestMapping(value="/visualizzaEsamiMedico", method = RequestMethod.POST)
+	@RequestMapping(value="/adminVisualizzaEsamiMedico", method = RequestMethod.POST)
 	public String visualizzaEsami(ModelMap model, HttpServletRequest request){
 		long id = Long.parseLong(request.getParameter("id_medico"));
 		Medico m = medicoFacade.getMedico(id);
@@ -45,7 +45,7 @@ public class MedicoController extends WebMvcConfigurerAdapter{
 		model.addAttribute("esami", esami);
 		return "amministrazione/riepilogoEsamiMedico";
 	}
-	@RequestMapping(value="/vediEsamiPerMedici", method = RequestMethod.GET)
+	@RequestMapping(value="/adminVediEsamiPerMedici", method = RequestMethod.GET)
 	public String vediEsamiPerMedici(ModelMap model){
 		model.addAttribute("listaMedici", medicoFacade.getMedici());
 		//model.addAttribute("medico", new Medico());

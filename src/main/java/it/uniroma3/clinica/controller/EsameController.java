@@ -63,7 +63,7 @@ public class EsameController extends WebMvcConfigurerAdapter {
 		binder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, true));
 	}
 
-	@RequestMapping(value="/inserisciEsame", method = RequestMethod.POST)
+	@RequestMapping(value="/adminInserisciEsame", method = RequestMethod.POST)
 	public String inserisciEsame(@RequestParam("dataEsame")Date dataEsame, @ModelAttribute("esame") @Validated Esame esame,BindingResult bindingResult, ModelMap model) {
 		System.out.println(dataEsame);
 
@@ -85,7 +85,7 @@ public class EsameController extends WebMvcConfigurerAdapter {
 		model.addAttribute("esami", tipologiaFacade.getAllTipologiaEsame());
 		return "esami";
 	}
-	@RequestMapping(value="/nuovoEsame", method = RequestMethod.GET)
+	@RequestMapping(value="/adminNuovoEsame", method = RequestMethod.GET)
 	public String nuovoPazienteRedirect(ModelMap model) {
 		model.addAttribute("esame", new Esame());
 		model.addAttribute("listaTipologie",tipologiaFacade.getAllTipologiaEsame() );

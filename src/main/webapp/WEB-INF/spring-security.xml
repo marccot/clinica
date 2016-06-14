@@ -7,17 +7,23 @@
 	http://www.springframework.org/schema/security/spring-security-4.0.xsd">
 
 	<http auto-config="true">
-		<intercept-url pattern="/amministrazione**" access="ROLE_ADMIN" />
-		<intercept-url pattern="/paziente**" access="ROLE_USER" />
-		<form-login login-page="/login" login-processing-url="/j_spring_security_check" default-target-url="/"
-			authentication-failure-url="/login"  />
-			<logout logout-success-url="/" logout-url="/logout" />
+		<intercept-url pattern="/areaAmministrazione**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/paziente**" access="hasRole('ROLE_USER')" />
+		<form-login login-page="/login" login-processing-url="/j_spring_security_check"
+			default-target-url="/" authentication-failure-url="/login" />
+		<logout logout-success-url="/" logout-url="/logout" />
 	</http>
 	<authentication-manager>
 		<authentication-provider>
 			<user-service>
-				<user name="admin" password="admin" authorities="ROLE_USER" />
+				<user name="admin" password="admin" authorities="ROLE_ADMIN" />
 			</user-service>
+		</authentication-provider>
+		<authentication-provider>
+			<jdbc-user-service data-source-ref="dataSource"
+				users-by-username-query="select username,password,TRUE from Utente where username = ?"
+				authorities-by-username-query="select username,role from Utente where username = ?" />
 		</authentication-provider>
 	</authentication-manager>
 	<beans:bean id="dataSource"
