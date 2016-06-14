@@ -15,7 +15,7 @@ public class AreaPazienteController {
 	
 	@RequestMapping(value="/areaPaziente", method = RequestMethod.GET)
 	public String indexRedirect(ModelMap model) {
-		model.addAttribute("esami", eFacade.getEsamiByPaziente(7));
+		model.addAttribute("esami", eFacade.getEsamiByPaziente(27));
 		return "areaPaziente";
 	}
 }
