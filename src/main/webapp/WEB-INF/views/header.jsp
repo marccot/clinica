@@ -3,6 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@page session="true"%>
   <head>
   
     <meta charset="utf-8">
@@ -46,7 +48,8 @@
 <%--     <h3>${pageContext.request.userPrincipal.name}</h3> --%>
     <c:choose>
      <c:when test="${pageContext.request.userPrincipal == null}"><a href="<c:url value = "login"/>"><span class="label label-success loginbutton">LOGIN</span></a></c:when>
-	 <c:otherwise> <a href="<c:url value="/logout" />"><span class="label label-danger logout">LOGOUT</span></a></c:otherwise>
+	 <c:otherwise> <form:form action="logout" method='post' name='form'>
+	 <button class='btn btn-danger logout' type='submit'>LOGOUT</button></form:form></c:otherwise>
 </c:choose>
     <a class="navbar-brand" href="index.html">Logo</a>
   </div>
