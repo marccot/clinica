@@ -108,13 +108,13 @@ $('.hide').click(function () {
 			<div>
 				<c:forEach items='${esami}' var='esame'>
 				
-					<div class='elenco-esami'><span class="label  label-success esamebutton">${esame.nome}</span>	
+					<div class='elenco-esami'><div class="label  label-success esamebutton">${esame.nome}</div>	
 				<div class="wrappa">  
                     <p class="show p-block didascalia label-info" >Mostra Dettagli Esame</p>
                    </div>
                    <div class="wrapper">
 					<div class="content-block targetDiv esame-riepilogo">
-						<ul type="disc">
+						<ul type="">
 							<li>Descrizione: ${esame.descrizione}</li>
 							<li>Costo(&euro;): ${esame.costo}</li>
 							<li>Prerequisiti: <c:if test="${empty esame.prerequisiti}">

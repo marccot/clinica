@@ -3347,6 +3347,13 @@ margin:0 23px;
 	margin-top: 1em;
 	margin-bottom : 1em;
 }
+.form-centrato{
+	text-align:center;
+}
+.form-centrato select{
+	background-color:ghostwhite;
+	width:50%;
+}
 }
 .margineNavAreaAmministrazione{
 	margin-bottom: 3em;
@@ -3355,9 +3362,10 @@ margin:0 23px;
 	color:blue;
 }
 .titolone{
-  padding-top: 34em;
+  padding-top: 7em;
 }
 .titolone h3{
+	text-shadow: 2px 2px black;
 	line-height: 1.4em;
     text-align: center;
     color: #FFFFFF;

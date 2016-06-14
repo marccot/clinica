@@ -16,7 +16,7 @@
 <body class="form-clinica">
 <h3 class="tittle">Seleziona un medico per vedere i suoi esami</h3>
 
-<form name='form' action='visualizzaEsamiMedico' method='post'>
+<form name='form' class='form-centrato' action='visualizzaEsamiMedico' method='post'>
 <select name='id_medico'>
 <c:forEach items='${listaMedici }' var='medico'>
 <option value='${medico.id }'> ${medico.nome } ${medico.cognome }</option>
@@ -33,8 +33,6 @@
 </c:forEach>
 
 </c:forEach></br>
-
 </body>
 <%@include file ='../footer.html' %>
-</body>
 </html>
