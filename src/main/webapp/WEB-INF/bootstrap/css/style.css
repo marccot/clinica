@@ -660,12 +660,13 @@ text-decoration:none;
 /*-- //Slide toogle menu --*/
 /*-- banner --*/
 .banner{
-background: url(../images/33.jpg) no-repeat 0px 0px;
+background: url(../images/33.jpg) fixed;
 background-size:cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
 -ms-background-size: cover;
 -moz-background-size: cover;
+padding: 131px 0 0 0;
 min-height: 800px;
 
 }
