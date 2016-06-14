@@ -19,7 +19,7 @@ public class MedicoController extends WebMvcConfigurerAdapter{
 	@RequestMapping(value="/inserisciMedico", method = RequestMethod.GET)
 	public String indexRedirect(ModelMap model) {
 		model.addAttribute("medico", new Medico());
-		return "inserisciMedico";
+		return "amministrazione/inserisciMedico";
 	}
 	
 	@RequestMapping(value="/addMedico", method = RequestMethod.POST) 
@@ -36,6 +36,6 @@ public class MedicoController extends WebMvcConfigurerAdapter{
 	public String vediEsamiPerMedici(ModelMap model){
 		model.addAttribute("listaMedici", medicoFacade.getMedici());
 		model.addAttribute("medico", new Medico());
-		return "riepilogoEsamiAmministrazione";
+		return "amministrazione/riepilogoEsamiAmministrazione";
 	}
 }

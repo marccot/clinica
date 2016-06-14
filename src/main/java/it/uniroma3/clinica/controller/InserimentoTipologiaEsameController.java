@@ -50,6 +50,6 @@ public class InserimentoTipologiaEsameController {
 		model.addAttribute("esame", new TipologiaEsame());
 		model.addAttribute("prerequisito", new Prerequisito());
 		model.addAttribute("prerequisitiEsistenti", prerequisitiEsistenti);
-		return "inserisciTipologiaEsame";
+		return "amministrazione/inserisciTipologiaEsame";
 	}
 }

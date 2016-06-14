@@ -27,6 +27,6 @@ public class InserimentoPrerequisitoController {
 		model.addAttribute("esame", new TipologiaEsame());
 		pFacade.savePrerequisito(prerequisito);
 		model.addAttribute("prerequisitiEsistenti", pFacade.getPrerequisiti());
-		return "inserisciTipologiaEsame";
+		return "amministrazione/inserisciTipologiaEsame";
 	}
 }

@@ -12,7 +12,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<%@include file ='header.jsp' %>
+<%@include file ='../header.jsp' %>
 <body class="form-clinica">
 <h3 class="tittle">Riepilogo esami per medico</h3>
 <c:forEach var='type' items='${esamiByMedico }'>
@@ -25,6 +25,6 @@
 </c:forEach></br>
 
 </body>
-<%@include file ='footer.html' %>
+<%@include file ='../footer.html' %>
 </body>
 </html>

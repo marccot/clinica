@@ -9,22 +9,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <!-- <head> -->
+<%@include file ='../header.jsp' %>
 
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->
 <!-- <title>Insert title here</title> -->
 <!-- </head> -->
-<%@include file ='header.html' %>
 <script>
 $(document).ready(function(){
-	$("div2").toggle();
+	$("#newpost").toggle();
 	});
 $(document).ready(function(){
     $("p3").click(function(){
-        $("div2").toggle();
+        $("#newpost").toggle();
     });
 });
 </script>
-<%@include file ='header.jsp' %>
 
 <body>
 <form:form class='form-clinica' method='post' action='addTipologiaEsame' modelAttribute='esame' name='form'>
@@ -52,15 +51,15 @@ $(document).ready(function(){
 <tr><td><a href='<c:url value="/areaAmministrazione" />'><span class="label label-danger annullabutton">Annulla Operazione</span></a></td></tr>
 </table>
  </form:form>
- <div2 id="newpost">
+ <div id="newpost">
  <form:form class='form-clinica' method='post' action='addPrerequisito' modelAttribute='prerequisito' name='form' style='hidden'>
 <h3 class="tittle">Aggiungi qui un nuovo prerequisito</h3>
 <label>Nome prerequisito </label><form:input type='text' path='nome'/><br/>
 <label>Descrizione prerequisito</label><form:input type='text' path='valore' /><br/>
 <input type='submit' name='submit' class='label-success' value='Aggiungi prerequisito' />
-</form:form></div2>
+</form:form></div>
 
-<%@include file ='footer.html' %>
+<%@include file ='../footer.html' %>
 
 </body>
 </html>

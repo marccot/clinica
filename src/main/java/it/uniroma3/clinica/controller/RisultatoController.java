@@ -50,7 +50,7 @@ public class RisultatoController {
 		long id = Long.parseLong(s);
 		model.addAttribute("esame", esameFacade.getEsame(id));
 		model.addAttribute("nRes", nRes);
-		return "inserisciRisultati_step2";
+		return "amministrazione/inserisciRisultati_step2";
 	}
 	
 	@RequestMapping(value="/inserisciRisultatiEsame", method = RequestMethod.GET)
@@ -58,6 +58,6 @@ public class RisultatoController {
 //		System.out.println("CISONO");
 		System.out.println(esameFacade.getEsami());
 		model.addAttribute("esami", esameFacade.getEsami());
-		return "inserisciRisultati_step1";
+		return "amministrazione/inserisciRisultati_step1";
 	}
 }

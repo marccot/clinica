@@ -73,7 +73,7 @@ public class EsameController extends WebMvcConfigurerAdapter {
 			model.addAttribute("listaTipologie",tipologiaFacade.getAllTipologiaEsame() );
 			model.addAttribute("listaPazienti", pazienteFacade.getPazienti());
 			model.addAttribute("listaMedici", medicoFacade.getMedici());
-			return "inserisciEsame";
+			return "amministrazione/inserisciEsame";
 		}
 		esame.setDataPrenotazione(new Date());
 		esameFacade.saveEsame(esame);
@@ -91,7 +91,7 @@ public class EsameController extends WebMvcConfigurerAdapter {
 		model.addAttribute("listaTipologie",tipologiaFacade.getAllTipologiaEsame() );
 		model.addAttribute("listaPazienti", pazienteFacade.getPazienti());
 		model.addAttribute("listaMedici", medicoFacade.getMedici());
-		return "inserisciEsame";
+		return "amministrazione/inserisciEsame";
 	}
 
 }
