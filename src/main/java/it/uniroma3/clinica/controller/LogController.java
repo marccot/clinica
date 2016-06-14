@@ -1,6 +1,12 @@
 package it.uniroma3.clinica.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -34,6 +40,17 @@ public class LogController {
 		return "signup";
 	}
 	
+	@RequestMapping(value="/logout", method = RequestMethod.POST)
+	public String logOut(HttpServletRequest request, HttpServletResponse response){
+		 Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		    if (auth != null){    
+		        new SecurityContextLogoutHandler().logout(request, response, auth);
+		    }
+//		HttpSession session = request.getSession();
+//		if(session!=null)
+//			session.invalidate();
+		return "areaAmministrazione";
+	}
 	@RequestMapping(value= "creaUtente")
 	public String effettuaRegistrazione(@ModelAttribute("utente") Utente utente, @ModelAttribute("paziente") Paziente paziente, ModelMap model) {
 		utente.setRole("ROLE_USER");
