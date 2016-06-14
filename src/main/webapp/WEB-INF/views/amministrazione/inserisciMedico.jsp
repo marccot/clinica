@@ -78,7 +78,7 @@
 			<td><form:input type='text' path='specializzazione' placeholder='specializzazione' required='true' class='form-control' /></td>
 			</tr>
 			<tr>
-			<td><input type="submit" value="invia" class = "label-success" /></td>
+			<td><button type="submit" value="invia" class="btn btn-success">Invia</button></td>
 
 		</tr>
 		</table>

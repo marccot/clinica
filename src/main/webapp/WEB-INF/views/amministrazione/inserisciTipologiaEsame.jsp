@@ -57,7 +57,7 @@ $(document).ready(function(){
 <h3 class="tittle">Aggiungi qui un nuovo prerequisito</h3>
 <label>Nome prerequisito </label><form:input type='text' path='nome'/><br/>
 <label>Descrizione prerequisito</label><form:input type='text' path='valore' /><br/>
-<input type='submit' name='submit' class='label-success' value='Aggiungi prerequisito' />
+<button type='submit' name='submit' class="btn btn-success">Aggiungi prerequisito</button>
 </form:form></div>
 
 <%@include file ='../footer.html' %>

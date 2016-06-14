@@ -50,7 +50,7 @@
 				</tr>
 				<tr>
 
-					<td><input type="submit" value="Invia" class="label-success" />
+					<td><button class="btn btn-success" type="submit">Invia</button>
 					</td>
 				</tr>
 				<tr>

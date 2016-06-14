@@ -41,7 +41,7 @@
 			<td><form:errors path="codice"  /></td>
 		</tr>
 		<tr>
-			<td><input class='label-success' type="submit" value="invia" /></td>
+			<td><button class="btn btn-success" type="submit" >Invia</button></td>
 		</tr>
 		</table>
 		<a href='<c:url value="/areaAmministrazione" />'><span class="label label-danger annullabutton">Annulla Operazione</span></a>
