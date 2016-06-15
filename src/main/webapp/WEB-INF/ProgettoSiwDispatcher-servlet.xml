@@ -17,6 +17,7 @@
 	<context:component-scan base-package="it.uniroma3.clinica" />
 	
 	<beans:bean id="pazienteValidator" class="it.uniroma3.clinica.validator.PazienteValidator" />
+	<beans:bean id="utenteValidator" class="it.uniroma3.clinica.validator.UtenteValidator" />
 	<beans:bean id="esameValidator" class="it.uniroma3.clinica.validator.EsameValidator" />
 	<beans:bean id="editorPaziente" class="it.uniroma3.clinica.editor.EditorPaziente" />
 	<beans:bean id="editorMedico" class="it.uniroma3.clinica.editor.EditorMedico" />

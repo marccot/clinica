@@ -68,7 +68,7 @@ public class EsameController extends WebMvcConfigurerAdapter {
 		System.out.println(dataEsame);
 
 		if (bindingResult.hasErrors()) {
-			System.out.println(bindingResult.getAllErrors());
+//			System.out.println(bindingResult.getAllErrors());
 			model.addAttribute("esame", new Esame());
 			model.addAttribute("listaTipologie",tipologiaFacade.getAllTipologiaEsame() );
 			model.addAttribute("listaPazienti", pazienteFacade.getPazienti());

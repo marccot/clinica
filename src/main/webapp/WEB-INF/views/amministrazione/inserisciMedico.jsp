@@ -71,7 +71,7 @@
 		<tr>
 					<td>Cognome Medico</td>
 			<td><form:input type="text" path='cognome' placeholder="cognome" required="true" class="form-control"/></td>
-			<td><form:errors path="nome"  /></td>
+			<td><form:errors path="cognome"  /></td>
 			</tr>
 			<tr>
 			<td>Specializzazione</td>
