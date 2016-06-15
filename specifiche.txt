@@ -5,12 +5,25 @@
 * Lorenzo Tocco
 * Roberto Boschi
 --------------
+###Username e passwords
+amministratore
+ -username: admin
+ -password: admin
 
+paziente1
+ -username: user1
+ -password: password
+
+paziente2
+ -username: user2
+ -password: password
+ 
 ### Estensioni
 Il paziente può registrarsi ed effettuare l'accesso.
 Il paziente può consultare il suo esame non attraverso il codice ma tramite l'accesso alla sua Area Pazienti,ottenuto tramite registrazione.
 Se l'amministratore non ha effettuato l'accesso non può accedere al **pannello admin**, ma se ha effettuato l'accesso non può accedere all'Area Pazienti.
 Nell'area pazienti gli esami visualizzati in rosso non hanno ancora i risultati mentre quelli in verdi li hanno.
+
 
 ### Specifiche Originali
 Si vuole realizzare un sistema informativo su Web per la prenotazione degli esami medici di una piccola clinica
