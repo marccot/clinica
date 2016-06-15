@@ -19,5 +19,6 @@ public class PazienteValidator implements Validator {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nome", "nome.required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cognome", "cognome.required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "codiceFiscale", "codicefiscale.required");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "email.required");
 	}
 }
