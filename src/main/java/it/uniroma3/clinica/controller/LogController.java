@@ -64,7 +64,6 @@ public class LogController extends WebMvcConfigurerAdapter{
 		UtenteValidator validator = new UtenteValidator();
 		validator.validate(utente, bindingResult);
 		if (bindingResult.hasErrors()) {
-			System.out.println(bindingResult.getAllErrors());;
 			return "signup";
 		}
 		utente.setRole("ROLE_USER");
