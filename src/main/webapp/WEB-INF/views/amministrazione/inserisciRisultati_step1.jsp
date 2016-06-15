@@ -16,10 +16,15 @@
 <input type='radio' name='esamePrenotato' value='${esame.id }'/> #${esame.id}: ${esame.tipologia } paziente: ${esame.paziente }<br/>
 </c:forEach>
 </div >
+<c:if test='${!empty messaggioErroreEsame }'><td><div class='error'><p>${messaggioErroreEsame }</p></div></td></c:if>
 </fieldset></td>
 </tr>
 <tr><td><label>numero di risultati</label></td>
-<td><input type='text' name='nResults' /></td></tr>
+<td><input type='text' name='nResults' /></td>
+<c:if test='${!empty messaggioErroreNumero }'>
+<td><div class='error'><p>${messaggioErroreNumero }</p></div></td>
+</c:if>
+</tr> 
 <tr><td><input class='label-success'type='submit' name='submit' value='avanti'/></td></tr>
 <tr><td><a href='<c:url value="/areaAmministrazione" />'><span class="label label-danger annullabutton">Annulla Operazione</span></a></td></tr>
 </table>

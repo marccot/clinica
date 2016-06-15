@@ -36,6 +36,7 @@
 		<h3 class='tittle'>Step 2: Specificare i dettagli dei risultati</h3>
 		<a href='<c:url value="/inserisciRisultatiEsame" />'><span
 			class="label label-danger annullabutton">Torna Indietro</span></a>
+		<c:if test='${!empty messaggioErrore }'><div class='error'><p>${messaggioErrore }</p></div></c:if>
 		<form:form class='multiform-clinica' name='form' method="post"
 			action='addRisultati'>
 			<c:forEach begin='1' end='${nRes }' varStatus='loop'>

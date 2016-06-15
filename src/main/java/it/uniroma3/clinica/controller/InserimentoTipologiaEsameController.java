@@ -36,6 +36,7 @@ public class InserimentoTipologiaEsameController {
 			}
 		}
 		tipoEsameFacade.saveTipologiaEsame(esame);
+		model.addAttribute("messaggioSuccesso", "Tipologia d'esame " + esame.getNome() + " inserita con successo");
 		return "amministrazione/areaAmministrazione";
 	}
 
