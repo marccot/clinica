@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="banner">
 <div class="titolone">
 		<h3>MEDICURE INC.</h3>
-		<h3>I TUOI MALORI...IL NOSTRO FUTURO</h3>
+		<h3>SIAMO QUI PER TE...	</h3>
 	</div>
 	<script src=" <c:url value="/bootstrap/js/jquery.magnific-popup.js" /> " type="text/javascript"></script>
 		<div id="small-dialog" class="mfp-hide">
