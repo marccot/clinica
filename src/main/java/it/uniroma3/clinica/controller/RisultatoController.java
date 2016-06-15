@@ -18,22 +18,21 @@ import it.uniroma3.clinica.validator.RisultatoValidator;
 
 @Controller
 public class RisultatoController {
-	
+
 	@Autowired
 	private EsameFacade esameFacade;
 	@Autowired
 	private RisultatoFacade rFacade;
-	
+
 	@RequestMapping(value="/addRisultati", method = RequestMethod.POST)
 	public String aggiungiRisultato( ModelMap model, HttpServletRequest request){
 		int n =(Integer.parseInt(request.getParameter("nRes")));
 		Esame e = esameFacade.getEsame(Long.parseLong(request.getParameter("esameScelto")));
-		System.out.println(e.getId());
+		RisultatoValidator validator = new RisultatoValidator();
 		for(int i = 1; i<=n;i++){
-			System.out.println("*************");
 			Risultato risultato = new Risultato(request.getParameter("nome"+i), request.getParameter("valore"+i));
 			risultato.setEsame(e);
-			if(risultato.getNome().equals("")|| risultato.getValore().equals("")){
+			if(!validator.validate(risultato)){
 				model.addAttribute("esami", esameFacade.getEsami());
 				model.addAttribute("nRes", n);
 				model.addAttribute("messaggioErrore", "compilare tutti i campi");
@@ -43,10 +42,10 @@ public class RisultatoController {
 			esameFacade.aggiornaEsame(e);
 			rFacade.saveRisultato(risultato);
 		}
-//		model.addAttribute("success", "Risultato inserito nel sistema");
+				model.addAttribute("messaggioSuccesso", "Risultato inserito nel sistema");
 		return "amministrazione/areaAmministrazione";
 	}
-	
+
 	@RequestMapping(value="recuperaEsame", method = RequestMethod.POST)
 	public String recuperaEsame(ModelMap model, HttpServletRequest request){
 		String s = request.getParameter("esamePrenotato");
@@ -68,16 +67,16 @@ public class RisultatoController {
 		for(int i=0; i<nRes; i++){
 			model.addAttribute("risultato"+i, new Risultato());
 		}
-//		System.out.println(nRes);
+		//		System.out.println(nRes);
 		long id = Long.parseLong(s);
 		model.addAttribute("esame", esameFacade.getEsame(id));
 		model.addAttribute("nRes", nRes);
 		return "amministrazione/inserisciRisultati_step2";
 	}
-	
+
 	@RequestMapping(value="/inserisciRisultatiEsame", method = RequestMethod.GET)
 	public String indexRedirect(ModelMap model) {
-//		System.out.println("CISONO");
+		//		System.out.println("CISONO");
 		System.out.println(esameFacade.getEsami());
 		model.addAttribute("esami", esameFacade.getEsami());
 		return "amministrazione/inserisciRisultati_step1";
