@@ -44,7 +44,7 @@
 				</tr>
 				<tr>
 					<td>Data dell'esame :</td>
-					<td><input type="date" path = "dataEsame" name="dataEsame" required />
+					<td><form:input type="date" path = "dataEsame" name="dataEsame" required />
 					
 					</td>
 				</tr>
