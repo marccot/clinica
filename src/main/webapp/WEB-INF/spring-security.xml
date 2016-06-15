@@ -7,6 +7,7 @@
 	http://www.springframework.org/schema/security/spring-security-4.0.xsd">
 
 	<http auto-config="true">
+		<access-denied-handler error-page ="/index" />
 		<intercept-url pattern="/areaAmministrazione**" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/paziente**" access="hasRole('ROLE_USER')" />
