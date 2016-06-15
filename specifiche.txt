@@ -1,0 +1,85 @@
+#Clinica Progetto SIW 2016
+
+--------------
+* Marco Oteri
+* Lorenzo Tocco
+* Roberto Boschi
+--------------
+
+### Estensioni
+Il paziente può registrarsi ed effettuare l'accesso.
+Il paziente può consultare il suo esame non attraverso il codice ma tramite l'accesso alla sua Area Pazienti,ottenuto tramite registrazione.
+Se l'amministratore non ha effettuato l'accesso non può accedere al **pannello admin**, ma se ha effettuato l'accesso non può accedere all'Area Pazienti.
+
+
+### Specifiche Originali
+Si vuole realizzare un sistema informativo su Web per la prenotazione degli esami medici di una piccola clinica
+Oltre agli utenti occasionali, due tipologie di attori interagiscono con il sistema: i pazienti e l'amministrazione
+Un paziente può svolgere le seguenti operazioni (è possibile introdurne altre):
+Consultazione tipologie di esami offerti dalle clinica
+Consultazione dei risultati di un proprio esame
+L'amministrazione può svolgere le seguenti operazioni:
+Inserimento di una tipologia di esame 
+Inserimento di un esame
+Inserimento di un paziente nella anagrafica pazienti
+Inserimento risultati di un esame
+Per ogni tipologia di esame sono di interesse un nome, un codice, una descrizione, un costo
+Ogni tipologia di esame ha inoltre un insieme di prerequisiti che (per semplicità) sono rappresentati da un insieme coppie nome valore 
+esempio prerequisiti {<"digiuno 12", "il paziente deve essere a digiuno da dodici ore"> <"no pregnant", "paziente non può essere una donna in gravidanza">}
+(Per semplicità) ogni tipologia di esame ha un insieme di indicatori per i risultati
+esempio risultati per la tipologia "esame del sangue"{"emoglobina", "colesterolo LDL",etc.}
+Per ogni esame è necessario riportare, oltre al paziente, la data di prenotazione (con data e ora in cui è stata effettuata la prenotazione), 
+la data in cui è stato effettuato l'esame, il nome del medico che ha condotto l'esame
+Per ogni medico è necessario gestire: nome, cognome, specializzazione
+(Per semplicità) i risultati di un esame sono un insieme di coppie nome-valore
+
+-Caso d'uso UC1: consulta offerta
+Attore primario: utente non registrato
+Scenario principale di successo: 
+L'utente consulta l'elenco delle tipologie di esame
+L'utente sceglie una tipologia di esame e ne richiede i dettagli 
+Il sistema mostra i dettagli della tipologia di esame scelta dall'utente
+L'utente ripete i passi precedenti un numero indefinito di volte
+
+-Caso d'uso UC2: crea esame (prenotazione)
+Attore primario: amministrazione
+Scenario principale di successo: 
+L'ammistrazione crea un esame
+L'amministrazione imposta una tipologia di esame all'esame creato
+L'amministrazione associa un paziente all'esame creato
+Il sistema registra l'esame (impostando automaticamente la data di prenotazione)
+Precondizioni: l'amministratore è identificato e autenticato
+
+-Caso d'uso UC3: consulta risultati proprio esame
+Attore primario: paziente
+Scenario principale:
+Il paziente consulta l'elenco dei propri esami
+Il sistema mostra al paziente l'elenco dei suoi esami
+Il paziente chiede il dettaglio di un esame
+Il sistema mostra il dettaglio dell'esame
+Il paziente ripete i passi precedenti finché necessario
+Precondizioni: il paziente è identificato e autenticato
+
+-Caso d'uso UC4: inserimento tipologia di esame
+Attore primario: amministrazione
+Scenario principale:
+L'amministratore inserisce una nuova tipologia di esame specificandone i dettagli
+Il sistema registra la tipologia di esame
+I punti precedenti vengono ripetuti fino a che necessario
+Precondizioni: l'amministratore è identificato e autenticato
+
+-Caso d'uso UC5: esami effettuati da un medico
+Attore primario: amministrazione
+Scenario principale:
+L’amministratore fornisce nome e cognome di un medico
+Il sistema mostra all’amministratore tutti gli esami effettuati dal medico
+Precondizioni: l’amministratore è identificato e autenticato
+
+-Caso d'uso UC6: inserimento risultati esame
+Attore primario: amministrazione
+Scenario principale:
+L'amministrazione inserisce un codice esame
+Il sistema presenta all'amministratore l'esame corrispondente al codice immesso
+L'amministratore inserisce tutti i risultati dell'esame
+Precondizioni:
+l'amministratore è identificato e autenticato
