@@ -63,5 +63,8 @@ public class LogController {
 		model.addAttribute("utente", utente);
 		return "home";
 	}
-
+	@RequestMapping(value="/error", method = RequestMethod.GET)
+	 public String errorpage(ModelMap model) {
+	  return "error";
+	 }
 }
