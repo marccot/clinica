@@ -12,7 +12,7 @@ public class RisultatoValidator {
     }
     
     public boolean validate(Risultato risultato) {
-      if(risultato.getNome().equals("") || risultato.getValore().equals(""))
+      if(risultato.getNome().isEmpty() || risultato.getValore().isEmpty())
           return false;
       return true;
 

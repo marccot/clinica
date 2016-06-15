@@ -35,9 +35,11 @@ $(document).ready(function(){
 <label>Nome esame</label>
 </td>
 <td>
-<form:input type='text' path='nome' /></td> </tr>
-<tr><td><label>Descrizione</label></td><td><form:input type='text' path='descrizione' /></td> </tr>
-<tr><td><label>Costo &euro; </label></td><td><form:input path='costo' /></td> </tr>
+<form:input type='text' path='nome' required='true'/></td>
+<td><form:errors path='nome' /></td> </tr>
+<tr><td><label>Descrizione</label></td><td><form:input type='text' path='descrizione' required='true'/></td>
+<td><form:errors path="descrizione" /></td> </tr>
+<tr><td><label>Costo &euro; </label></td><td><form:input path='costo' /></td><td>${messaggioErroreCosto } </tr>
 <tr><td><label>Prerequisiti:</label></td>
 <td><fieldset>
 <div class='DivToScroll DivWithScroll'>
