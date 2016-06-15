@@ -21,7 +21,7 @@
 				<td><label>Username</label></td>
 				<td><spring:bind path="utente.username">
 						<input type="text" name="${status.expression}"
-							value="${status.value}" >
+							value="${status.value}" required>
 		</spring:bind></td>
 		<td><form:errors path="utente.username"  /></td>
 			</tr>
@@ -29,7 +29,7 @@
 				<td><label>Password</label></td>
 				<td><spring:bind path="utente.password">
 						<input type="password" name="${status.expression}"
-							value="${status.value}" >
+							value="${status.value}" required>
 						<br />
 					</spring:bind></td>
 					<td><form:errors path="utente.password" /></td>
@@ -37,7 +37,7 @@
 				<td><label>Nome</label></td>
 				<td><spring:bind path="paziente.nome">
 						<input type="text" name="${status.expression}"
-							value="${status.value}" >
+							value="${status.value}" required>
 						<br />
 					</spring:bind></td>
 					<td><form:errors path="utente.paziente.nome"/></td>
@@ -47,7 +47,7 @@
 				<td><label>Cognome</label></td>
 				<td><spring:bind path="paziente.cognome">
 						<input type="text" name="${status.expression}"
-							value="${status.value}" >
+							value="${status.value}" required>
 						<br />
 					</spring:bind></td>
 					<td><form:errors path="utente.paziente.cognome" /></td>
@@ -57,7 +57,7 @@
 				<td><label>Codice Fiscale</label></td>
 				<td><spring:bind path="paziente.codiceFiscale">
 						<input type="text" name="${status.expression}"
-							value="${status.value}" >
+							value="${status.value}" required>
 						<br />
 					</spring:bind></td>
 					<td><form:errors path="utente.paziente.codiceFiscale" /></td>
@@ -67,7 +67,7 @@
 				<td><label>Email</label></td>
 				<td><spring:bind path="paziente.email">
 						<input type="text" name="${status.expression}"
-							value="${status.value}" >
+							value="${status.value}" required>
 						<br />
 					</spring:bind></td>
 					<td><form:errors path="utente.paziente.email" /></td>
