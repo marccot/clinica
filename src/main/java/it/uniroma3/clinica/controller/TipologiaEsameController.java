@@ -17,7 +17,7 @@ import it.uniroma3.clinica.model.Prerequisito;
 import it.uniroma3.clinica.model.TipologiaEsame;
 
 @Controller
-public class InserimentoTipologiaEsameController {
+public class TipologiaEsameController {
 
 	@Autowired
 	private TipologiaEsameFacade tipoEsameFacade;

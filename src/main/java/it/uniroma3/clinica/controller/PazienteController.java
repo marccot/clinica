@@ -18,7 +18,7 @@ import it.uniroma3.clinica.facade.PazienteFacade;
 import it.uniroma3.clinica.model.Paziente;
 
 @Controller
-public class InserimentoPazienteController extends WebMvcConfigurerAdapter {
+public class PazienteController extends WebMvcConfigurerAdapter {
 	
 	@Autowired
 	PazienteFacade facade;
